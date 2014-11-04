@@ -6,6 +6,7 @@ var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
 var consolidate = require('consolidate');
+var scraper = require('./scraper/scraper.js')(app);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', __dirname + '/views');
