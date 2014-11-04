@@ -8,8 +8,9 @@ div.row
 
 	div.col-md-8
 		h3 This is what I've got for you.
-		//- each image, i in images
-		//- 	p Src #{image}
+		each image, i in images
+			p Src
+				img(src="#{image}")
 
 		//- p Src #{images}
 
