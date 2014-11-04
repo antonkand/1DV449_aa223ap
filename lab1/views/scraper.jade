@@ -1,5 +1,15 @@
 include ./partials/header.jade
 
-h1 Scraper
+div.row
+	div.col-md-4
+		h1 Scraper
+		h3.bg-success Successfully scraped #{url}
+		include ./partials/footer.jade
 
-include ./partials/footer.jade
+	div.col-md-8
+		h3 This is what I've got for you.
+		//- each image, i in images
+		//- 	p Src #{image}
+
+		//- p Src #{images}
+

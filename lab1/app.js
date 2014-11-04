@@ -1,7 +1,6 @@
 'use strict';
 var express = require('express');
 var app = express();
-var fs = require('fs');
 var path = require('path');
 var chalk = require('chalk');
 var consolidate = require('consolidate');
