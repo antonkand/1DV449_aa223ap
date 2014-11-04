@@ -3,8 +3,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var path = require('path');
-var request = require('request');
-var cheerio = require('cheerio');
+var chalk = require('chalk');
 var consolidate = require('consolidate');
 var scraper = require('./scraper/scraper.js')(app);
 
@@ -18,7 +17,9 @@ app.set('view engine', 'jade');
 require('./routes/routes.js')(app);
 
 var server = app.listen(3000, function () {
-  var host = server.address().address
-  var port = server.address().port
-  console.log('Tiny scraper app listening at http://%s:%s', host, port)
+  var host = server.address().address;
+  var port = server.address().port;
+  console.log(
+  	chalk.cyan('Tiny scraper app listening at ' + host + ':' + port)
+  );
 })

@@ -5,4 +5,9 @@ module.exports = function (app) {
 	app.get('/', function (req, res) {
 		res.render('index');
 	});
+
+	// tests nightmare setup
+	app.get('/nightmare', function (req, res) {
+		console.log('nightmare was here');
+	});
 };

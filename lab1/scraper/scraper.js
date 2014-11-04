@@ -1,8 +1,16 @@
 'use strict';
+var request = require('request');
+var cheerio = require('cheerio');
+var Nightmare = require('nightmare');
+var user = require('./user/user.js');
+var fb = require('./lib/fblogin/fblogin.js');
+
 module.exports = function (app) {
 	console.log('app in scraper.js');
-	console.log(app);
 	app.get('/scraper', function (req, res) {
+		new Nightmare()
+			.use(fb.login(user.email, user.pw))
+			.run();
 		res.render('scraper');
 	});
 }
