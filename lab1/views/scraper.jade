@@ -8,9 +8,8 @@ div.row
 
 	div.col-md-8
 		h3 This is what I've got for you.
-		each image, i in images
-			p Src
-				img(src="#{image}")
+		each course, i in courses
+			p Course #{course.coursename}
 
 		//- p Src #{images}
 
