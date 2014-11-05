@@ -2,14 +2,12 @@ include ./partials/header.jade
 
 div.row
 	div.col-md-4
-		h1 Scraper
+		h1 Scraper by
+			p
+				a(href='https://github.com/antonkand/1DV449_aa223ap' title='Link to Github') aa223ap
 		h3.bg-success Successfully scraped #{url}
-		include ./partials/footer.jade
 
 	div.col-md-8
 		h3 This is what I've got for you.
-		each course, i in courses
-			p Course #{course.coursename}
-
-		//- p Src #{images}
-
+		a(href='#{jsonlink}')
+			p #{jsonname}

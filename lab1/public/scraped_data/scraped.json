@@ -2,16 +2,12 @@
     "site": "http://coursepress.lnu.se/kurser",
     "courses": [
         {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
         },
         {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
+            "coursename": "Iterativ mjukvaruutveckling",
+            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
         },
         {
             "coursename": "Strukturerad programmering med C++",
@@ -22,76 +18,12 @@
             "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
         },
         {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
             "coursename": "Design av grafiska gränssnitt",
             "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
         },
         {
             "coursename": "Mjukvarutestning (Software Testing)",
             "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
         },
         {
             "coursename": "CoursePress",
@@ -102,44 +34,8 @@
             "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
         },
         {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
             "coursename": "Webbteknik II",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
         },
         {
             "coursename": "Avancerade LAN-teknologier",
@@ -150,60 +46,8 @@
             "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
         },
         {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
             "coursename": "Webbteknik I",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
         },
         {
             "coursename": "Grundläggande spelprogrammering",
@@ -214,44 +58,8 @@
             "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
         },
         {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
             "coursename": "Objektorienterad analys och design med UML",
             "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
         },
         {
             "coursename": "Webbutveckling med PHP",
@@ -262,44 +70,8 @@
             "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
         },
         {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
             "coursename": "Inledande programmering med C#",
             "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
         },
         {
             "coursename": "Grafiska verktyg",
@@ -310,28 +82,12 @@
             "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
         },
         {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
         },
         {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
+            "coursename": "Iterativ mjukvaruutveckling",
+            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
         },
         {
             "coursename": "Strukturerad programmering med C++",
@@ -342,76 +98,12 @@
             "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
         },
         {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
             "coursename": "Design av grafiska gränssnitt",
             "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
         },
         {
             "coursename": "Mjukvarutestning (Software Testing)",
             "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
         },
         {
             "coursename": "CoursePress",
@@ -422,44 +114,8 @@
             "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
         },
         {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
             "coursename": "Webbteknik II",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
         },
         {
             "coursename": "Avancerade LAN-teknologier",
@@ -470,60 +126,8 @@
             "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
         },
         {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
             "coursename": "Webbteknik I",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
         },
         {
             "coursename": "Grundläggande spelprogrammering",
@@ -534,44 +138,8 @@
             "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
         },
         {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
             "coursename": "Objektorienterad analys och design med UML",
             "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
         },
         {
             "coursename": "Webbutveckling med PHP",
@@ -582,44 +150,8 @@
             "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
         },
         {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
             "coursename": "Inledande programmering med C#",
             "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
         },
         {
             "coursename": "Grafiska verktyg",
@@ -630,28 +162,12 @@
             "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
         },
         {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
         },
         {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/"
+            "coursename": "Iterativ mjukvaruutveckling",
+            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
         },
         {
             "coursename": "Strukturerad programmering med C++",
@@ -662,76 +178,12 @@
             "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
         },
         {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
-        },
-        {
             "coursename": "Design av grafiska gränssnitt",
             "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/"
         },
         {
             "coursename": "Mjukvarutestning (Software Testing)",
             "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/"
         },
         {
             "coursename": "CoursePress",
@@ -742,44 +194,8 @@
             "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
         },
         {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/"
-        },
-        {
             "coursename": "Webbteknik II",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/"
         },
         {
             "coursename": "Avancerade LAN-teknologier",
@@ -790,60 +206,8 @@
             "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
         },
         {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/"
-        },
-        {
             "coursename": "Webbteknik I",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/"
         },
         {
             "coursename": "Grundläggande spelprogrammering",
@@ -854,44 +218,8 @@
             "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
         },
         {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
-            "coursename": "RIA-utveckling med JavaScript",
-            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/"
-        },
-        {
             "coursename": "Objektorienterad analys och design med UML",
             "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Objektorienterad analys och design med UML",
-            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/"
         },
         {
             "coursename": "Webbutveckling med PHP",
@@ -902,66 +230,18 @@
             "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
         },
         {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
-        },
-        {
             "coursename": "Inledande programmering med C#",
             "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/"
         },
         {
             "coursename": "Grafiska verktyg",
             "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Grafiska verktyg",
-            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/"
-        },
-        {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
-        },
-        {
-            "coursename": "Webbteknisk Introduktion",
-            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
         },
         {
             "coursename": "Webbteknisk Introduktion",
             "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/"
         }
     ],
-    "scraped_courses": 240,
-    "date_scraped": "Wed Nov 05 2014 11:23:20 GMT+0100 (CET)"
+    "scraped_courses": 60,
+    "date_scraped": "Wed Nov 05 2014 12:33:43 GMT+0100 (CET)"
 }
