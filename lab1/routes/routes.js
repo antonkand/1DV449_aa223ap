@@ -6,8 +6,9 @@ module.exports = function (app) {
 		res.render('index');
 	});
 
-	// tests nightmare setup
-	app.get('/nightmare', function (req, res) {
-		console.log('nightmare was here');
+	// scraped json from coursepress
+	app.get('/coursepress', function (req, res) {
+		var scraped = require('../public/scraped_data/scraped.json');
+		res.json(scraped);
 	});
 };
