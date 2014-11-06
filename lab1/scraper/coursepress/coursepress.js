@@ -45,20 +45,21 @@ function scrapeCourses (loadedCheerio, callback) {
 				// push to course {}
 				request(course.url, function (error, response, html) {
 					if (!error && response.statusCode === 200) {
-						var loader = cheerio.load(html);
+						var loader = cheerio.load(html, { normalizeWhitespace: true });
 						// short description of course
 						loader('div.entry-content').filter(function () {
 							var courseDescription = loader(this);
 							// TODO: Fix course description
 							// console.log(courseDescription.first().text());
-							course.description = courseDescription.first().text();
+							// doc('div.entry-content').first('p').text()
+							course.description = courseDescription.first('p').text();
 						});
 						// first blog post
 						loader('header.entry-header').filter(function () {
 							var blogPost = loader(this);
 							// console.log(blogPost.children().first().text()); // h1 with title
 							console.log(blogPost.children().first()); // strong with author
-							course.first_blogpost.title = blogPost.children().first().text();
+							course.first_blogpost.title = blogPost.children().first().text() || 'no title';
 							// course.first_blogpost.author = blogPost.children().second().text();
 						});
 
@@ -91,7 +92,7 @@ function pushCourse (course) {
 function scrape () {
 	request(options, function(error, response, html){
 			if (!error && response.statusCode === 200) {
-				var loader = cheerio.load(html);
+				var loader = cheerio.load(html, { normalizeWhitespace: true });
 				scrapeCourses(loader, pushCourse);
 			}
 		});
