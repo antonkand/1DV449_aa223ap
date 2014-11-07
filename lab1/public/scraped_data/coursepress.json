@@ -1,227 +1,207 @@
 {
     "site": "http://coursepress.lnu.se/kurser",
-    "date_scraped": "2014-11-06T14:04:17.888Z",
+    "date_scraped": "2014-11-07T11:16:36.168Z",
     "courses": [
         {
             "coursename": "Operativsystem",
             "url": "http://coursepress.lnu.se/kurs/operativsystem/",
-            "description": "  1DV012 Operating Systems, 7.5 credits  This course will discuss operating system concepts. We will learn about the process concept, process scheduling and synchronization, memory management and file management. This course includes a series of lectures and a practical assignment. In total 20 points may be achieved during the course, practical assignment: 10 (minimum 6 points are required) final exam: 10 (minimum 6 points are required) At least 12 points are needed to Pass (G) the course, whereas with at least 16 points the course is Passed with Distinction (VG).  Please keep visiting this website, since additional relevant information for the course will be included continually. ",
+            "code": "1DV012",
+            "description": "description not available",
             "first_blogpost": {
-                "title": "",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
-            "description": " Denna kurswebbplats är under uppdatering ",
-            "first_blogpost": {
-                "title": "Under uppdatering",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/",
-            "description": " Sökvägen i fältet _path i klassen RecipeRepository blir fel om inte arbetskatalogen för projektet sätts till “..\\..\\”. Informationen om vilken arbetskatalog som ska användas lagras i filen FiledRecipes.csproj.user. Filen finns nu på GitHub (vilken den tidigare inte gjorde). Redan klonat repositoriet? Du kan själv ställa in arbetskatalogen genom att:  I fönstret Solution Explorer högerklicka på projektnamnet FiledRecipes. Välja Properties längst ner i menyn. Markera Debug den vänstra delen av fönstret. Skriv ..\\..\\ vid Workning directory. Spara inställningen genom att välja File – Save All.  ",
-            "first_blogpost": {
-                "title": "Sökväg till recept i FiledRecipes",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
-            "description": " Hi Welcome to Software Testing 2DV110! The aim of the course is to provide students with basic knowledge in software testing. The course starts 5/11 09:15 – 12:00 online in https://connect.sunet.se/softwaretesting/ and on Campus Kalmar in Ny105. If you are taking this course in Växjö or online, you will need a computer with internet, headset, webcam and programming environment to participate in lectures and examination of the laboratory assignments. During the beginning of the course you will do a bit of programming. I will be showing some examples during lectures using Java, JUnit, Mockito and CodeCover. Programming language is free of choice. You might want to choose one that has a good framework for unit-testing! Please make sure that you install a programming environment early on your computer. You might want to start early so please check out the assignment here: https://coursepress.lnu.se/kurs/mjukvarutestning/labs/assignment-2-xunit-testing/ Unfortunately the course litterature Aditya P. Mathur, “Foundation of Software Testing”, Prentice Hall, (2008) has gone out of print. As of now I do not have a good replacement fir that. I will try to remedy the lack of course literature during the course. The communication-strategy for the course is:  Lectures are broadcasted using Adobe Connect on https://connect.sunet.se/softwaretesting/, the goal is that lectures should be recorded and put on the course web page. During the lectures ask questions if anything is unclear Questions about course material, assignments etc. is done in course forum for example here: https://coursepress.lnu.se/grupper/mjukvarutestning-ht14/forum/topic/general-course-questions/ Personal questions is done by mail to me. daniel.toll@lnu.se or to lab-assistant (email will be posted on course web later) If some information is lacking from assignments, or anything is unclear you ask for it on the forum! During laboratory assignments we are online for questions in the connect room. Main written language will be English, but you can talk Swedish with and the lab-assistant Important declarations will be posted on the course web page, like if a lecture is cancelled or moved  For more information, please visit the course web page: https://coursepress.lnu.se/kurs/mjukvarutestning/  Please check the deadlines document! See you in class (in connect or on campus) Best Wishes Daniel Toll Skypeid: dntoll ",
-            "first_blogpost": {
-                "title": "Welcome to the course",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/",
-            "description": " Hej och välkommen till kurshemsidan och denna kursblogg! Vi hoppas att du nu läst de välkomstbrev vi skickat till dig från Linnéuniversitetet. Som du kan se i det första informationsbrevet (som du fick i samband med antagningsbeskedet), behöver några viktiga saker göras innan du kan påbörja kursen. Om du har följt anvisningarna på Linnéuniversitetets studentwebb, “Ny på Linnéuniversitetet“, så har du framförallt tagit det viktigaste steget och skaffat ett studentkonto. Att registrera dig på kursen är nästa steg. (Funktionen för självregistrering är öppen en vecka före samt under kursstartveckan!) I mitt personliga välkomstbrev har du också fått veta några mer specifika detaljer om kursinnehåll och -upplägg. Den första kursinformationen bör du nu komplettera med en rundtur här på hemsidan. Börja med att läsa “paket”-informationen Om kursen och besök gärna kursens Diskussionsgrupp (se vänstermenyn) så kan du passa på att ställa frågor om du undrar över något! På vänstermenyns Kontakt-sida får du veta hur du kommunicerar med oss och får den support du behöver under kursen. På övriga menyval hittar du annan viktig kursinformation eller förberedelser som du behöver göra inför kursstart:  Kurslitteratur – innan du fått hem din lärobok så finns under Länkskafferi punkt 2 ett fritt kompendium som kan vara användbart! Programvaror – det är viktigt att du så snabbt som möjligt skaffar en C++ kompilator, som beskrivs i välkomstbrevet! Studieplan med steg-beskrivningar och viktiga provdatum, hjälper dig att planera kursarbetet.  Detaljerat kursinnehåll kan du hitta under respektive kurssteg i vänstermenyn. Uppmärksamma dock att kurswebben är föremål för uppdatering och justeringar under tiden fram till kursstart, varför viss information ännu kan vara inaktuell. Tips! Lägg in ett bokmärke (eller motsvarande) till kurshemsidan nu direkt, så blir det enklare att återvända hit. Välkommen åter till kursstart! /Anne ",
-            "first_blogpost": {
-                "title": "Kursstart måndag den 3 november 2014",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Design av grafiska gränssnitt",
-            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/",
-            "description": " Kursen Design av grafiska gränssnitt (HT13) vid Linnéuniversitetet Välkommen till kursen Design av grafiska gränssnitt! ",
-            "first_blogpost": {
-                "title": "",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "CoursePress",
-            "url": "http://coursepress.lnu.se/",
-            "description": "",
-            "first_blogpost": {
-                "title": "",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
-            "description": " Idag börjar kursen! Vi kör igång klockan 13:15 i sal ny105 samt att föreläsningen strömmas ut via https://connect.sunet.se/r1jnh6jkk4n Varmt välkomna! ",
-            "first_blogpost": {
-                "title": "Kursstart!",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/",
-            "description": " Hej  Nu finns första föreläsningen ute, första delen med koordinatsystem var nog rätt mycket bättre förra året. Inspelningar från tidigare år finns tillgängligt. Notera även att schemat har ändrats, av någon anledning var jag dubbelbokad i schemat, nu är handledning på distans förlagd till tisdag eftermiddag. Daniel ",
-            "first_blogpost": {
-                "title": "Första föreläsningen renderad och klar",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Iterativ mjukvaruutveckling",
-            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/",
-            "description": " Inspelningen från gårdagens föreläsningen ligger ute nu. Tyvärr fungerade in Camtasia utan där fastnade endast de första 30 min. I går fick jag en fråga om vilka kapitel ni kunde läsa i kursboken. Svaret är att veckans föreläsningar mer handlar om “tiden före” boken. Jag tittade igenom boken igår och visst fins det saker ni kan läsa men bokens kapitel har en mer direkt koppling till föreläsningarna som kommer. Det vi prata om igår finns utspritt på väldigt många avsnitt i boken. Jesper   ",
-            "first_blogpost": {
-                "title": "Ang: Föreläsning 1",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "ASP.NET MVC",
-            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/",
-            "description": " Du registrerar dig själv på kursen, under vecka 44 och 45, via Ladok på webben, http://lpw.lnu.se.   OBS! OBS! OBS!   Du är behörig att läsa kursen under förutsättning att du uppfyller förkunskapskraven, d.v.s. har erhållit slutbetyg i kurserna (eller har motsvarande kunskaper):  1DV402, Inledande programmering med C#.  1IK415, Webbteknisk introduktion.  1DV403, Webbteknik I  1DV405, Databasteknik  1DV407, Objektorienterad analys och design med UML     ",
-            "first_blogpost": {
-                "title": "Självregistrering på kursen",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
-            "description": " Denna kurshemsida är för tillfället under uppdatering inför hösten 2014. När denna är klar för bruk så kommer ett nyhetsinlägg angående detta också att göras. Morgan ",
-            "first_blogpost": {
-                "title": "Kurshemsida under uppdatering",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Brukarorienterad design",
-            "url": "http://coursepress.lnu.se/kurs/brukarorienterad-design/",
-            "description": " Här kommer ett förtydligande inför utställningen nästa vecka. Distansstudenter: Här får ni lite inspiration för hur kandidatstudenter i Oslo har förmedlat sina projekt: http://sonen.ifi.uio.no/wiki/INF1510#V.C3.A5ren_2013 Era filmer ska vara runt (högst) 5 minuter, och de kommer att visas samtidigt som campusstudenterna ställer ut sina projekt på plats i Kalmar. Filmen ska handla mest om problemet/produkten/lösningen, men kan även innehålla “reklam” för hur det har varit att arbeta burkarorienterat. Era filmer kommer att rulla på skärmar, och ni kan koppla upp er på Connect eller Skype, så att ni är med under utställningen. Ni kan skicka era kopplingsscheman till Peter, så kanske vi har möjlighet att bygga upp era Arduino-artefakter för att ha på plats. I lokalen kommer vi att ha fyra bord, där campusgrupper ställer ut sina projekt/artefakter, samtidigt som de står där och kan diskutera med utställningsbesökare. Campusstudenterna ska ha sina egna datorer med sig. Alla grupper kan producera en affisch, som Peter kan skriva upp i A3-format. Affischerna ska hängas vid utställningen. Hoppas jag inte har glömt nås som ni skulle behöva veta. I så fall, hör av er via forumet, så lägger vi till detaljer. ",
-            "first_blogpost": {
-                "title": "Utställningen – instruktioner",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
             }
         },
         {
             "coursename": "Avancerade LAN-teknologier",
             "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
-            "description": " Kursen Avancerade LAN-teknologier (HT14) vid Linnéuniversitetet Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104. Kursen är en fördjupning inom virtuella lokala nätverk, loopfria nätverk och redundans. I första halvan av kursen kommer fokus främst ligga på teori och under andra halvan på praktiskt arbete även om laborationshandledning kommer förekomma kontinuerligt under hela kursen. Kursen har fyra examinerande moment (seminarium, tentamen, projekt och laboration) så det är många examinationer att förbereda sig för utspridda över hela kurstiden. För att bli godkänd på kursen är tanken att man självständigt ska kunna designa och konfigurera ett flerlagerswitchat nätverk. ",
+            "code": "1DV447",
+            "description": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.",
             "first_blogpost": {
-                "title": "",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "En levande diskussion",
+                "author": "Thomas Ivarsson",
+                "date": "2014-11-06 03:55"
             }
         },
         {
-            "coursename": "Interaktionsdesigner 180hp",
-            "url": "http://coursepress.lnu.se/program/interaktionsdesigner/",
-            "description": " Oliver Fornander har meddelat att han vill vara klassrepresentant för de av er som läser första året på distans. Vi välkomnar honom och tänk på att det är till honom ni kan vända er om ni vill att något skall framföras under våra programråd. Morgan ",
+            "coursename": "Inledande programmering med C#",
+            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/async.each(arr, iterator, function(args){
+            	// body
+            })",
+            "code": "1DV402",
+            "description": "Kursen Inledande programmering med C# är en fristående kurs och programkurs för studenter vid programmen “Utvecklare av digitala tjänster” och ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar grunderna i objektorienterad programmering där applikationer skrivs för konsolmiljön.",
             "first_blogpost": {
-                "title": "Klassrepresentant första året distans",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "Restredovisningar",
+                "author": "Mats Loock",
+                "date": "2014-11-06 13:26"
+            }
+        },
+        {
+            "coursename": "Klientbaserad webbutveckling",
+            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
+            "code": "1DV435",
+            "description": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.",
+            "first_blogpost": {
+                "title": "Hur går handledning och redovisning till",
+                "author": "John Häggerud",
+                "date": "2014-11-06 01:37"
+            }
+        },
+        {
+            "coursename": "Strukturerad programmering med C++",
+            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/",
+            "code": "1DV433",
+            "description": "I denna grundkurs lär du dig skapa console-baserade datorprogram på ett procedurorienterat sätt med programspråket C++. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial utom kurslitteraturen hämtas på denna webbplats – logga in med ditt studentkonto för att få tillgång till detta. (Bara registrerade kursdeltagare har tillgång till diskussionsgrupp eller gruppindelningar - anonyma besökare har begränsad åtkomst till webbmaterialet.)",
+            "first_blogpost": {
+                "title": "Kurslitteraturen som pdf",
+                "author": "Anne Norling",
+                "date": "2014-11-06 09:28"
+            }
+        },
+        {
+            "coursename": "Mjukvarutestning (Software Testing)",
+            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
+            "code": "2DV110",
+            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
+            "first_blogpost": {
+                "title": "Registration on the course",
+                "author": "Daniel Toll",
+                "date": "2014-11-06 01:06"
+            }
+        },
+        {
+            "coursename": "Design av grafiska gränssnitt",
+            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/",
+            "code": "1ME403",
+            "description": "Välkommen till kursen Design av grafiska gränssnitt!",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Grundläggande spelprogrammering",
+            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/",
+            "code": "1DV437",
+            "description": "Kursen i grundläggande spelprogrammering syftar till att ge studenterna en första inblick i spelprogrammering men även en god bas att bygga dator/tv/mobil-spel och andra interaktiva applikationer. Kursen är i sig programspråks och plattforms-oberoende. Detta betyder att studenten själv har en möjlighet att välja implementationsspråk och plattform. Tidigare år har spel till Android, XBox 360 och PC-plattformarna utvecklats av våra studenter. Valet av programspråk och plattform är mer beroende av studentens kunskaper och för att läsa kursen bör studenten ha goda kunskaper i implementationsspråket.",
+            "first_blogpost": {
+                "title": "Första föreläsningen renderad och klar",
+                "author": "Daniel Toll",
+                "date": "2014-11-03 03:23"
+            }
+        },
+        {
+            "coursename": "Webbteknik II",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
+            "code": "1DV449",
+            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
+            "first_blogpost": {
+                "title": "Quiz utlagd",
+                "author": "John Häggerud",
+                "date": "2014-11-06 11:09"
+            }
+        },
+        {
+            "coursename": "Iterativ mjukvaruutveckling",
+            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/",
+            "code": "1DV404",
+            "description": "Syfte och Innehåll",
+            "first_blogpost": {
+                "title": "Ang: Föreläsning 1",
+                "author": "Jesper Andersson",
+                "date": "2014-11-05 12:23"
+            }
+        },
+        {
+            "coursename": "ASP.NET MVC",
+            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/",
+            "code": "1DV409",
+            "description": "Kursen ASP.NET MVC är en kurs som inom ramen för programmet ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar planering och skapade av webbapplikationer med ASP.NET MVC 5. Webbapplikationernas persistenta data lagras i databaser och hanteras med främst Entity Framework.",
+            "first_blogpost": {
+                "title": "Ingen kurslitteratur?",
+                "author": "Mats Loock",
+                "date": "2014-11-05 11:13"
+            }
+        },
+        {
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
+            "code": "1DI101",
+            "description": "Kursen Grafisk Design ingår som obligatorisk kurs under andra året vid utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Målet med kursen är att studenten skall få en god förståelse för hur man skapar och tolkar bild för digitalt och analogt bruk. Studenten skall även kunna använda sig av designprocessen för att presentera bild och text via webblösningar, datorprogram samt för tryck. Fokus ligger på bildbehandling utifrån ett professionellt perspektiv med fokus på bildanalys och förståelse. Kursen består av följande två delkurser:",
+            "first_blogpost": {
+                "title": "Kurshemsida uppdaterad",
+                "author": "Morgan Rydbrink",
+                "date": "2014-11-05 01:05"
+            }
+        },
+        {
+            "coursename": "Brukarorienterad design",
+            "url": "http://coursepress.lnu.se/kurs/brukarorienterad-design/",
+            "code": "1IK430",
+            "description": "Kursen introducerar begrepp och metoder som ingår i brukarorienterad design. De studerande får både teoretisk och praktisk kunskap om hur de kan undersöka bruk av artefakter för interaktioner i vardag och i arbetsliv samt vilken betydelse studier av bruk har för interaktionsdesign. Kursen betonar också att design är en integrerad del av sammanhanget artefakten brukas i för kommunikation och interaktion. Dessutom betonas att andra ämnen är användbara för att berika analytiska perspektiv för att undersöka bruk av artefakter för interaktioner.",
+            "first_blogpost": {
+                "title": "Filmer",
+                "author": "Susanne Isaksson",
+                "date": "2014-11-05 01:10"
             }
         },
         {
             "coursename": "Webbteknik I",
             "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
-            "description": " Innehållet uppdateras för kursstart 3/11.   /Johan ",
+            "code": "1DV403",
+            "description": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.",
             "first_blogpost": {
-                "title": "Innehållet uppdateras",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "Missa inte introduktionsföreläsningen",
+                "author": "Johan Leitet",
+                "date": "2014-11-04 03:54"
             }
         },
         {
             "coursename": "RIA-utveckling med JavaScript",
             "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/",
-            "description": " Klockan är den 3:e november, och RIA-kursen är officiellt igång! Varmt välkomna!  Bästa startskottet är sidan “Presentation av kursen”. Ni som redan tjuvläst, missa inte att den nu är uppdaterad med en introduktionsvideo. Som ni kommer se i introduktionen är tanken att ni ska ha löpande handledning med mig, och dedikerade dagar för detta finns under sidan “Handledning”. Denna vecka är det onsdag och fredag. Hoppas träffa er där! Igen, varmt välkomna!    / David ",
+            "code": "2DV407",
+            "description": "…till kurswebben för Linnéuniversitets kurs RIA-utveckling med JavaScript som går av stapeln andra delen av höstterminen 2014! Denna kurs ges som en del av det frivilliga tredje året på programmet för Webbprogrammerare samt Utvecklare av digitala tjänster. Hela kursen ges på distans, inga aktiviteter på Campus förekommer.",
             "first_blogpost": {
                 "title": "Ready set go!",
-                "author": "",
-                "date": "",
-                "post_body": ""
-            }
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
-            "description": " Hej Här finns formulär för bokning av mittrelease. (tänk på att inte ändra någon annans bokning) https://docs.google.com/spreadsheets/d/1YBsrlotZ39NOG_KrmZZvlL9gzZpV77sP11SErgCgxbQ/edit#gid=0 Daniel ",
-            "first_blogpost": {
-                "title": "Projekt Mittrelease",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "author": "David Waller",
+                "date": "2014-11-03 05:46"
             }
         },
         {
             "coursename": "Objektorienterad analys och design med UML",
             "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/",
-            "description": " Feel free to test our the exam system using the link below. Post any feedback in the forums. You should be able to log in and get 3 questions (from the examples) and be able to upload files during a 90 minute period from when you log in. The beta will be open until tomorrow 12-ish. Examinator Beta ",
+            "code": "1DV407",
+            "description": "Kursen handlar om objektorientering med fokus på objektorienterad analys/domänmodellering och objektorienterad design med praktiska exempel i objektorienterad programmering.",
             "first_blogpost": {
-                "title": "Beta Exam System Online",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "Final Submission of Workshops",
+                "author": "Tobias Ohlsson",
+                "date": "2014-10-31 02:25"
+            }
+        },
+        {
+            "coursename": "Webbutveckling med PHP",
+            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
+            "code": "1DV408",
+            "description": "Kursen Webbutveckling med PHP, 7.5 Hp syftar till att ge er ett andra programmeringsspråk för serversidan. Den första delen handlar om språket PHP och hur objektorienterade applikationer kan skrivas med hjälp utav det. Men språkets grunder är bara början, kursen syftar också till att ge en djupare insikt i programmering… [läs mer...]",
+            "first_blogpost": {
+                "title": "Projekt rättade och betyg inlämnade",
+                "author": "Daniel Toll",
+                "date": "2014-10-31 11:30"
             }
         },
         {
             "coursename": "Ämnesintroduktion till interaktionsdesign",
             "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/",
-            "description": " Det kan vid flera tillfällen vara bra att även ha tillgång till enkäten. I vissa fall visas till exempel inte graderingen på skalorna i sammanställningen. Jag har lagt till en direktlänk till enkäten under “Dokumentation”. Morgan ",
+            "code": "1IK420",
+            "description": "Kursen Ämnesintroduktion till interaktionsdesign är den första kursen som ingår i utbildningsprogrammet interaktionsdesigner. Målet med kursen är att ge programstudenterna en grundläggande kunskap och förståelse kring vad interaktionsdesign och användarcentrerad design är. Detta innebär både historisk bakgrund, praktiska och teoretiska ämnen och områden som ingår samt möjliga arbetsområden. Under kursens gång går vi även igenom vilka verktyg och kunskap en interaktionsdesigner behöver. Fokus i kursen ligger på interaktionsdesignerns teoretiska samt professionella roll både inom arbetslivet men även inom akademin. Kursen består av sex delkurser:",
             "first_blogpost": {
-                "title": "Länk till enkäten",
-                "author": "",
-                "date": "",
-                "post_body": ""
+                "title": "Kompletterad information",
+                "author": "Morgan Rydbrink",
+                "date": "2014-10-31 09:28"
             }
         }
     ],
-    "scraped_courses": 20
+    "scraped_courses": 18
 }

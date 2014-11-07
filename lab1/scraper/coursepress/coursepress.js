@@ -16,9 +16,31 @@ var json = {
 	courses: [],
 	scraped_courses: 0
 };
+var regex = {
+	COURSE_PATTERN: /kurs/,
+	SYLLABUS_PATTERN: /GenerateDocument.ashx/,
+	DATE_PATTERN: /[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}/
+};
+
+// checks url to contain the word 'kurs'
+function isCourse (url) {
+	return url.match(regex.COURSE_PATTERN);
+}
+
+// returns parsed date from string
+function isDate (str) {
+	var date = str.match(regex.DATE_PATTERN) || ['non-parseable date']; // funny but ugly hack detected
+	return date[0];
+}
+
+//
+function fetchSyllabus (hrefCheerio) {
+	var hrefs = hrefCheerio;
+	return hrefs.match(regex.SYLLABUS_PATTERN);
+}
 
 // @loadedCheerio: a cheerio object with loaded dom
-// @scrapeobject: a JS object to write to
+// @callback: returns a course object
 function scrapeCourses (loadedCheerio, callback) {
 			if (!loadedCheerio) {
 				console.log('cheerio.getCourses: missing params.');
@@ -30,43 +52,42 @@ function scrapeCourses (loadedCheerio, callback) {
 			var course = {
 				coursename: '',
 				url: '',
+				number: '',
+				syllabus: '',
 				description: '',
 				first_blogpost: {
 					title: '',
 					author: '',
-					date: '',
-					post_body: ''
+					date: ''
 				}
 			};
 			data.each(function () {
-				course.coursename = data.text();
-				course.url = data[0].attribs['href'];
-				// make new request for each subpage,
-				// push to course {}
-				request(course.url, function (error, response, html) {
-					if (!error && response.statusCode === 200) {
-						var loader = cheerio.load(html, { normalizeWhitespace: true });
-						// short description of course
-						loader('div.entry-content').filter(function () {
-							var courseDescription = loader(this);
-							// TODO: Fix course description
-							// console.log(courseDescription.first().text());
-							// doc('div.entry-content').first('p').text()
-							course.description = courseDescription.first('p').text();
+					// if it's a course, use url, throw away otherwise
+					if (isCourse(data[0].attribs['href'])) {
+						course.url = data[0].attribs['href'];
+						course.coursename = data.text();
+						// make new request for each subpage,
+						// push to course {}
+						request(course.url, function (error, response, html) {
+							if (!error && response.statusCode === 200) {
+								var loader = cheerio.load(html, { normalizeWhitespace: true });
+								// TODO
+								//fetchSyllabus(loader('a').toString());
+								course.number = loader('#header-wrapper ul li + li + li > a').text() || 'no information';
+								// short description of course
+								// different formating for different courses
+								// get h1 + p first, which is most common
+								// get h2 + p second, uncommon
+								course.description = (loader('div.entry-content h1 + p').text() || loader('div.entry-content h2 + p').text()) || 'description not available';
+								// first blog post
+								course.first_blogpost.title = loader('header.entry-header').children().first().text() || 'no title'; // title or non-parseable title, from old coursepress site
+								course.first_blogpost.author = loader('p.entry-byline strong').first().text() || 'Anon teacher'; // name of author, or non-parseable.
+								course.first_blogpost.date = isDate(loader('p.entry-byline').first().text()); // YY-MM-DD HH:MM or non-parsable date
+								callback(course);
+							}
 						});
-						// first blog post
-						loader('header.entry-header').filter(function () {
-							var blogPost = loader(this);
-							// console.log(blogPost.children().first().text()); // h1 with title
-							console.log(blogPost.children().first()); // strong with author
-							course.first_blogpost.title = blogPost.children().first().text() || 'no title';
-							// course.first_blogpost.author = blogPost.children().second().text();
-						});
-
-					callback(course);
 					}
 				});
-			});
 		});
 }
 
@@ -82,8 +103,6 @@ function saveDataToJSON () {
 
 // used as callback when scraping
 function pushCourse (course) {
-	// console.log('pushCourse @course:');
-	// console.log(course);
 	json.courses.push(course);
 	json.scraped_courses = json.courses.length;
 }
