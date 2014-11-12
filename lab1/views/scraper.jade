@@ -2,12 +2,31 @@ include ./partials/header.jade
 
 div.row
 	div.col-md-4
-		h1 Scraper by
-			p
-				a(href='https://github.com/antonkand/1DV449_aa223ap' title='Link to Github') aa223ap
-		h3.bg-success Successfully scraped #{url}
+		h3.alert.alert-success Skrapade #{url}. Hittade #{number_of_courses} stycken kurser.
+		p Scraper by
+			a(href='https://github.com/antonkand/1DV449_aa223ap' title='Link to Github')  aa223ap
 
 	div.col-md-8
-		h3 This is what I've got for you.
-		a(href='#{jsonlink}')
-			p #{jsonname}
+		h3
+			a(href='#{jsonlink}')
+				strong #{jsonname}
+		p
+			each course in courses
+				div.alert.alert-info
+					ul.list-unstyled
+						li
+							h3
+								a(href='#{course.url}') #{course.number}: #{course.coursename}
+						li
+						p
+							a(href='#{course.syllabus}' class='btn btn-primary')
+								strong Kursplan
+						li
+							p
+								strong #{course.first_blogpost.title} <br>
+								skrivet #{course.first_blogpost.date} av #{course.first_blogpost.author}
+
+						li
+							p
+								em #{course.description}
+
