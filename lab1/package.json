@@ -4,14 +4,11 @@
   "description": "lab1 scrape",
   "main": "app.js",
   "dependencies": {
-    "c": "^0.1.0",
     "chalk": "^0.5.1",
     "cheerio": "^0.17.0",
     "consolidate": "^0.10.0",
     "express": "^4.10.1",
     "jade": "^1.7.0",
-    "nightmare": "^1.6.0",
-    "phantomjs": "^1.9.12",
     "request": "^2.47.0"
   },
   "devDependencies": {},

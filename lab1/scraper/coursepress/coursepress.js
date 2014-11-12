@@ -29,26 +29,39 @@ function isCourse (url) {
 
 // returns parsed date from string
 function isDate (str) {
-	var date = str.match(regex.DATE_PATTERN) || ['non-parseable date']; // funny but ugly hack detected
+	var date = str.match(regex.DATE_PATTERN) || ['non-parseable date']; // funny
 	return date[0];
 }
 
-//
+// returns true if no previous scraping was found,
+// or if scraped data is older than 5 minutes
+function cachedDataHasExpired () {
+	var cachedDate = new Date(require('../../public/scraped_data/coursepress.json').date_scraped).getMinutes() || null;
+	if (cachedDate) {
+		console.log(cachedDate - new Date().getMinutes());
+	}
+	else {
+		return true;
+	}
+}
+
+// matches links with syllabus generation
 function fetchSyllabus (hrefCheerio) {
 	var hrefs = hrefCheerio;
 	return hrefs.match(regex.SYLLABUS_PATTERN);
 }
 
-// @loadedCheerio: a cheerio object with loaded dom
+// @domRepresentation: a cheerio object with loaded dom
 // @callback: returns a course object
-function scrapeCourses (loadedCheerio, callback) {
-			if (!loadedCheerio) {
-				console.log('cheerio.getCourses: missing params.');
+function scrapeCourses (domRepresentation, callback) {
+			if (!domRepresentation) {
+				console.log('scrapeCourses: missing params.');
+			}
 			// load all the urls and titles,
 			// push to course {}
-			}
-			loadedCheerio('.item-title a').filter(function () {
-			var data = loadedCheerio(this);
+			cachedDataHasExpired();
+			domRepresentation('.item-title a').filter(function () {
+			var data = domRepresentation(this);
 			var course = {
 				coursename: '',
 				url: '',

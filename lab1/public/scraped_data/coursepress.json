@@ -1,79 +1,24 @@
 {
     "site": "http://coursepress.lnu.se/kurser",
-    "date_scraped": "2014-11-07T11:16:36.168Z",
+    "date_scraped": "2014-11-12T08:29:55.901Z",
     "courses": [
         {
-            "coursename": "Operativsystem",
-            "url": "http://coursepress.lnu.se/kurs/operativsystem/",
-            "code": "1DV012",
-            "description": "description not available",
+            "coursename": "Databasteknik och administration av databas",
+            "url": "http://coursepress.lnu.se/kurs/databasteknik-och-administration-av-databas/",
+            "number": "1DV423",
+            "syllabus": "",
+            "description": "På denna webbplats hittar du all information kring kursen. De flesta sidorna med sin information är helt öppna – ett fåtal sidor kräver inloggning beroende på att det är privat information.",
             "first_blogpost": {
-                "title": "no title",
-                "author": "Anon teacher",
-                "date": "non-parseable date"
-            }
-        },
-        {
-            "coursename": "Avancerade LAN-teknologier",
-            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
-            "code": "1DV447",
-            "description": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.",
-            "first_blogpost": {
-                "title": "En levande diskussion",
-                "author": "Thomas Ivarsson",
-                "date": "2014-11-06 03:55"
-            }
-        },
-        {
-            "coursename": "Inledande programmering med C#",
-            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/async.each(arr, iterator, function(args){
-            	// body
-            })",
-            "code": "1DV402",
-            "description": "Kursen Inledande programmering med C# är en fristående kurs och programkurs för studenter vid programmen “Utvecklare av digitala tjänster” och ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar grunderna i objektorienterad programmering där applikationer skrivs för konsolmiljön.",
-            "first_blogpost": {
-                "title": "Restredovisningar",
-                "author": "Mats Loock",
-                "date": "2014-11-06 13:26"
-            }
-        },
-        {
-            "coursename": "Klientbaserad webbutveckling",
-            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
-            "code": "1DV435",
-            "description": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.",
-            "first_blogpost": {
-                "title": "Hur går handledning och redovisning till",
-                "author": "John Häggerud",
-                "date": "2014-11-06 01:37"
-            }
-        },
-        {
-            "coursename": "Strukturerad programmering med C++",
-            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/",
-            "code": "1DV433",
-            "description": "I denna grundkurs lär du dig skapa console-baserade datorprogram på ett procedurorienterat sätt med programspråket C++. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial utom kurslitteraturen hämtas på denna webbplats – logga in med ditt studentkonto för att få tillgång till detta. (Bara registrerade kursdeltagare har tillgång till diskussionsgrupp eller gruppindelningar - anonyma besökare har begränsad åtkomst till webbmaterialet.)",
-            "first_blogpost": {
-                "title": "Kurslitteraturen som pdf",
-                "author": "Anne Norling",
-                "date": "2014-11-06 09:28"
-            }
-        },
-        {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
-            "code": "2DV110",
-            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
-            "first_blogpost": {
-                "title": "Registration on the course",
-                "author": "Daniel Toll",
-                "date": "2014-11-06 01:06"
+                "title": "Flyttad föreläsningar",
+                "author": "Jacob Lindehoff",
+                "date": "2014-11-11 07:26"
             }
         },
         {
             "coursename": "Design av grafiska gränssnitt",
             "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/",
-            "code": "1ME403",
+            "number": "1ME403",
+            "syllabus": "",
             "description": "Välkommen till kursen Design av grafiska gränssnitt!",
             "first_blogpost": {
                 "title": "no title",
@@ -82,42 +27,142 @@
             }
         },
         {
-            "coursename": "Grundläggande spelprogrammering",
-            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/",
-            "code": "1DV437",
-            "description": "Kursen i grundläggande spelprogrammering syftar till att ge studenterna en första inblick i spelprogrammering men även en god bas att bygga dator/tv/mobil-spel och andra interaktiva applikationer. Kursen är i sig programspråks och plattforms-oberoende. Detta betyder att studenten själv har en möjlighet att välja implementationsspråk och plattform. Tidigare år har spel till Android, XBox 360 och PC-plattformarna utvecklats av våra studenter. Valet av programspråk och plattform är mer beroende av studentens kunskaper och för att läsa kursen bör studenten ha goda kunskaper i implementationsspråket.",
+            "coursename": "Webbteknik II",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
+            "number": "1DV449",
+            "syllabus": "",
+            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
             "first_blogpost": {
-                "title": "Första föreläsningen renderad och klar",
-                "author": "Daniel Toll",
-                "date": "2014-11-03 03:23"
+                "title": "PI#2 och slö webbserver",
+                "author": "John Häggerud",
+                "date": "2014-11-11 04:29"
             }
         },
         {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
-            "code": "1DV449",
-            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
+            "coursename": "Grafiska verktyg",
+            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/",
+            "number": "1ME402",
+            "syllabus": "",
+            "description": "Välkommen till kursen!",
             "first_blogpost": {
-                "title": "Quiz utlagd",
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Strukturerad programmering med C++",
+            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/",
+            "number": "1DV433",
+            "syllabus": "",
+            "description": "I denna grundkurs lär du dig skapa console-baserade datorprogram på ett procedurorienterat sätt med programspråket C++. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial utom kurslitteraturen hämtas på denna webbplats – logga in med ditt studentkonto för att få tillgång till detta. (Bara registrerade kursdeltagare har tillgång till diskussionsgrupp eller gruppindelningar - anonyma besökare har begränsad åtkomst till webbmaterialet.)",
+            "first_blogpost": {
+                "title": "Schemaändring …",
+                "author": "Anne Norling",
+                "date": "2014-11-07 01:26"
+            }
+        },
+        {
+            "coursename": "Webbteknik I",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
+            "number": "1DV403",
+            "syllabus": "",
+            "description": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.",
+            "first_blogpost": {
+                "title": "Missa inte introduktionsföreläsningen",
+                "author": "Johan Leitet",
+                "date": "2014-11-04 03:54"
+            }
+        },
+        {
+            "coursename": "Klientbaserad webbutveckling",
+            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
+            "number": "1DV435",
+            "syllabus": "",
+            "description": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.",
+            "first_blogpost": {
+                "title": "Ytterligare förtydling",
                 "author": "John Häggerud",
-                "date": "2014-11-06 11:09"
+                "date": "2014-11-10 04:29"
+            }
+        },
+        {
+            "coursename": "Grundläggande spelprogrammering",
+            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/",
+            "number": "1DV437",
+            "syllabus": "",
+            "description": "Kursen i grundläggande spelprogrammering syftar till att ge studenterna en första inblick i spelprogrammering men även en god bas att bygga dator/tv/mobil-spel och andra interaktiva applikationer. Kursen är i sig programspråks och plattforms-oberoende. Detta betyder att studenten själv har en möjlighet att välja implementationsspråk och plattform. Tidigare år har spel till Android, XBox 360 och PC-plattformarna utvecklats av våra studenter. Valet av programspråk och plattform är mer beroende av studentens kunskaper och för att läsa kursen bör studenten ha goda kunskaper i implementationsspråket.",
+            "first_blogpost": {
+                "title": "På resa",
+                "author": "Daniel Toll",
+                "date": "2014-11-10 01:27"
+            }
+        },
+        {
+            "coursename": "Mjukvarutestning (Software Testing)",
+            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
+            "number": "2DV110",
+            "syllabus": "",
+            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
+            "first_blogpost": {
+                "title": "Travelling",
+                "author": "Daniel Toll",
+                "date": "2014-11-10 01:27"
+            }
+        },
+        {
+            "coursename": "Avancerade LAN-teknologier",
+            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
+            "number": "1DV447",
+            "syllabus": "",
+            "description": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.",
+            "first_blogpost": {
+                "title": "Fredagens “redovisning”",
+                "author": "Thomas Ivarsson",
+                "date": "2014-11-10 12:34"
+            }
+        },
+        {
+            "coursename": "Operativsystem",
+            "url": "http://coursepress.lnu.se/kurs/operativsystem/",
+            "number": "1DV012",
+            "syllabus": "",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
             }
         },
         {
             "coursename": "Iterativ mjukvaruutveckling",
             "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/",
-            "code": "1DV404",
+            "number": "1DV404",
+            "syllabus": "",
             "description": "Syfte och Innehåll",
             "first_blogpost": {
-                "title": "Ang: Föreläsning 1",
+                "title": "Laboration 1 tillgänglig",
                 "author": "Jesper Andersson",
-                "date": "2014-11-05 12:23"
+                "date": "2014-11-07 03:20"
+            }
+        },
+        {
+            "coursename": "Inledande programmering med C#",
+            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/",
+            "number": "1DV402",
+            "syllabus": "",
+            "description": "Kursen Inledande programmering med C# är en fristående kurs och programkurs för studenter vid programmen “Utvecklare av digitala tjänster” och ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar grunderna i objektorienterad programmering där applikationer skrivs för konsolmiljön.",
+            "first_blogpost": {
+                "title": "Restredovisningar",
+                "author": "Mats Loock",
+                "date": "2014-11-06 13:26"
             }
         },
         {
             "coursename": "ASP.NET MVC",
             "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/",
-            "code": "1DV409",
+            "number": "1DV409",
+            "syllabus": "",
             "description": "Kursen ASP.NET MVC är en kurs som inom ramen för programmet ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar planering och skapade av webbapplikationer med ASP.NET MVC 5. Webbapplikationernas persistenta data lagras i databaser och hanteras med främst Entity Framework.",
             "first_blogpost": {
                 "title": "Ingen kurslitteratur?",
@@ -128,7 +173,8 @@
         {
             "coursename": "Grafisk design",
             "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
-            "code": "1DI101",
+            "number": "1DI101",
+            "syllabus": "",
             "description": "Kursen Grafisk Design ingår som obligatorisk kurs under andra året vid utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Målet med kursen är att studenten skall få en god förståelse för hur man skapar och tolkar bild för digitalt och analogt bruk. Studenten skall även kunna använda sig av designprocessen för att presentera bild och text via webblösningar, datorprogram samt för tryck. Fokus ligger på bildbehandling utifrån ett professionellt perspektiv med fokus på bildanalys och förståelse. Kursen består av följande två delkurser:",
             "first_blogpost": {
                 "title": "Kurshemsida uppdaterad",
@@ -139,7 +185,8 @@
         {
             "coursename": "Brukarorienterad design",
             "url": "http://coursepress.lnu.se/kurs/brukarorienterad-design/",
-            "code": "1IK430",
+            "number": "1IK430",
+            "syllabus": "",
             "description": "Kursen introducerar begrepp och metoder som ingår i brukarorienterad design. De studerande får både teoretisk och praktisk kunskap om hur de kan undersöka bruk av artefakter för interaktioner i vardag och i arbetsliv samt vilken betydelse studier av bruk har för interaktionsdesign. Kursen betonar också att design är en integrerad del av sammanhanget artefakten brukas i för kommunikation och interaktion. Dessutom betonas att andra ämnen är användbara för att berika analytiska perspektiv för att undersöka bruk av artefakter för interaktioner.",
             "first_blogpost": {
                 "title": "Filmer",
@@ -148,20 +195,10 @@
             }
         },
         {
-            "coursename": "Webbteknik I",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
-            "code": "1DV403",
-            "description": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.",
-            "first_blogpost": {
-                "title": "Missa inte introduktionsföreläsningen",
-                "author": "Johan Leitet",
-                "date": "2014-11-04 03:54"
-            }
-        },
-        {
             "coursename": "RIA-utveckling med JavaScript",
             "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/",
-            "code": "2DV407",
+            "number": "2DV407",
+            "syllabus": "",
             "description": "…till kurswebben för Linnéuniversitets kurs RIA-utveckling med JavaScript som går av stapeln andra delen av höstterminen 2014! Denna kurs ges som en del av det frivilliga tredje året på programmet för Webbprogrammerare samt Utvecklare av digitala tjänster. Hela kursen ges på distans, inga aktiviteter på Campus förekommer.",
             "first_blogpost": {
                 "title": "Ready set go!",
@@ -172,34 +209,13 @@
         {
             "coursename": "Objektorienterad analys och design med UML",
             "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/",
-            "code": "1DV407",
+            "number": "1DV407",
+            "syllabus": "",
             "description": "Kursen handlar om objektorientering med fokus på objektorienterad analys/domänmodellering och objektorienterad design med praktiska exempel i objektorienterad programmering.",
             "first_blogpost": {
                 "title": "Final Submission of Workshops",
                 "author": "Tobias Ohlsson",
                 "date": "2014-10-31 02:25"
-            }
-        },
-        {
-            "coursename": "Webbutveckling med PHP",
-            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
-            "code": "1DV408",
-            "description": "Kursen Webbutveckling med PHP, 7.5 Hp syftar till att ge er ett andra programmeringsspråk för serversidan. Den första delen handlar om språket PHP och hur objektorienterade applikationer kan skrivas med hjälp utav det. Men språkets grunder är bara början, kursen syftar också till att ge en djupare insikt i programmering… [läs mer...]",
-            "first_blogpost": {
-                "title": "Projekt rättade och betyg inlämnade",
-                "author": "Daniel Toll",
-                "date": "2014-10-31 11:30"
-            }
-        },
-        {
-            "coursename": "Ämnesintroduktion till interaktionsdesign",
-            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/",
-            "code": "1IK420",
-            "description": "Kursen Ämnesintroduktion till interaktionsdesign är den första kursen som ingår i utbildningsprogrammet interaktionsdesigner. Målet med kursen är att ge programstudenterna en grundläggande kunskap och förståelse kring vad interaktionsdesign och användarcentrerad design är. Detta innebär både historisk bakgrund, praktiska och teoretiska ämnen och områden som ingår samt möjliga arbetsområden. Under kursens gång går vi även igenom vilka verktyg och kunskap en interaktionsdesigner behöver. Fokus i kursen ligger på interaktionsdesignerns teoretiska samt professionella roll både inom arbetslivet men även inom akademin. Kursen består av sex delkurser:",
-            "first_blogpost": {
-                "title": "Kompletterad information",
-                "author": "Morgan Rydbrink",
-                "date": "2014-10-31 09:28"
             }
         }
     ],
