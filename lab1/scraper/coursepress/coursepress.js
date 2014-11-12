@@ -36,11 +36,17 @@ function isDate (str) {
 // returns true if no previous scraping was found,
 // or if scraped data is older than 5 minutes
 function cachedDataHasExpired () {
-	var cachedDate = new Date(require('../../public/scraped_data/coursepress.json').date_scraped).getMinutes() || null;
-	if (cachedDate) {
-		console.log(cachedDate - new Date().getMinutes());
+	try {
+		var cachedDate = new Date(require('../../public/scraped_data/coursepress.json').date_scraped).getTime() || null;
+		if (cachedDate) {
+			var now = new Date().getTime();
+			return (now - cachedDate >= 300000);
+		}
+		else {
+			return true;
+		}
 	}
-	else {
+	catch (error) {
 		return true;
 	}
 }
@@ -59,7 +65,6 @@ function scrapeCourses (domRepresentation, callback) {
 			}
 			// load all the urls and titles,
 			// push to course {}
-			cachedDataHasExpired();
 			domRepresentation('.item-title a').filter(function () {
 			var data = domRepresentation(this);
 			var course = {
@@ -122,13 +127,17 @@ function pushCourse (course) {
 
 
 function scrape () {
-	request(options, function(error, response, html){
-			if (!error && response.statusCode === 200) {
-				var loader = cheerio.load(html, { normalizeWhitespace: true });
-				scrapeCourses(loader, pushCourse);
-			}
-		});
-		setTimeout(saveDataToJSON, 15000);
+	// expired data is older than 5 minutes
+	if (cachedDataHasExpired()) {
+
+		request(options, function(error, response, html){
+				if (!error && response.statusCode === 200) {
+					var loader = cheerio.load(html, { normalizeWhitespace: true });
+					scrapeCourses(loader, pushCourse);
+				}
+			});
+			setTimeout(saveDataToJSON, 15000);
+	}
 }
 
 var coursepress = {

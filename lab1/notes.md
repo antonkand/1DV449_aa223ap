@@ -20,10 +20,10 @@ Informationen som ska skrapas är:
 
 - [x] Din webbskrapas alla HTTP- anrop mot coursepress webbserver ska identifiera dig på lämpligt sätt.
 
-- [ ] URL till kursplanen
-
-- [ ] Du ska implementera en enklare cachingsstategi som gör att om man 
+- [x] Du ska implementera en enklare cachingsstategi som gör att om man 
 anropar sidan som kör ditt script ska bara själva skrapningen göras ifall fem minuter har passerat sedan sista gången. 
+
+- [ ] URL till kursplanen
 
 - [ ] Du ska skriva ner dina reflektioner (se nedan) i ett dokument i md- format som ska vara enkelt åtkommligt från ditt GitHub- repo.
 

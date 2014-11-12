@@ -10,8 +10,8 @@ module.exports = function (app) {
 		coursepress.scrape();
 		res.render('scraper', {
 			url: coursepress.url,
-			jsonlink: coursepress.jsonlink,
-			jsonname: coursepress.filename
+			jsonlink: coursepress.jsonlink || '' ,
+			jsonname: coursepress.filename ||	''
 		});
 	});
 };

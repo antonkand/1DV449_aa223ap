@@ -1,6 +1,6 @@
 {
     "site": "http://coursepress.lnu.se/kurser",
-    "date_scraped": "2014-11-12T08:29:55.901Z",
+    "date_scraped": "2014-11-12T08:56:01.236Z",
     "courses": [
         {
             "coursename": "Databasteknik och administration av databas",
@@ -27,18 +27,6 @@
             }
         },
         {
-            "coursename": "Webbteknik II",
-            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
-            "number": "1DV449",
-            "syllabus": "",
-            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
-            "first_blogpost": {
-                "title": "PI#2 och slö webbserver",
-                "author": "John Häggerud",
-                "date": "2014-11-11 04:29"
-            }
-        },
-        {
             "coursename": "Grafiska verktyg",
             "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/",
             "number": "1ME402",
@@ -48,6 +36,18 @@
                 "title": "no title",
                 "author": "Anon teacher",
                 "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Webbteknik II",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
+            "number": "1DV449",
+            "syllabus": "",
+            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
+            "first_blogpost": {
+                "title": "PI#2 och slö webbserver",
+                "author": "John Häggerud",
+                "date": "2014-11-11 04:29"
             }
         },
         {
@@ -99,18 +99,6 @@
             }
         },
         {
-            "coursename": "Mjukvarutestning (Software Testing)",
-            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
-            "number": "2DV110",
-            "syllabus": "",
-            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
-            "first_blogpost": {
-                "title": "Travelling",
-                "author": "Daniel Toll",
-                "date": "2014-11-10 01:27"
-            }
-        },
-        {
             "coursename": "Avancerade LAN-teknologier",
             "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
             "number": "1DV447",
@@ -120,6 +108,18 @@
                 "title": "Fredagens “redovisning”",
                 "author": "Thomas Ivarsson",
                 "date": "2014-11-10 12:34"
+            }
+        },
+        {
+            "coursename": "Mjukvarutestning (Software Testing)",
+            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
+            "number": "2DV110",
+            "syllabus": "",
+            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
+            "first_blogpost": {
+                "title": "Travelling",
+                "author": "Daniel Toll",
+                "date": "2014-11-10 01:27"
             }
         },
         {
@@ -171,18 +171,6 @@
             }
         },
         {
-            "coursename": "Grafisk design",
-            "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
-            "number": "1DI101",
-            "syllabus": "",
-            "description": "Kursen Grafisk Design ingår som obligatorisk kurs under andra året vid utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Målet med kursen är att studenten skall få en god förståelse för hur man skapar och tolkar bild för digitalt och analogt bruk. Studenten skall även kunna använda sig av designprocessen för att presentera bild och text via webblösningar, datorprogram samt för tryck. Fokus ligger på bildbehandling utifrån ett professionellt perspektiv med fokus på bildanalys och förståelse. Kursen består av följande två delkurser:",
-            "first_blogpost": {
-                "title": "Kurshemsida uppdaterad",
-                "author": "Morgan Rydbrink",
-                "date": "2014-11-05 01:05"
-            }
-        },
-        {
             "coursename": "Brukarorienterad design",
             "url": "http://coursepress.lnu.se/kurs/brukarorienterad-design/",
             "number": "1IK430",
@@ -192,6 +180,18 @@
                 "title": "Filmer",
                 "author": "Susanne Isaksson",
                 "date": "2014-11-05 01:10"
+            }
+        },
+        {
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
+            "number": "1DI101",
+            "syllabus": "",
+            "description": "Kursen Grafisk Design ingår som obligatorisk kurs under andra året vid utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Målet med kursen är att studenten skall få en god förståelse för hur man skapar och tolkar bild för digitalt och analogt bruk. Studenten skall även kunna använda sig av designprocessen för att presentera bild och text via webblösningar, datorprogram samt för tryck. Fokus ligger på bildbehandling utifrån ett professionellt perspektiv med fokus på bildanalys och förståelse. Kursen består av följande två delkurser:",
+            "first_blogpost": {
+                "title": "Kurshemsida uppdaterad",
+                "author": "Morgan Rydbrink",
+                "date": "2014-11-05 01:05"
             }
         },
         {
