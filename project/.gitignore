@@ -1,2 +1,3 @@
-node_modules
-backend/public/bower_components
+app/node_modules
+app/public/bower_components
+app/.idea
