@@ -27,7 +27,11 @@ anropar sidan som kör ditt script ska bara själva skrapningen göras ifall fem
 
 - [x] URL till kursplanen
 
-- [ ] Du ska skriva ner dina reflektioner (se nedan) i ett dokument i md- format som ska vara enkelt åtkommligt från ditt GitHub- repo.
+- [x] Du ska skriva ner dina reflektioner (se nedan) i ett dokument i md- format som ska vara enkelt åtkommligt från ditt GitHub- repo.
 
-- [ ] När du anser dig klar med uppgiften gör du en release/tag på GitHub. Döp den liknande L01- v.1.0. Vid eventuella kompletteringar gör du en ny release L01- v.1.1 o.s.v.
+- [x] Bonusar
+* - [x] Sortera datat i alfabetisk ordning
+* - [x] Rendera upp datat snyggt för användaren
+
+- [x] När du anser dig klar med uppgiften gör du en release/tag på GitHub. Döp den liknande L01- v.1.0. Vid eventuella kompletteringar gör du en ny release L01- v.1.1 o.s.v.
 

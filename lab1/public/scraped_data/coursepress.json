@@ -1,0 +1,823 @@
+{
+    "site": "http://coursepress.lnu.se/kurser",
+    "date_scraped": "2014-11-12T13:17:41.102Z",
+    "courses": [
+        {
+            "coursename": "3D-grafik",
+            "url": "http://coursepress.lnu.se/kurs/3d-grafik/",
+            "number": "2DV303",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV303&documenttype=pdf&lang=en",
+            "description": "Course in 3D grphics with 3ds max and java-OpenGL",
+            "first_blogpost": {
+                "title": "Examination of OpenGL Assignments",
+                "author": "Martin Blomberg",
+                "date": "2014-03-26 03:48"
+            }
+        },
+        {
+            "coursename": "ASP.NET MVC",
+            "url": "http://coursepress.lnu.se/kurs/aspnet-mvc/",
+            "number": "1DV409",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV409&documenttype=pdf&lang=sv",
+            "description": "Kursen ASP.NET MVC är en kurs som inom ramen för programmet ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar planering och skapade av webbapplikationer med ASP.NET MVC 5. Webbapplikationernas persistenta data lagras i databaser och hanteras med främst Entity Framework.",
+            "first_blogpost": {
+                "title": "Ingen kurslitteratur?",
+                "author": "Mats Loock",
+                "date": "2014-11-05 11:13"
+            }
+        },
+        {
+            "coursename": "ASP.NET Web Forms",
+            "url": "http://coursepress.lnu.se/kurs/aspnet-web-forms/",
+            "number": "1DV406",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV406&documenttype=pdf&lang=sv",
+            "description": "Kursen ASP.NET Web Forms är en programkurs för studenter vid programmen “Utvecklare av digitala tjänster” och ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar planering och skapade av webbapplikationer med ASP.NET Web Forms. Webbapplikationernas persistenta data lagras i databaser och hanteras med traditionell ADO.NET.",
+            "first_blogpost": {
+                "title": "Resttillfälle för stegtest",
+                "author": "Mats Loock",
+                "date": "2014-04-09 15:43"
+            }
+        },
+        {
+            "coursename": "Aktuella problem inom datavetenskap",
+            "url": "http://coursepress.lnu.se/kurs/aktuella-problem-inom-datavetenskap/",
+            "number": "2DV005",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV005&documenttype=pdf&lang=sv",
+            "description": "This is the main page for the course in JavaFX.",
+            "first_blogpost": {
+                "title": "Deadline",
+                "author": "Tobias Andersson-Gidlund",
+                "date": "2012-12-17 09:26"
+            }
+        },
+        {
+            "coursename": "Använda komponenter och APIer",
+            "url": "http://coursepress.lnu.se/kurs/anvanda-komponenter-och-apier/",
+            "number": "1DV436",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV436&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Förbättrad json kod",
+                "author": "Martin Blomberg",
+                "date": "2014-01-14 11:47"
+            }
+        },
+        {
+            "coursename": "Avancerade LAN-teknologier",
+            "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
+            "number": "1DV447",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV447&documenttype=pdf&lang=sv",
+            "description": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.",
+            "first_blogpost": {
+                "title": "Fredagens “redovisning”",
+                "author": "Thomas Ivarsson",
+                "date": "2014-11-10 12:34"
+            }
+        },
+        {
+            "coursename": "Brukarorienterad design",
+            "url": "http://coursepress.lnu.se/kurs/brukarorienterad-design/",
+            "number": "1IK430",
+            "syllabus": "http://api.kursinfo.lnu.se/GenerateDocument.ashx?templatetype=coursesyllabus&revision=2&code=1IK430&documenttype=pdf&lang=sv",
+            "description": "Kursen introducerar begrepp och metoder som ingår i brukarorienterad design. De studerande får både teoretisk och praktisk kunskap om hur de kan undersöka bruk av artefakter för interaktioner i vardag och i arbetsliv samt vilken betydelse studier av bruk har för interaktionsdesign. Kursen betonar också att design är en integrerad del av sammanhanget artefakten brukas i för kommunikation och interaktion. Dessutom betonas att andra ämnen är användbara för att berika analytiska perspektiv för att undersöka bruk av artefakter för interaktioner.",
+            "first_blogpost": {
+                "title": "Filmer",
+                "author": "Susanne Isaksson",
+                "date": "2014-11-05 01:10"
+            }
+        },
+        {
+            "coursename": "Computer Graphics",
+            "url": "http://coursepress.lnu.se/kurs/computer-graphics/",
+            "number": "1DV300",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV300&documenttype=pdf&lang=en",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Presentation times for your last assignments.",
+                "author": "Martin Blomberg",
+                "date": "2013-11-05 09:50"
+            }
+        },
+        {
+            "coursename": "Computer Networks administration",
+            "url": "http://coursepress.lnu.se/kurs/datornat-administration/",
+            "number": "1DV202",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV202&documenttype=pdf&lang=sv",
+            "description": "Welcome",
+            "first_blogpost": {
+                "title": "Friday’s seminar",
+                "author": "Marcus Wilhelmsson",
+                "date": "2013-05-22 01:10"
+            }
+        },
+        {
+            "coursename": "Computer Networks an introduction",
+            "url": "http://coursepress.lnu.se/kurs/computer-networks-an-introduction/",
+            "number": "1DV201",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV201&documenttype=pdf&lang=en",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Summer retake for assignments",
+                "author": "Kostiantyn Kucher",
+                "date": "2013-08-20 12:15"
+            }
+        },
+        {
+            "coursename": "Databasteknik och administration av databas",
+            "url": "http://coursepress.lnu.se/kurs/databasteknik-och-administration-av-databas/",
+            "number": "1DV423",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV423&documenttype=pdf&lang=sv",
+            "description": "På denna webbplats hittar du all information kring kursen. De flesta sidorna med sin information är helt öppna – ett fåtal sidor kräver inloggning beroende på att det är privat information.",
+            "first_blogpost": {
+                "title": "Flyttad föreläsningar",
+                "author": "Jacob Lindehoff",
+                "date": "2014-11-11 07:26"
+            }
+        },
+        {
+            "coursename": "Datavetenskap, självständigt arbete (högskoleexamen)",
+            "url": "http://coursepress.lnu.se/kurs/datavetenskap-sjalvstandigt-arbete-hogskoleexamen/",
+            "number": "1DV42E",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV42E&documenttype=pdf&lang=sv",
+            "description": "Kursen “Datavetenskap, självständigt arbete (högskoleexamen)” är avslutningskursen för den tvååriga utbildningen Webbprogrammerare 120hp. Det självständiga arbetet är uppdelat i två delar och för att bli godkänd på kursen krävs det att studenten dels programmerar och skapar något praktiskt samt formulerar en vetenskaplig frågeställning och skriver en rapport kring denna.",
+            "first_blogpost": {
+                "title": "Redovisnings- och examensvecka",
+                "author": "Johan Leitet",
+                "date": "2014-06-02 10:37"
+            }
+        },
+        {
+            "coursename": "Datorhårdvaruteknik",
+            "url": "http://coursepress.lnu.se/kurs/datorhardvaruteknik/",
+            "number": "1DV426",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV426&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Salsbyte även idag",
+                "author": "Marcus Wilhelmsson",
+                "date": "2014-04-24 07:33"
+            }
+        },
+        {
+            "coursename": "Design av grafiska gränssnitt",
+            "url": "http://coursepress.lnu.se/kurs/design-av-grafiska-granssnitt/",
+            "number": "1ME403",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1ME403&documenttype=pdf&lang=sv",
+            "description": "Välkommen till kursen Design av grafiska gränssnitt!",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Design och konceptvisualisering",
+            "url": "http://coursepress.lnu.se/kurs/design-och-konceptvisualisering/",
+            "number": "1IK418",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK418&documenttype=pdf&lang=sv",
+            "description": "Kursen Design och konceptvisaulisering, 1IK418, är en kurs som ingår i utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Kursen ges både på campus och distans under första året och är obligatorisk för samtliga studenter vid programmet. Under kursens gång vävs föreläsningar med praktiska uppgifter och diskussionsseminarier och avslutas med ett kortare projektarbete där den kunskap som erhållits under kursens gång sätts på prov. Kursen består av följande byggstenar:",
+            "first_blogpost": {
+                "title": "Komplettering av labb 3",
+                "author": "Susanne Isaksson",
+                "date": "2014-06-06 01:14"
+            }
+        },
+        {
+            "coursename": "Effektiviserad drift av datorsystem",
+            "url": "http://coursepress.lnu.se/kurs/effektiviserad-drift-av-datorsystem/",
+            "number": "1DV427",
+            "syllabus": "",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Tentamensåterlämning",
+                "author": "Marcus Wilhelmsson",
+                "date": "2013-01-24 10:10"
+            }
+        },
+        {
+            "coursename": "Examensarbete inom datavetenskap",
+            "url": "http://coursepress.lnu.se/kurs/examensarbete-inom-datavetenskap-2/",
+            "number": "2DV40E",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV40E&documenttype=pdf&lang=sv",
+            "description": "Här bör kursansvarig fylla i en beskrivning av kursen. Detta görs på sidan “Startsida”",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Examensarbete inom datavetenskap",
+            "url": "http://coursepress.lnu.se/kurs/examensarbete-inom-datavetenskap/",
+            "number": "1DV41E",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV41E&documenttype=pdf&lang=sv",
+            "description": "Här bör kursansvarig fylla i en beskrivning av kursen. Detta görs på sidan “Startsida”",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Examensarbete inom informatik, interaktionsdesign",
+            "url": "http://coursepress.lnu.se/kurs/examensarbete-inom-informatik-interaktionsdesign/",
+            "number": "2IK50E",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2IK50E&documenttype=pdf&lang=sv",
+            "description": "Kursen Examensarbete inom informatik, interaktionsdesign, är sista kursen som ges inom utbildningsprogrammet interaktionsdesigner vid Linnéuniversitetet. Kursen går under utbildningens sista tio veckor och genomförs på helfart. Under dessa tio veckor genomför studenten enskild eller i grupp sitt examensarbete i samråd med sin tilldelade handledare. Målet med kursen är att studenten skall kunna:",
+            "first_blogpost": {
+                "title": "Resttillfälle presentation examensarbete",
+                "author": "Morgan Rydbrink",
+                "date": "2013-08-05 09:07"
+            }
+        },
+        {
+            "coursename": "Examensarbete på kandidatnivå",
+            "url": "http://coursepress.lnu.se/kurs/examensarbete-pa-kandidatniva/",
+            "number": "2DV00E",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV00E&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Tidsschema på plats",
+                "author": "Mathias Hedenborg",
+                "date": "2014-05-28 08:10"
+            }
+        },
+        {
+            "coursename": "Grafisk design",
+            "url": "http://coursepress.lnu.se/kurs/grafisk-design/",
+            "number": "1DI101",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DI101&documenttype=pdf&lang=sv",
+            "description": "Kursen Grafisk Design ingår som obligatorisk kurs under andra året vid utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Målet med kursen är att studenten skall få en god förståelse för hur man skapar och tolkar bild för digitalt och analogt bruk. Studenten skall även kunna använda sig av designprocessen för att presentera bild och text via webblösningar, datorprogram samt för tryck. Fokus ligger på bildbehandling utifrån ett professionellt perspektiv med fokus på bildanalys och förståelse. Kursen består av följande två delkurser:",
+            "first_blogpost": {
+                "title": "Kurshemsida uppdaterad",
+                "author": "Morgan Rydbrink",
+                "date": "2014-11-05 01:05"
+            }
+        },
+        {
+            "coursename": "Grafiska verktyg",
+            "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/",
+            "number": "1ME402",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1ME402&documenttype=pdf&lang=sv",
+            "description": "Välkommen till kursen!",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Grundläggande operativsystem",
+            "url": "http://coursepress.lnu.se/kurs/grundlaggande-operativsystem/",
+            "number": "1DV415",
+            "syllabus": "",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Projekten ute samt alla tentamensfrågor",
+                "author": "Marcus Wilhelmsson",
+                "date": "2014-01-13 09:23"
+            }
+        },
+        {
+            "coursename": "Grundläggande spelprogrammering",
+            "url": "http://coursepress.lnu.se/kurs/grundlaggande-spelprogrammering/",
+            "number": "1DV437",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV437&documenttype=pdf&lang=sv",
+            "description": "Kursen i grundläggande spelprogrammering syftar till att ge studenterna en första inblick i spelprogrammering men även en god bas att bygga dator/tv/mobil-spel och andra interaktiva applikationer. Kursen är i sig programspråks och plattforms-oberoende. Detta betyder att studenten själv har en möjlighet att välja implementationsspråk och plattform. Tidigare år har spel till Android, XBox 360 och PC-plattformarna utvecklats av våra studenter. Valet av programspråk och plattform är mer beroende av studentens kunskaper och för att läsa kursen bör studenten ha goda kunskaper i implementationsspråket.",
+            "first_blogpost": {
+                "title": "På resa",
+                "author": "Daniel Toll",
+                "date": "2014-11-10 01:27"
+            }
+        },
+        {
+            "coursename": "Gränssnittsutveckling - användarvänlighet och tillgänglighet",
+            "url": "http://coursepress.lnu.se/kurs/granssnittsutveckling-anvandarvanlighet-och-tillganglighet/",
+            "number": "1IK419",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK419&documenttype=pdf&lang=sv",
+            "description": "För att skapa effektiva, attraktiva och användbara användargränssnitt gäller det att få flera pusselbitar att falla på plats. Gränssnittet behöver vara anpassat till sin målgrupp och det behöver vara utformat så att det är lätt att förstå och lätt att använda. Dessutom ska gränssnittet utföra en uppgift som är meningsfull för dess användare, t ex att informera användaren på ett effektivt och/eller underhållande sätt eller utföra någon nyttig tjänst. Sist, men inte minst, bör det också vara estetiskt tilltalande. I den här kursen får du lära dig att hantera de verktyg man använder för att skapa grafisk material. Vidare får du lära dig att anpassa design, layout och funktion till den tänkta målgruppen och du får lära dig tekniker för hur man gör för att skapa ett användargränssnitt som är användbart på riktigt, dvs fyller ett syfte för sin målgrupp och som tar hänsyn till den mänskliga användarens förutsättningar och begränsningar.",
+            "first_blogpost": {
+                "title": "Virtuella klassrumen",
+                "author": "Peter Adiels",
+                "date": "2014-04-03 10:29"
+            }
+        },
+        {
+            "coursename": "Individuellt mjukvaruutvecklingsprojekt",
+            "url": "http://coursepress.lnu.se/kurs/individuellt-mjukvaruutvecklingsprojekt/",
+            "number": "1DV430",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV430&documenttype=pdf&lang=sv",
+            "description": "I denna kurs får du arbeta individuellt med att ta fram en mjukvara från idé till färdig applikation. Du kommer att arbeta mycket med programmering, krav, planering och testning. Till din hjälp har du ett antal kurskamrater som arbetar med liknande idéer eller liknande tekniker samt handledarmöten varje vecka. Du kommer att arbeta iterativt med en SCRUM-liknande arbetsprocess. Kursen har ett entrepenöriellt fokus och innehåller ett antal gästföreläsningar från olika organisationer och näringslivet. Kursen avslutas med en gemensam redovisning där du får visa upp din applikation och berätta om dina erfarenheter under utvecklingen.",
+            "first_blogpost": {
+                "title": "Kompletteringar och Omexaminationer",
+                "author": "Tobias Ohlsson",
+                "date": "2014-07-27 04:16"
+            }
+        },
+        {
+            "coursename": "Inledande programmering med C#",
+            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-csharp/",
+            "number": "1DV402",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV402&documenttype=pdf&lang=sv",
+            "description": "Kursen Inledande programmering med C# är en fristående kurs och programkurs för studenter vid programmen “Utvecklare av digitala tjänster” och ”Webbprogrammerare” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar grunderna i objektorienterad programmering där applikationer skrivs för konsolmiljön.",
+            "first_blogpost": {
+                "title": "Restredovisningar",
+                "author": "Mats Loock",
+                "date": "2014-11-06 13:26"
+            }
+        },
+        {
+            "coursename": "Inledande programmering med Java",
+            "url": "http://coursepress.lnu.se/kurs/inledande-programmering-med-java/",
+            "number": "1DV432",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV432&documenttype=pdf&lang=sv",
+            "description": "I denna grundläggande kurs lär du dig att skapa objektorienterade datorprogram med programspråket Java. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial, förutom kurslitteraturen, finner du på denna webbplats.",
+            "first_blogpost": {
+                "title": "Dags för kursvärdering!",
+                "author": "Anne Norling",
+                "date": "2014-07-09 01:48"
+            }
+        },
+        {
+            "coursename": "Introduktion till informationsteknik",
+            "url": "http://coursepress.lnu.se/kurs/introduktion-till-informationsteknik/",
+            "number": "1IK426",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK426&documenttype=pdf&lang=sv",
+            "description": "Kursens syfte är att ge studenten en orientering i vad informationsteknik är, hur den fungerar och kan användas samt vad användandet av den kan innebära för individer, grupper och samhällen.",
+            "first_blogpost": {
+                "title": "Komplettering/Omexamination",
+                "author": "Patrik Brandt",
+                "date": "2014-01-11 05:25"
+            }
+        },
+        {
+            "coursename": "Iterativ mjukvaruutveckling",
+            "url": "http://coursepress.lnu.se/kurs/iterativ-mjukvaruutveckling/",
+            "number": "1DV404",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV404&documenttype=pdf&lang=sv",
+            "description": "Syfte och Innehåll",
+            "first_blogpost": {
+                "title": "Laboration 1 tillgänglig",
+                "author": "Jesper Andersson",
+                "date": "2014-11-07 03:20"
+            }
+        },
+        {
+            "coursename": "Klientbaserad webbutveckling",
+            "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
+            "number": "1DV435",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV435&documenttype=pdf&lang=sv",
+            "description": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.",
+            "first_blogpost": {
+                "title": "Ytterligare förtydling",
+                "author": "John Häggerud",
+                "date": "2014-11-10 04:29"
+            }
+        },
+        {
+            "coursename": "Linuxadministration I",
+            "url": "http://coursepress.lnu.se/kurs/linuxadministration-i/",
+            "number": "1DV417",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV417&documenttype=pdf&lang=sv",
+            "description": "Detta är webbplatsen för kursen Linuxadministration I 1DV417.",
+            "first_blogpost": {
+                "title": "Tentamensåterlämning",
+                "author": "Marcus Wilhelmsson",
+                "date": "2014-04-03 03:39"
+            }
+        },
+        {
+            "coursename": "Linuxadministration II",
+            "url": "http://coursepress.lnu.se/kurs/linuxadministration-ii/",
+            "number": "1DV421",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV421&documenttype=pdf&lang=sv",
+            "description": "Välkommen till Linuxadministration II 1DV421 som ges för år 2 på IT-teknikerprogrammet.",
+            "first_blogpost": {
+                "title": "Revidering av laboration 3.",
+                "author": "Peter Sönnerfors",
+                "date": "2014-10-15 01:45"
+            }
+        },
+        {
+            "coursename": "Metoder för interaktionsdesign II",
+            "url": "http://coursepress.lnu.se/kurs/metoder-for-interaktionsdesign-ii/",
+            "number": "1IK433",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&revision=1.000&code=1IK433&documenttype=pdf&lang=sv",
+            "description": "Kursen Metoder för Interaktionsdesign II, 1IK433, är en obligatorisk programkurs vid utbildningsprogrammet Interaktionsdesigner. Kursen ges endast för programstudenter och ges både campus och distans. Under kursens gång vävs föreläsningar kring designemtoder och processer och dess koppling till användarcenterad design ihop med praktiska och teoretiska uppgifter och laborationer. Kursen består av tre delkurser:",
+            "first_blogpost": {
+                "title": "Redovisningstider",
+                "author": "Johan Malmquist",
+                "date": "2014-03-25 10:59"
+            }
+        },
+        {
+            "coursename": "Metoder för interaktionsdesign I",
+            "url": "http://coursepress.lnu.se/kurs/metoder-for-interaktionsdesign-i/",
+            "number": "1IK422",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK422&documenttype=pdf&lang=sv",
+            "description": "Kursen Metoder för Interaktionsdesign, 1IK422, är en kurs som ingår i utbildningsprogrammet interaktionsdesigner, 180hp, vid Linnéuniversitetet. Kursen ges på campus samt distans och är en obligatorisk kurs för samtliga studenter som läser programmet. Under kursens gång vävs föreläsningar kring projektledning, prototyping och användbarhetsutvärdering ihop med praktiska uppgifter och seminarier med fokus på metoder som gagnas i yrkesrollen som interaktionsdesigner. Kursen består av följande fyra moment:",
+            "first_blogpost": {
+                "title": "Inspelning projektintroduktion",
+                "author": "Morgan Rydbrink",
+                "date": "2014-02-26 02:24"
+            }
+        },
+        {
+            "coursename": "Mjukvarutestning (Software Testing)",
+            "url": "http://coursepress.lnu.se/kurs/mjukvarutestning/",
+            "number": "2DV110",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV110&documenttype=pdf&lang=sv",
+            "description": "The aim of the course is to provide students with basic knowledge in software testing.",
+            "first_blogpost": {
+                "title": "Travelling",
+                "author": "Daniel Toll",
+                "date": "2014-11-10 01:27"
+            }
+        },
+        {
+            "coursename": "Moderna applikationsmiljöer",
+            "url": "http://coursepress.lnu.se/kurs/moderna-applikationsmiljoer/",
+            "number": "2DV400",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV400&documenttype=pdf&lang=sv",
+            "description": "Kursen Moderna applikationsmiljöer syftar till att undersöka och presentera funktionaliteten hos en modern applikationsmiljö. Som avslutning i kursen hålls en föreläsning om varje applikationsområde som det har arbetats med i kursen.",
+            "first_blogpost": {
+                "title": "Inspelade presentationer",
+                "author": "Martin Blomberg",
+                "date": "2012-11-13 11:11"
+            }
+        },
+        {
+            "coursename": "Nätverksprojekt",
+            "url": "http://coursepress.lnu.se/kurs/natverksprojekt/",
+            "number": "1DV420",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&revision=2.000&code=1DV420&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Förtydliganden av rapportuppgifter",
+                "author": "Mathias Hedenborg",
+                "date": "2014-10-20 10:20"
+            }
+        },
+        {
+            "coursename": "Nätverkssäkerhet",
+            "url": "http://coursepress.lnu.se/kurs/natverkssakerhet/",
+            "number": "1DV425",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV425&documenttype=pdf&lang=sv",
+            "description": "Kursen Nätverkssäkerhet 1DV425 är en kurs som ingår i utbildningsprogrammet IT-tekniker vid Linnéuniversitetet.",
+            "first_blogpost": {
+                "title": "Tentamensåterlämning",
+                "author": "Marcus Wilhelmsson",
+                "date": "2014-04-11 02:07"
+            }
+        },
+        {
+            "coursename": "Nätverkssäkerhet fördjupning",
+            "url": "http://coursepress.lnu.se/kurs/natverkssakerhet-fordjupning/",
+            "number": "2DV404",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV404&documenttype=pdf&lang=sv",
+            "description": "Välkommen till kurshemsidan!",
+            "first_blogpost": {
+                "title": "Seminarie 3",
+                "author": "Patrik Brandt",
+                "date": "2013-01-09 01:34"
+            }
+        },
+        {
+            "coursename": "Nätverksteknik I",
+            "url": "http://coursepress.lnu.se/kurs/natverksteknik-i/",
+            "number": "1DV414",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV414&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Extra laborationstillfälle",
+                "author": "Marcus Wilhelmsson",
+                "date": "2013-11-22 10:52"
+            }
+        },
+        {
+            "coursename": "Nätverksteknik II",
+            "url": "http://coursepress.lnu.se/kurs/natverksteknik-ii/",
+            "number": "1DV418",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV418&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "WAN – Practical & Theoretical exam schedule",
+                "author": "Huseyin Kayahan",
+                "date": "2014-05-28 11:56"
+            }
+        },
+        {
+            "coursename": "Objektorienterad analys och design med UML",
+            "url": "http://coursepress.lnu.se/kurs/objektorienterad-analys-och-design-med-uml/",
+            "number": "1DV407",
+            "syllabus": "",
+            "description": "Kursen handlar om objektorientering med fokus på objektorienterad analys/domänmodellering och objektorienterad design med praktiska exempel i objektorienterad programmering.",
+            "first_blogpost": {
+                "title": "Final Submission of Workshops",
+                "author": "Tobias Ohlsson",
+                "date": "2014-10-31 02:25"
+            }
+        },
+        {
+            "coursename": "Objektorienterad programmering med C++",
+            "url": "http://coursepress.lnu.se/kurs/objektorienterad-programmering-med-cplusplus/",
+            "number": "1DV434",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV434&documenttype=pdf&lang=sv",
+            "description": "I denna fortsättningskurs lär du dig att skapa objektorienterade datorprogram med programspråket C++. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial utom kurslitteraturen hämtar du på denna webbplats.",
+            "first_blogpost": {
+                "title": "Dags för kursvärdering!",
+                "author": "Anne Norling",
+                "date": "2014-06-11 09:35"
+            }
+        },
+        {
+            "coursename": "Operativsystem",
+            "url": "http://coursepress.lnu.se/kurs/operativsystem/",
+            "number": "1DV012",
+            "syllabus": "",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Organisation, ledarskap och kulturella perspektiv",
+            "url": "http://coursepress.lnu.se/kurs/organisation-ledarskap-och-kulturella-perspektiv/",
+            "number": "1IL240",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IL240&documenttype=pdf&lang=sv",
+            "description": "Här bör kursansvarig fylla i en beskrivning av kursen. Detta görs på sidan “Startsida”",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Projektarbete i grupp",
+            "url": "http://coursepress.lnu.se/kurs/projektarbeteigrupp/",
+            "number": "2DV409",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV409&documenttype=pdf&lang=sv",
+            "description": "Här bör kursansvarig fylla i en beskrivning av kursen. Detta görs på sidan “Startsida”",
+            "first_blogpost": {
+                "title": "Presentationer",
+                "author": "Martin Blomberg",
+                "date": "2014-06-03 09:13"
+            }
+        },
+        {
+            "coursename": "Projektarbete med vetenskapsteori",
+            "url": "http://coursepress.lnu.se/kurs/projektarbete-med-vetenskapsteori/",
+            "number": "2IK400",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2IK400&documenttype=pdf&lang=sv",
+            "description": "Kursen Projektarbete med vetenskapsteori 2IK400 är en kurs som ingår i utbildningsprogrammet Interaktionsdesign 180 hp vid Linnéuniversitetet. Kursen ges både på campus samt distans och är en obligatorisk kurs för samtliga tredjeårsstudenter vid programmet. Kursen består av två delar, vetenskapsteori samt en skarp fallstudie mot utvalda företag. Målet med kursen är dels att studenterna skall få praktiskt applicera de kunskaper som de fått hittills under programmets gång, men även att förbereda dem inför de kommande examensarbetet. Slutresultatet av kursen är ett praktiskt arbete samt motsvarande en uppsats på kandidatnivå. Efter kursens slut skall studenten dels fått praktisera sina färdigheter samt vara på det klara med vad som krävs inför genomförandet av examensarbetet. Kursen genomförs i stort i mindre grupper även om individuella delar ingår.",
+            "first_blogpost": {
+                "title": "Presentationsschema",
+                "author": "Morgan Rydbrink",
+                "date": "2013-03-18 10:04"
+            }
+        },
+        {
+            "coursename": "RIA-utveckling med JavaScript",
+            "url": "http://coursepress.lnu.se/kurs/ria-utveckling-med-javascript/",
+            "number": "2DV407",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV407&documenttype=pdf&lang=sv",
+            "description": "…till kurswebben för Linnéuniversitets kurs RIA-utveckling med JavaScript som går av stapeln andra delen av höstterminen 2014! Denna kurs ges som en del av det frivilliga tredje året på programmet för Webbprogrammerare samt Utvecklare av digitala tjänster. Hela kursen ges på distans, inga aktiviteter på Campus förekommer.",
+            "first_blogpost": {
+                "title": "Ready set go!",
+                "author": "David Waller",
+                "date": "2014-11-03 05:46"
+            }
+        },
+        {
+            "coursename": "Servervirtualisering, tekniker",
+            "url": "http://coursepress.lnu.se/kurs/servervirtualisering-tekniker/",
+            "number": "2DV403",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV403&documenttype=pdf&lang=sv",
+            "description": "Välkommna till den här kursen, ni hittar all information om kursen via menyn till vänster. Jacob Lindehoff, kursansvarig",
+            "first_blogpost": {
+                "title": "Inget seminare vecka 42",
+                "author": "Jacob Lindehoff",
+                "date": "2014-10-09 02:36"
+            }
+        },
+        {
+            "coursename": "Shaderprogrammering",
+            "url": "http://coursepress.lnu.se/kurs/shaderprogrammering/",
+            "number": "1DV438",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV438&documenttype=pdf&lang=sv",
+            "description": "Kursen innehåller teori och praktiska tillämpningar av linjär algebra, shaderprogrammering och 3D-grafik i realtid. I kursen finns det 6 stycken laborationer samt en skriftlig tentamen som ska genomföras.",
+            "first_blogpost": {
+                "title": "Omtentamen",
+                "author": "Martin Blomberg",
+                "date": "2014-04-01 01:08"
+            }
+        },
+        {
+            "coursename": "Strukturerad programmering med C++",
+            "url": "http://coursepress.lnu.se/kurs/strukturerad-programmering-med-cplusplus/",
+            "number": "1DV433",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV433&documenttype=pdf&lang=sv",
+            "description": "I denna grundkurs lär du dig skapa console-baserade datorprogram på ett procedurorienterat sätt med programspråket C++. Kursen består av teorimoment (3,5p) och praktiska tillämpningar (4p). Allt kursmaterial utom kurslitteraturen hämtas på denna webbplats – logga in med ditt studentkonto för att få tillgång till detta. (Bara registrerade kursdeltagare har tillgång till diskussionsgrupp eller gruppindelningar - anonyma besökare har begränsad åtkomst till webbmaterialet.)",
+            "first_blogpost": {
+                "title": "Schemaändring …",
+                "author": "Anne Norling",
+                "date": "2014-11-07 01:26"
+            }
+        },
+        {
+            "coursename": "Systemadministration med PowerShell",
+            "url": "http://coursepress.lnu.se/kurs/systemadministration-med-powershell/",
+            "number": "1DV419",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV419&documenttype=pdf&lang=sv",
+            "description": "Kursen Systemadministration med Powershell är en programkurs för studenter vid programmet IT-tekniker vid Linnéuniversitetet i Kalmar. Kursen ger en introduktion till skriptprogrammering och strukturen i PowerShell. Kursen innehåller moment som syntax, hantering av skriptfiler, cmdlets, hantering av Active Directory, automatisering av uppgifter.",
+            "first_blogpost": {
+                "title": "Sista föreläsningarna publicerade",
+                "author": "Jacob Lindehoff",
+                "date": "2014-04-29 09:26"
+            }
+        },
+        {
+            "coursename": "Tillämpad interaktionsdesign",
+            "url": "http://coursepress.lnu.se/kurs/tillampad-interaktionsdesign/",
+            "number": "1IK414",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK414&documenttype=pdf&lang=sv",
+            "description": "Kursen 1IK414 Tillämpad Interaktionsdesign är en kurs som ingår i utbildningsprogrammet Interaktionsdesigner vid Linnéuniversitetet. Kursen ges under andra året för studenter vid programmet. Under kursens gång genomförs ett skarpt projekt mot företag inom IT-sektor och produktutveckling. Under kursens gång vävs föreläsningar kring användarcentrerad design och tjänstedesign ihop med praktiska uppgifter där kunskapen från kurslitteratur och föreläsningar praktiskt appliceras i de praktiskt projekt som genomförs mot företag.",
+            "first_blogpost": {
+                "title": "Slutbetyg",
+                "author": "Thomas Ivarsson",
+                "date": "2014-06-13 11:06"
+            }
+        },
+        {
+            "coursename": "Tillämpad kvantmekanik",
+            "url": "http://coursepress.lnu.se/kurs/tillampad-kvantmekanik/",
+            "number": "2FY808",
+            "syllabus": "",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "no title",
+                "author": "Anon teacher",
+                "date": "non-parseable date"
+            }
+        },
+        {
+            "coursename": "Vetenskapsmetod och teori",
+            "url": "http://coursepress.lnu.se/kurs/vetenskapsmetod-och-teori/",
+            "number": "4IK024",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=4IK024&documenttype=pdf&lang=sv",
+            "description": "I denna kurs ska du tillägna dig grundläggande kunskaper om vetenskapsteori med speciell fokus på metoder inom ämnesområdet datavetenskap.",
+            "first_blogpost": {
+                "title": "Is mathematics more art than science?",
+                "author": "Patrik Brandt",
+                "date": "2014-01-08 04:47"
+            }
+        },
+        {
+            "coursename": "Visualisering i 3D",
+            "url": "http://coursepress.lnu.se/kurs/visualisering-i-3d/",
+            "number": "1IK407",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK407&documenttype=pdf&lang=sv",
+            "description": "Grundläggande kurs i 3D visualisering/modellering",
+            "first_blogpost": {
+                "title": "Inte uppdaterad sida",
+                "author": "Peter Adiels",
+                "date": "2013-10-08 08:25"
+            }
+        },
+        {
+            "coursename": "Web management",
+            "url": "http://coursepress.lnu.se/kurs/web-management/",
+            "number": "1IK424",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK424&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Restredovisning",
+                "author": "John Häggerud",
+                "date": "2014-07-07 12:20"
+            }
+        },
+        {
+            "coursename": "Webbprojekt I",
+            "url": "http://coursepress.lnu.se/kurs/webbprojekt-i/",
+            "number": "1DV411",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV411&documenttype=pdf&lang=sv",
+            "description": "I denna kurs får du arbeta i grupp och utveckla en webbaserad applikation med en riktig kund. Vi strävar efter att erbjuda alla grupper kunder från näringslivet och du får praktisera dina kunskaper inom programmering, kundkontakt, analys och design, versionshantering, kravhantering, testning, agil-projektledning m.m. under så verkliga förhållanden som möjligt. Varje vecka har du ett handledningsmöte där din grupp presenterar veckans resultat, ev. problem och vägen framåt. Kursen avslutas med en gemensam redovisning.",
+            "first_blogpost": {
+                "title": "Examination",
+                "author": "Tobias Ohlsson",
+                "date": "2014-04-17 04:13"
+            }
+        },
+        {
+            "coursename": "Webbramverk",
+            "url": "http://coursepress.lnu.se/kurs/webbramverk/",
+            "number": "1DV450",
+            "syllabus": "",
+            "description": "Många av dagens webbutvecklingsprojekt använder sig av färdiga webbramverk för att underlätta och snabba på utvecklingen. I denna kurs kommer vi koncentrera oss till två av de mer populära webbramverken som används idag, Ruby on Rails och AngularJS.",
+            "first_blogpost": {
+                "title": "Sista restinsamlingen gjord",
+                "author": "John Häggerud",
+                "date": "2014-05-21 06:31"
+            }
+        },
+        {
+            "coursename": "Webbteknik I",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
+            "number": "1DV403",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV403&documenttype=pdf&lang=sv",
+            "description": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.",
+            "first_blogpost": {
+                "title": "Missa inte introduktionsföreläsningen",
+                "author": "Johan Leitet",
+                "date": "2014-11-04 03:54"
+            }
+        },
+        {
+            "coursename": "Webbteknik II",
+            "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
+            "number": "1DV449",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV449&documenttype=pdf&lang=sv",
+            "description": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.",
+            "first_blogpost": {
+                "title": "PI#2 och slö webbserver",
+                "author": "John Häggerud",
+                "date": "2014-11-11 04:29"
+            }
+        },
+        {
+            "coursename": "Webbteknisk Introduktion",
+            "url": "http://coursepress.lnu.se/kurs/webbteknisk-introduktion/",
+            "number": "1IK415",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK415&documenttype=pdf&lang=sv",
+            "description": "Kursen Webbteknisk introduktion är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans. Kursen behandlar grundläggande HTML/CSS, SEO (sökmotoroptimering) och anpassning av webbsidor för mobila enheter. Att lära sig skapa tillgängliga webbgränssnitt är en röd tråd genom hela kursen.",
+            "first_blogpost": {
+                "title": "Restredovisningspass",
+                "author": "Johan Leitet",
+                "date": "2014-10-28 04:03"
+            }
+        },
+        {
+            "coursename": "Webbutveckling med PHP",
+            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
+            "number": "1DV408",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV408&documenttype=pdf&lang=sv",
+            "description": "Kursen Webbutveckling med PHP, 7.5 Hp syftar till att ge er ett andra programmeringsspråk för serversidan. Den första delen handlar om språket PHP och hur objektorienterade applikationer kan skrivas med hjälp utav det. Men språkets grunder är bara början, kursen syftar också till att ge en djupare insikt i programmering… [läs mer...]",
+            "first_blogpost": {
+                "title": "Projekt rättade och betyg inlämnade",
+                "author": "Daniel Toll",
+                "date": "2014-10-31 11:30"
+            }
+        },
+        {
+            "coursename": "Webbutveckling med PHP II",
+            "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php-ii/",
+            "number": "2DV410",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV410&documenttype=pdf&lang=sv",
+            "description": "Kursen Weubbutveckling med PHP 2 tar vid där kursen 1DV408 slutar men flyttar perspektivet från den enskilde utvecklarens kod till det större sammanhanget. Till PHP finns många ramverk, publiceringsverktyg, komponenter och apiér, kursen syftar till att ge studenterna en bra grund för utveckling, underhåll och användning av dessa.",
+            "first_blogpost": {
+                "title": "Redovisningar",
+                "author": "Daniel Toll",
+                "date": "2013-01-15 09:07"
+            }
+        },
+        {
+            "coursename": "Windowsadministration I",
+            "url": "http://coursepress.lnu.se/kurs/windowsadministration-i/",
+            "number": "1DV416",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV416&documenttype=pdf&lang=sv",
+            "description": "description not available",
+            "first_blogpost": {
+                "title": "Gamla tentamen",
+                "author": "Jacob Lindehoff",
+                "date": "2014-01-08 09:12"
+            }
+        },
+        {
+            "coursename": "Windowsadministration II",
+            "url": "http://coursepress.lnu.se/kurs/windowsadministration-ii/",
+            "number": "1DV424",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV424&documenttype=pdf&lang=sv",
+            "description": "Kursen Windowsadministration II är en programkurs för studenter vid programmet IT-tekniker vid Linnéuniversitetet i Kalmar. Kursen behandlar installation och administration av ett flertal av de mer avancerade tjänsterna i Windows serveroperativsystem. Vidare behandlar kursen hur man identifiera och åtgärdar säkerhetsproblem i en Windows servermiljö.",
+            "first_blogpost": {
+                "title": "Projekthandledning",
+                "author": "Jacob Lindehoff",
+                "date": "2014-03-13 09:34"
+            }
+        },
+        {
+            "coursename": "Ämnesintroduktion till interaktionsdesign",
+            "url": "http://coursepress.lnu.se/kurs/amnesintroduktion-till-interaktionsdesign/",
+            "number": "1IK420",
+            "syllabus": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK420&documenttype=pdf&lang=sv",
+            "description": "Kursen Ämnesintroduktion till interaktionsdesign är den första kursen som ingår i utbildningsprogrammet interaktionsdesigner. Målet med kursen är att ge programstudenterna en grundläggande kunskap och förståelse kring vad interaktionsdesign och användarcentrerad design är. Detta innebär både historisk bakgrund, praktiska och teoretiska ämnen och områden som ingår samt möjliga arbetsområden. Under kursens gång går vi även igenom vilka verktyg och kunskap en interaktionsdesigner behöver. Fokus i kursen ligger på interaktionsdesignerns teoretiska samt professionella roll både inom arbetslivet men även inom akademin. Kursen består av sex delkurser:",
+            "first_blogpost": {
+                "title": "Kompletterad information",
+                "author": "Morgan Rydbrink",
+                "date": "2014-10-31 09:28"
+            }
+        }
+    ],
+    "scraped_courses": 68
+}

@@ -20,7 +20,6 @@ module.exports = function (app) {
 	);
 
 app.get('/scraper', function (req, res) {
-	coursepress.scrape();
 	res.render('scraper', {
 			url: coursepress.url,
 			jsonlink: coursepress.jsonlink || '' ,
@@ -29,5 +28,6 @@ app.get('/scraper', function (req, res) {
 			number_of_courses: numberOfCourses
 		});
 	});
+	coursepress.scrape();
 };
 

@@ -35,8 +35,17 @@ function isDate (str) {
 
 // writes the scraped data to file
 function saveDataToJSON () {
-		fs.writeFileSync('public/scraped_data/' + filename, JSON.stringify(json, null, 4));
-		console.log('Scraper saved to JSON: ' + filename);
+	json.courses = json.courses.sort(function (a, b) {
+  	if (a.coursename > b.coursename) {
+  	  return 1;
+  	}
+  	if (a.coursename < b.coursename) {
+    	return -1;
+  	}
+  	return 0;
+	});
+	fs.writeFileSync('public/scraped_data/' + filename, JSON.stringify(json, null, 4));
+	console.log('Scraper saved to JSON: ' + filename);
 }
 
 // used as callback when scraping

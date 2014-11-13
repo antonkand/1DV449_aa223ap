@@ -21,4 +21,4 @@ var server = app.listen(3000, function () {
   console.log(
   	chalk.cyan('Tiny scraper app listening at ' + host + ':' + port)
   );
-})
+});
