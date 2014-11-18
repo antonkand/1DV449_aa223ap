@@ -4,7 +4,7 @@
 
 _Lösning_: Validering av input sker på både klient och serversidan inputen med modulen [`sanitizer`](https://github.com/theSmaw/Caja-HTML-Sanitizer). Strängar som saneras får en escape inför varje specialtecken.
 
-#### 2. Inloggningen är felaktigt konstruerad, släpper igenom allt.
+#### 2. Fel: Inloggningen är felaktigt konstruerad, släpper igenom allt.
 
 _Lösning:_ Kontrollera användarens identitet korrekt, se till att inte släppa igenom allt.
 
