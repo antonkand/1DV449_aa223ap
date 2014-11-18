@@ -45,4 +45,11 @@ HTMLen bör minifieras.
 #### 9. Skippa inline JS längst ner i body. 
 Kör istället init direkt från skriptet. Om den länkas in längst ner i body kommer window.onload att vara klar.
 
-#### 10. 
+#### 10. Konkatera skript
+Alla skript som inte är via CDN bör konkateneras. MessageBoard och Message bör konkateneras, samtidigt som de minifieras.
+
+#### 11. Ta bort onödiga filer i filträd
+Ta bort filer som aldrig används. 
+* index.html
+* css/dyn.css
+* pic/b.jpg
