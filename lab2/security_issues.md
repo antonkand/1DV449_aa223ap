@@ -63,3 +63,7 @@ _Lösning:_ Acceptera inte inputen innan användaren har ett korrekt användarna
 #### 13: Databasen lagrar användarnamn och lösenord i klartext.
 
 _Lösning:_ Kombinera lösenordet med ett unikt salt, som sedan genererar en envägshash. Jämför lösenord+salt mot envägshashen vid inloggning.
+
+#### 14: Sessioner kan kapas
+
+_Lösning:_ Implementera en kontroll av kakan som stämmer överens med den aktiva sessionen. Väldigt svårt att kontrollera nu då sessioner inte implementeras korrekt.
