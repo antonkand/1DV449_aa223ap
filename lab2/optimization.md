@@ -53,3 +53,6 @@ Ta bort filer som aldrig används.
 * index.html
 * css/dyn.css
 * pic/b.jpg
+
+#### 12. Slå ihop alla bilder till en sprite
+Bilder bör slås ihop till en enda sprite, för att minska GET.
