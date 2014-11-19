@@ -1,0 +1,19 @@
+doctype html
+head
+    title james-node-seed
+    // all your meta-data should go here
+    include partials/meta
+    // bootstrap from jsDelivr, just remove or edit the partial if you're into custom CSS
+    include partials/jsdelivr_css
+    // all your custom SASS stylesheets gets inserted as bundle here
+    include partials/jsdelivr_css
+body.container-fluid
+    h1 Node. James Node.
+    // angular.min.js + angular-animate gets pulled in from jsDelivr
+    // also inserts bootstrap.min.js from jsDelivr, remove if not wanted
+    include partials/jsdelivr_js
+    // your custom angular bundle, that builds using gulpfile.js (see gulpfile for instructions)
+    include partials/scripts
+footer.container-fluid
+    // all your nice footer info
+    include partials/footer
