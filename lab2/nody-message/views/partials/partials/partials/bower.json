@@ -1,0 +1,35 @@
+{
+  "name": "james-node-seed",
+  "version": "0.0.1",
+  "homepage": "https://github.com/antonkand/james-node-seed",
+  "authors": [
+    "Anton K. Andersson <jag@antonkandersson.se>"
+  ],
+  "description": "jade, angular, mongoose, express, socket.io",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "jade",
+    "angular",
+    "mongoose",
+    "express",
+    "socket.io",
+    "mvc"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.2",
+    "angular-animate": "~1.3.2",
+    "angular-loading-bar": "~0.6.0"
+  }
+}

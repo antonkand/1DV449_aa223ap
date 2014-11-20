@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+head
+    include partials/meta
+    include partials/jsdelivr_css
+body.container-fluid.text-justify(style="max-width: 650px;")
+    div.row
+        section#messageboard.form-group.container-fluid
+            h1.messageboard-header Nody Message
+            section#messagearea
+                blockquote.message Hej! Detta är första meddelandet
+                    small 1:12:42 pm av @user
+                p#numberOfMess
+                    small
+                        strong Antal meddelanden:
+                        span#nrOfMessages 12
+    form.form-group
+        label(for="inputName") Namn
+        input#inputName.form-control(type="text" name="name")
+        label(for="inputText") Meddelande
+        textarea#inputText.form-control(name="mess" cols="55" rows="6")
+    button#buttonSend.btn.btn-primary.form-control Skicka
+    include partials/jsdelivr_js
+nav.navbar.navbar-default.navbar-fixed-bottom.text-right.container-fluid(role="navigation")
+    button#buttonLogout.btn.btn-danger(style="max-width: 75px") Logga ut
