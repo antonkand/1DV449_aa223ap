@@ -5,7 +5,7 @@ var path = require('path');
 var morgan = require('morgan');
 var logger = require('express-logger');
 var chalk = require('chalk');
-var middleware = require('./middleware/middleware.js');
+var middleware = require('./lib/middleware/middleware.js');
 var MainController = require('./controllers/MainController.js');
 
 // morgan used for logging when developing
@@ -15,6 +15,11 @@ switch (app.get('env')) {
         app.use(morgan('dev'));
         break;
     case 'production':
+        app.use(logger({
+            path: __dirname + '/log/requests.log'
+        }));
+        break;
+    default:
         app.use(logger({
             path: __dirname + '/log/requests.log'
         }));
