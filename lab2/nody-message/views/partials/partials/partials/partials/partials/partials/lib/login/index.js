@@ -15,8 +15,9 @@ var LoginController = require('./controllers/LoginController.js');
 var config = require('./lib/config');
 
 // local vars
+var socialMediaLoginView = path.dirname(require.main.filename); // app's rootdir, used when merging views
 //var socialMediaLoginView = __dirname + '/views'; // used when merging with app's views
-var appViewsDir = path.dirname(require.main.filename); // app's rootdir, used when merging views
+var rootDir = path.dirname(require.main.filename); // app's rootdir, used when merging views
 var start = function (app) {
     try {
         app.use(session({
@@ -37,7 +38,8 @@ var start = function (app) {
             config.routing.getLoggedIn(), // route for logged in users
             config.views.getLoggedIn(), // view for logged in users
             config.views.getFolder(), // views folder for main app
-            appViewsDir
+            socialMediaLoginView,
+            rootDir
         );
     }
     catch (error) {

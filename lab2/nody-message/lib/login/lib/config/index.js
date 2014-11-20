@@ -24,6 +24,7 @@ config.session = {
 };
 
 config.routing = {
+    signup: '/signup',
     loggedOutRoute: '/login',
     loggedInRoute: '/logged-in',
     setLogIn: function (route) {
@@ -37,13 +38,20 @@ config.routing = {
     },
     getLoggedIn: function () {
         return config.routing.loggedInRoute;
+    },
+    setSignup: function (route) {
+        config.routing.signup = checked.isString(route) ? route : config.routing.signup;
+    },
+    getSignup: function () {
+        return config.routing.signup;
     }
 };
 
 config.views = {
+    signup: 'signup',
     folder: '/views',
     loggedOut: 'social-media-login',
-    loggedIn: '/logged-in',
+    loggedIn: 'logged-in',
     setLoggedOut: function (view) {
         config.views.loggedOut = checked.isString(view) ? view : config.views.loggedOut;
     },
@@ -61,6 +69,12 @@ config.views = {
     },
     getFolder: function () {
         return config.views.folder;
+    },
+    setSignup: function (view) {
+        config.views.signup = checked.isString(view) ? view : config.views.signup;
+    },
+    getSignup: function () {
+        return config.views.signup;
     }
 };
 module.exports = config;

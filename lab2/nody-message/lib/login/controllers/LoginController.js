@@ -12,6 +12,7 @@ var merge = require('merge-dirs');
 * and a view to render after successful login
 * all views are jade-templates
 * @param {function} app Express app to use
+* @param {function} passport Configured passport object
 * @param {string} route The route to use for login form, passed in as '/routename' (optional, defaults to '/login')
 * @param {string} view The view to render before user has logged in (optional, defaults to 'login')
 * @param {string} loggedInRoute The route to use when user logs in, as '/routename' (optional, defaults to '/logged-in')
@@ -26,24 +27,20 @@ exports.init = function (app, passport, route, view, loggedInRoute, loggedInView
         viewsFolder: checked.isString(viewsFolder) && checked.isString(rootDir) ? rootDir + viewsFolder + '/partials' : rootDir + '/views/partials',
         loginViewFolder: './views'
     };
-    console.log(login.viewsFolder);
-    console.log(login.loginViewFolder);
 
     try {
         merge(login.loginViewFolder, login.viewsFolder);
         app.set('views', login.viewsFolder);
-        console.log(
-            chalk.cyan('social-media-login ')
-            + 'initialized.'
-        );
         app.get(login.route, function (req, res) {
             res.render(login.view, { message: req.flash('loginMessage') });
         });
+        console.log(
+            chalk.cyan('social-media-login ') + 'initialized.'
+        );
     }
     catch (error) {
         console.log(
-            chalk.cyan('social-media-login ')
-            + chalk.red('crashed.')
+            chalk.cyan('social-media-login ') + chalk.red('crashed.')
         );
         throw new Error(error);
     }

@@ -2,7 +2,7 @@
   "name": "social-media-login",
   "version": "0.0.1",
   "description": "Module for easy OAuth2 login to social media",
-  "main": "index.js",
+  "main": "MasterController.js",
   "scripts": {
     "test": "test"
   },
