@@ -20,7 +20,7 @@ var MessageBoard = {
                 return {
                     message: str,
                     user: user,
-                    date: date.toLocaleTimeString() + ' ' + date.toDateString()
+                    date: date
                 };
             }
             else {
@@ -62,22 +62,30 @@ var MessageBoard = {
     init: function () {
         var messages = [];
 
-        var parseMessage = function (message) {
-            console.log('parseMessages');
-            Object.keys(JSON.parse(messages)).forEach(function (element) {
-                console.log(messages[element]);
-                MessageBoard.helpers.insertMessage(messages[element].message, messages[element].user, messages[element].date);
+        var parseMessage = function (msgs) {
+            console.log('parseMessage');
+            console.log(JSON.parse(msgs));
+            msgs = JSON.parse(msgs);
+            msgs.forEach(function (element) {
+                console.log(element);
+                var msg = element.message;
+                var user = element.user;
+                var date = element.date;
+                console.log(msg);
+                console.log(user);
+                console.log(date);
+                MessageBoard.helpers.insertMessage(msg, user, date);
             });
         };
         var populateArray = function () {
-            NodyAjax.get(function (data, parseMessage) {
+            NodyAjax.get(function (data) {
                 console.log('progress: data received.');
-                console.log(data);
+                //console.log(data);
                 messages.push(data);
                 parseMessage(data);
             }, function (data) {
                 console.log('end: stream ended.');
-                console.log(data);
+                //console.log(data);
             }
         )}();
         console.log(messages);
