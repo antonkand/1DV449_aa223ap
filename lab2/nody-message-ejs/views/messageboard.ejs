@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Nody Message</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top:80px; word-wrap:break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+
+        <h1>
+            <span class="fa fa-envelope"></span>Nody Message
+        </h1>
+        <div id="messageboard">
+
+        </div>
+        <form>
+            <!--<input type="hidden" name="_csrf" value="%= _csrfToken %">-->
+            <textarea id="chatbox" cols="30" rows="10" placeholder="Write here" class="form-control"></textarea>
+            <button type="submit" id="submitButton" class="btn btn-success btn-lg form-control">Post message</button>
+        </form>
+
+        <hr>
+        <p>
+            Something else to do? <a href="/logout">Log Out</a>
+        </p>
+    </div>
+
+</div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+                <p>
+                    <strong>id</strong>: <%= user._id %><br>
+                    <strong>email</strong>: <span id="userEmail"><%= user.local.email %></span><br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/nodyajax.js"></script>
+<script src="js/devjs.js"></script>
+</body>
+</html>

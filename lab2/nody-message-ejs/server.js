@@ -10,27 +10,38 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var chalk = require('chalk');
 var configDB = require('./config/database.js');
-var csurf = require('csurf');
-var csrfMiddleware = require('./lib/middleware.js').csrf;
+
+var path = require('path');
 
 mongoose.connect(configDB.url);
 require('./config/passport')(passport);
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.use(session({ secret: 'nody-message' }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
-app.use(csurf());
-app.use(csrfMiddleware);
 
-require('./routes')(app, passport); // load our routes and pass in our app and fully configured passport
 
-// launch ======================================================================
-app.listen(port);
-console.log(
-    chalk.cyan('nody-message: ') + 'listening on ' + port + '.'
-);
+require('./routes/routes.js')(app, passport);
+
+function start () {
+    app.listen(port);
+        console.log(
+            chalk.cyan('nody-message: ') + 'listening on ' + port + '.'
+        );
+};
+
+// if run directly, start server
+if (require.main === module) {
+    start();
+}
+// else it's required(), export start
+else {
+    // logs which worker that's handling requests
+    module.exports = start;
+}
