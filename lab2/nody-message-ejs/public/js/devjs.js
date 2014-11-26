@@ -64,7 +64,8 @@ var MessageBoard = {
     },
     dataTransport: {
         xhrStream: function (progressCallback, finishedCallback) {
-            NodyAjax.get(progressCallback, finishedCallback)
+            console.log('xhrStream');
+            NodyAjax.get(progressCallback, finishedCallback);
         },
         SSE: function () {
             console.log('SSE enabled browser.');
@@ -131,14 +132,19 @@ var MessageBoard = {
     },
     init: function () {
         MessageBoard.handleDOM();
-        if (!window.EventSource) {
-            MessageBoard.dataTransport.xhrStream(function (data) {
+        if (window.EventSource) {
+            var progress = function (data) {
                 console.log('poll progress: data received.');
-                MessageBoard.parseMessage(data);
-            }, function (data) {
+                JSON.parse(data).forEach(function (element) {
+                        MessageBoard.parseMessage(element)}
+                );
+            };
+            var finished = function (data) {
                 console.log('poll end: stream ended.');
-                MessageBoard.dataTransport.xhrStream();
-            });
+                MessageBoard.dataTransport.xhrStream(progress, finished);
+            };
+            NodyAjax.allMessages('/allmessages', progress);
+            MessageBoard.dataTransport.xhrStream(progress, finished);
         }
         else {
             MessageBoard.dataTransport.SSE();

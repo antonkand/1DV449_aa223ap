@@ -8,29 +8,32 @@
         body {
             padding-top:80px; word-wrap:break-word;
         }
+        h1 {
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="col-sm-6 col-sm-offset-3">
-
+    <div class="col-sm-12 text-center">
         <h1>
-            <span class="fa fa-envelope"></span>Nody Message
+            <mark>&nbsp;<span class="fa fa-envelope"></span> Nody Message&nbsp;</mark>
         </h1>
-        <div id="messageboard">
-
-        </div>
-        <form>
-            <!--<input type="hidden" name="_csrf" value="%= _csrfToken %">-->
-            <textarea id="chatbox" cols="30" rows="10" placeholder="Write here" class="form-control"></textarea>
-            <button type="submit" id="submitButton" class="btn btn-success btn-lg form-control">Post message</button>
-        </form>
-
+    </div>
+    <div class="col-sm-6 col-sm-offset-1">
+        <div id="messageboard"></div>
         <hr>
         <p>
             Something else to do? <a href="/logout">Log Out</a>
         </p>
     </div>
+    <div class="col-sm-5">
+        <form>
+            <textarea id="chatbox" cols="30" rows="10" placeholder="Write here" class="form-control"></textarea>
+            <button type="submit" id="submitButton" class="btn btn-success btn-lg form-control">Post message</button>
+        </form>
+    </div>
+
 
 </div>
     <div class="row">

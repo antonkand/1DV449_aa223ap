@@ -1,4 +1,5 @@
 'use strict';
+var PostEmitter = new require('events').EventEmitter();
 module.exports = function (app, Message, messagesArray) {
     var SSE = require('express-sse');
     var sseSource = new SSE(messagesArray);
@@ -10,9 +11,15 @@ module.exports = function (app, Message, messagesArray) {
 //app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     app.get('/messages', function(req, res) {
         // TODO: se till att user ar authad innan get
+        PostEmitter.on('postAdded', function () {
+            res.json(messagesArray);
+        });
+    });
+    app.get('/allmessages', function (req, res) {
         res.json(messagesArray);
     });
     app.get('/stream', sseSource.init);
+
 //app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     app.post('/messages', function(req, res) {
         // TODO: se till att user ar authad innan post
@@ -25,5 +32,6 @@ module.exports = function (app, Message, messagesArray) {
             date: req.body.date
         }).save();
         sseSource.send(messagesArray);
+        PostEmitter.emit('postAdded');
     });
 }

@@ -26,12 +26,14 @@ var NodyAjax = {
                   xhr.onreadystatechange = function () {
                       var result = null;
                       if (xhr.readyState === 3) {
+                          console.log('createStream: readyState 3');
                           result = xhr.responseText.substring(received);
                           received += result.length;
                           progress(result);
                       }
                       else {
                           if (xhr.readyState === 4) {
+                              console.log('createStream: readyState 4');
                               finished(xhr.responseText);
                           }
                       }
@@ -40,7 +42,29 @@ var NodyAjax = {
                   return xhr;
       };
       createStream('/messages', progressCallback, finishedCallback);
+  },
+  allMessages: function (url, callback) {
+      var opened = 1,
+          complete = 4,
+          xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === opened) {
+              console.log('allMessages: opened');
+          }
+          if (xhr.readyState === complete) {
+              if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                  console.log(xhr.responseText);
+                  callback(xhr.responseText);
+              }
+              else {
+                  console.log('Error. XHR status ' + xhr.status);
+              }
+          }
+      };
+      xhr.open('get', url, true);
+      xhr.send(null);
   }
+
 };
 //    var crossbrowserXHR = function() {
 //        var xhr = null;
