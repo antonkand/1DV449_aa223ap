@@ -1,10 +1,23 @@
 'use strict';
 module.exports = function(app, passport) {
-    require('./messaging.js')(app);
-    var csurf = require('csurf');
-    var csrfMiddleware = require('../lib/middleware.js').csrf;
-    app.use(csurf());
-    app.use(csrfMiddleware);
+    var Message = require('../models/message.js');
+    var messages = [];
+    Message.find(function (err, msgs) {
+        if (err) {
+            return console.error(err);
+        }
+        else {
+            messages = msgs.map(function(element){
+                return {
+                    message: element.message,
+                    user: element.user,
+                    date: element.date
+                }
+            });
+            require('./messaging.js')(app, Message, messages);
+            require('./ssestream.js')(app, Message, messages);
+        }
+    });
     app.get('/', function(req, res) {
         res.render('login.ejs', { message: req.flash('loginMessage') }); // load the index.ejs file
     });

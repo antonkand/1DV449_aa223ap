@@ -29,7 +29,6 @@ var MessageBoard = {
         },
         insertMessage: function (message, email, date) {
             console.log('insertMessage');
-            console.log(message, email);
             var msg = new MessageBoard.helpers.Message(message, email, date);
             // message container
             var div = document.createElement('div');
@@ -59,36 +58,41 @@ var MessageBoard = {
             }
         }
     },
-    init: function () {
-        var messages = [];
-
-        var parseMessage = function (msgs) {
-            console.log('parseMessage');
-            console.log(JSON.parse(msgs));
-            msgs = JSON.parse(msgs);
+    dataTransport: {
+        xhrStream: function (progressCallback, finishedCallback) {
+            NodyAjax.get(progressCallback, finishedCallback)
+        },
+        SSE: function () {
+            console.log('SSE enabled browser.');
+            var sseStream = new EventSource('/stream');
+            sseStream.onmessage = function (event) {
+                console.log('PING! SSE event!');
+                var json = JSON.parse(event.data);
+                MessageBoard.parseMessage(json);
+            };
+        }
+    },
+    parseMessage: function (msgs) {
+        console.log('parseMessage');
+        // XHR Stream sends as array
+        if (msgs instanceof Array) {
+            console.log('typeof msgs, array');
             msgs.forEach(function (element) {
                 console.log(element);
                 var msg = element.message;
                 var user = element.user;
                 var date = element.date;
-                console.log(msg);
-                console.log(user);
-                console.log(date);
                 MessageBoard.helpers.insertMessage(msg, user, date);
             });
-        };
-        var populateArray = function () {
-            NodyAjax.get(function (data) {
-                console.log('progress: data received.');
-                //console.log(data);
-                messages.push(data);
-                parseMessage(data);
-            }, function (data) {
-                console.log('end: stream ended.');
-                //console.log(data);
-            }
-        )}();
-        console.log(messages);
+        }
+        // SSE transport sends each msg as separate object
+        else {
+            console.log('typeof msgs, !array');
+            MessageBoard.helpers.insertMessage(msgs.message, msgs.user, msgs.date);
+        }
+
+    },
+    handleDOM: function () {
         var submit = document.querySelector('#submitButton');
         var chatbox = document.querySelector('#chatbox');
         var body = document.body;
@@ -101,24 +105,41 @@ var MessageBoard = {
                     e.preventDefault();
                     return;
                 }
-                console.log(chatbox.value);
-                console.log(userEmail);
                 // TODO: easy shift-enter and br replacement
                 chatbox.value.replace(/\n/g, '<br>');
+                window.EventSource
+                    ? NodyAjax.post(chatbox.value, userEmail, '/stream')
+                    : NodyAjax.post(chatbox.value, userEmail, '/messages');
                 e.preventDefault();
-                NodyAjax.post(chatbox.value, userEmail, '/messages');
-                MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
+                //MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
                 chatbox.value = '';
             }
         }, false);
         body.addEventListener('click', function (e) {
             e = e || event;
             if (e.target === submit) {
-                console.log(chatbox.value, userEmail.value);
                 e.preventDefault();
-                MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
+                window.EventSource
+                    ? NodyAjax.post(chatbox.value, userEmail, '/stream')
+                    : NodyAjax.post(chatbox.value, userEmail, '/messages');
+                //MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
             }
         });
+    },
+    init: function () {
+        MessageBoard.handleDOM();
+        if (!window.EventSource) {
+            MessageBoard.dataTransport.xhrStream(function (data) {
+                console.log('poll progress: data received.');
+                MessageBoard.parseMessage(data);
+            }, function (data) {
+                console.log('poll end: stream ended.');
+                MessageBoard.dataTransport.xhrStream();
+            });
+        }
+        else {
+            MessageBoard.dataTransport.SSE();
+        }
     }
 };
 
