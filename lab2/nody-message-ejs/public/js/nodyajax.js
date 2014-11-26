@@ -58,41 +58,4 @@ var NodyAjax = {
 //        console.log(xhr);
 //        return xhr;
 //    };
-//    createStream = function  (url, progress, finished) {
-//        var xhr = new crossbrowserXHR(),
-//            received = 0;
-//        console.log(xhr);
-//        xhr.open('get', url, true);
-//        xhr.onreadystatechange = function () {
-//            var result = null;
-//            if (xhr.readyState === 3) {
-//              result = xhr.responseText.substring(received);
-//              received += result.length;
-//              progress(result);
-//            }
-//            else {
-//                if (xhr.readyState === 4) {
-//                    finished(xhr.responseText);
-//                }
-//            }
-//        };
-//        xhr.send(null);
-//        return xhr;
-//    };
 //
-//    var postMessage = function (message, url) {
-//      var xhr = crossbrowserXHR();
-//      xhr.onreadystatechange = function () {
-//        if (xhr.readyState === 4) {
-//           if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
-//               console.log(xhr.responseText);
-//           }
-//            else {
-//                console.log('postMessage: unsuccessful post. status code ' + xhr.status);
-//            }
-//          }
-//      };
-//        xhr.open('post', url, true);
-//        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//        xhr.send(message);
-//    };

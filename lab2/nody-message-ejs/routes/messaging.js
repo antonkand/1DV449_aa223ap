@@ -18,11 +18,8 @@ module.exports = function (app) {
 //app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     app.get('/messages', function(req, res) {
         // TODO: se till att user ar authad innan post
-        messages.forEach(function (element) {
-            console.log(element);
-            res.json(element);
-        });
-    });
+        res.json([{message: 'msg1', user: 'user1'}, {message: 'msg2', user: 'user2'}]);
+});
 //app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     app.post('/messages', function(req, res) {
         // TODO: se till att user ar authad innan post

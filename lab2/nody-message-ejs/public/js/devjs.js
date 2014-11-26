@@ -50,20 +50,19 @@ var MessageBoard = {
             blockquote.textContent = msg.message;
             blockquote.appendChild(small);
             div.appendChild(blockquote);
-            messageboard.appendChild(div);
+            if (messageboard.hasChildNodes()) {
+                var firstChild = messageboard.firstChild;
+                messageboard.insertBefore(blockquote, firstChild);
+            }
+            else {
+                messageboard.appendChild(div);
+            }
         }
     },
     init: function () {
         var messages = [];
-        var end = function (data, callback) {
-            console.log('end: stream ended.');
-            callback(data);
-        };
-        var progress = function (data, callback) {
-            console.log('progress: data received.');
-            callback(data);
-        };
-        var parseMessages = function (messages) {
+
+        var parseMessage = function (message) {
             console.log('parseMessages');
             Object.keys(JSON.parse(messages)).forEach(function (element) {
                 console.log(messages[element]);
@@ -71,12 +70,17 @@ var MessageBoard = {
             });
         };
         var populateArray = function () {
-            NodyAjax.get(function (data) {
-                progress(data, parseMessages);
+            NodyAjax.get(function (data, parseMessage) {
+                console.log('progress: data received.');
+                console.log(data);
+                messages.push(data);
+                parseMessage(data);
             }, function (data) {
-                end(data, parseMessages);
+                console.log('end: stream ended.');
+                console.log(data);
             }
         )}();
+        console.log(messages);
         var submit = document.querySelector('#submitButton');
         var chatbox = document.querySelector('#chatbox');
         var body = document.body;
