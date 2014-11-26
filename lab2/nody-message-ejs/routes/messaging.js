@@ -1,5 +1,6 @@
 'use strict';
-var PostEmitter = new require('events').EventEmitter();
+var Emitter = require('events').EventEmitter;
+var PostEmitter = new Emitter();
 module.exports = function (app, Message, messagesArray) {
     var SSE = require('express-sse');
     var sseSource = new SSE(messagesArray);

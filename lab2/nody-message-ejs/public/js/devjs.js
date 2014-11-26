@@ -12,10 +12,10 @@ var MessageBoard = {
             return MessageBoard.helpers.checkObject(variable, '[object String]');
         },
         Message: function (str, user, date) {
-            console.log('Message:')
-            console.log(str);
-            console.log(user);
-            console.log(date);
+            //console.log('Message:')
+            //console.log(str);
+            //console.log(user);
+            //console.log(date);
             date = date || new Date();
             // TODO: add sanitize to str
             if (MessageBoard.helpers.isString(str) && MessageBoard.helpers.isString(user)) {
@@ -30,9 +30,9 @@ var MessageBoard = {
             }
         },
         insertMessage: function (message, email, date) {
-            console.log('insertMessage');
-            console.log('message, email, date');
-            console.log(message +' '+ email + ' '+ date);
+            //console.log('insertMessage');
+            //console.log('message, email, date');
+            //console.log(message +' '+ email + ' '+ date);
             var msg = new MessageBoard.helpers.Message(message, email, date);
             // message container
             var div = document.createElement('div');
@@ -64,7 +64,7 @@ var MessageBoard = {
     },
     dataTransport: {
         xhrStream: function (progressCallback, finishedCallback) {
-            console.log('xhrStream');
+            //console.log('xhrStream');
             NodyAjax.get(progressCallback, finishedCallback);
         },
         SSE: function () {
@@ -81,7 +81,7 @@ var MessageBoard = {
         if (msgs instanceof Array) {
             //console.log('typeof msgs, array');
             msgs.forEach(function (element) {
-                console.log(element);
+                //console.log(element);
                 var msg = element.message;
                 var user = element.user;
                 var date = element.date;
@@ -90,13 +90,13 @@ var MessageBoard = {
         }
         // SSE transport sends each msg as separate object
         else {
-            console.log('typeof msgs, !array');
+            //console.log('typeof msgs, !array');
             var msg = msgs;
             if (typeof msg === 'string') {
                 msg = JSON.parse(msgs);
             }
-            console.log('parseMessage msgs');
-            console.log(typeof msg);
+            //console.log('parseMessage msgs');
+            //console.log(typeof msg);
             MessageBoard.helpers.insertMessage(msg.message, msg.user, msg.date);
         }
 
@@ -125,7 +125,7 @@ var MessageBoard = {
             e = e || event;
             if (e.target === submit) {
                 e.preventDefault();
-                NodyAjax.post(chatbox.value, userEmail, '/messages');
+                NodyAjax.post(chatbox.value, userEmail, '/messages', MessageBoard.parseMessage);
                 chatbox.value = '';
             }
         });
@@ -134,17 +134,22 @@ var MessageBoard = {
         MessageBoard.handleDOM();
         if (window.EventSource) {
             var progress = function (data) {
-                console.log('poll progress: data received.');
+                //console.log('poll progress: data received.');
                 JSON.parse(data).forEach(function (element) {
                         MessageBoard.parseMessage(element)}
                 );
             };
             var finished = function (data) {
-                console.log('poll end: stream ended.');
+                //console.log('poll end: stream ended.');
                 MessageBoard.dataTransport.xhrStream(progress, finished);
             };
-            NodyAjax.allMessages('/allmessages', progress);
-            MessageBoard.dataTransport.xhrStream(progress, finished);
+            var allMessagesLoaded = function (data) {
+                MessageBoard.dataTransport.xhrStream(progress, finished);
+                JSON.parse(data).forEach(function (element) {
+                        MessageBoard.parseMessage(element)}
+                );
+            };
+            NodyAjax.allMessages('/allmessages', allMessagesLoaded);
         }
         else {
             MessageBoard.dataTransport.SSE();
