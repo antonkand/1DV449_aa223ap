@@ -1,6 +1,15 @@
 'use strict';
-var Emitter = require('events').EventEmitter;
-var PostEmitter = new Emitter();
+var EventEmitter = require('events').EventEmitter;
+var util = require('util');
+function Master () {
+    EventEmitter.call(this);
+};
+util.inherits(Master, EventEmitter);
+var postEmitter = new Master();
+postEmitter.on('hej', function () {
+    console.log('hejsan!');
+});
+postEmitter.emit('hej');
 module.exports = function (app, Message, messagesArray) {
     var SSE = require('express-sse');
     var sseSource = new SSE(messagesArray);
@@ -10,11 +19,13 @@ module.exports = function (app, Message, messagesArray) {
         });
     });
 //app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
+    // TODO: se till att user ar authad innan get
     app.get('/messages', function(req, res) {
-        // TODO: se till att user ar authad innan get
-        PostEmitter.on('postAdded', function () {
-            res.json(messagesArray);
-        });
+        var respondToRequest = function () {
+            console.log('on postAdded');
+            return res.json(messagesArray);
+        };
+        postEmitter.on('postAdded', respondToRequest);
     });
     app.get('/allmessages', function (req, res) {
         res.json(messagesArray);
@@ -22,9 +33,9 @@ module.exports = function (app, Message, messagesArray) {
     app.get('/stream', sseSource.init);
 
 //app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
+    // TODO: se till att user ar authad innan post
     app.post('/messages', function(req, res) {
-        // TODO: se till att user ar authad innan post
-        res.json(req.body);
+        postEmitter.emit('postAdded');
         messagesArray.push(req.body);
         console.log(req.body);
         new Message({
@@ -33,6 +44,6 @@ module.exports = function (app, Message, messagesArray) {
             date: req.body.date
         }).save();
         sseSource.send(messagesArray);
-        PostEmitter.emit('postAdded');
+        return res.json(req.body);
     });
 }

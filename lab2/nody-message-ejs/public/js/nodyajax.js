@@ -19,11 +19,14 @@ var NodyAjax = {
       xhr.send(JSON.stringify(msg));
   },
   get: function (progressCallback, finishedCallback) {
+      console.log('createStream: inside get');
             function createStream (url, progress, finished) {
+                console.log('createStream: inside createStream');
                   var xhr = new XMLHttpRequest(),
                       received = 0;
                   xhr.open('get', url, true);
                   xhr.onreadystatechange = function () {
+                      console.log('createStream: inside onreadyStateChange');
                       var result = null;
                       if (xhr.readyState === 3) {
                           console.log('createStream: readyState 3');
@@ -64,22 +67,4 @@ var NodyAjax = {
       xhr.open('get', url, true);
       xhr.send(null);
   }
-
 };
-//    var crossbrowserXHR = function() {
-//        var xhr = null;
-//        try {
-//            xhr = new XMLHttpRequest();
-//        }
-//        catch (error) {
-//            try {
-//                xhr = new ActiveXObject('Microsoft.XMLHTTP');
-//            }
-//            catch (error) {
-//                throw new Error('crossbrowserXHR: Failed to create XHR.');
-//            }
-//        }
-//        console.log(xhr);
-//        return xhr;
-//    };
-//

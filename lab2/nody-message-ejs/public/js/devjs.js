@@ -18,6 +18,7 @@ var MessageBoard = {
             //console.log(date);
             date = date || new Date();
             // TODO: add sanitize to str
+            // TODO: parse date to nicely looking timestamp
             if (MessageBoard.helpers.isString(str) && MessageBoard.helpers.isString(user)) {
                 return {
                     message: str,
