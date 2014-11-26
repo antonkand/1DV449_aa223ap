@@ -1,11 +1,11 @@
 var NodyAjax = {
   send: function () {},
-  receive: function () {},
-  post: function (message, username, url) {
+  post: function (message, username, url, callback) {
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function () {
           if (xhr.readyState === 4) {
               if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                  callback(xhr.responseText);
                   console.log(xhr.responseText);
               }
               else {

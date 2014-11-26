@@ -12,10 +12,12 @@ var MessageBoard = {
             return MessageBoard.helpers.checkObject(variable, '[object String]');
         },
         Message: function (str, user, date) {
+            console.log('Message:')
+            console.log(str);
+            console.log(user);
+            console.log(date);
             date = date || new Date();
             // TODO: add sanitize to str
-            console.log('Message:');
-            console.log(str + user);
             if (MessageBoard.helpers.isString(str) && MessageBoard.helpers.isString(user)) {
                 return {
                     message: str,
@@ -29,6 +31,8 @@ var MessageBoard = {
         },
         insertMessage: function (message, email, date) {
             console.log('insertMessage');
+            console.log('message, email, date');
+            console.log(message +' '+ email + ' '+ date);
             var msg = new MessageBoard.helpers.Message(message, email, date);
             // message container
             var div = document.createElement('div');
@@ -67,16 +71,14 @@ var MessageBoard = {
             var sseStream = new EventSource('/stream');
             sseStream.onmessage = function (event) {
                 console.log('PING! SSE event!');
-                var json = JSON.parse(event.data);
-                MessageBoard.parseMessage(json);
+                MessageBoard.parseMessage(event.data);
             };
         }
     },
     parseMessage: function (msgs) {
-        console.log('parseMessage');
         // XHR Stream sends as array
         if (msgs instanceof Array) {
-            console.log('typeof msgs, array');
+            //console.log('typeof msgs, array');
             msgs.forEach(function (element) {
                 console.log(element);
                 var msg = element.message;
@@ -88,7 +90,13 @@ var MessageBoard = {
         // SSE transport sends each msg as separate object
         else {
             console.log('typeof msgs, !array');
-            MessageBoard.helpers.insertMessage(msgs.message, msgs.user, msgs.date);
+            var msg = msgs;
+            if (typeof msg === 'string') {
+                msg = JSON.parse(msgs);
+            }
+            console.log('parseMessage msgs');
+            console.log(typeof msg);
+            MessageBoard.helpers.insertMessage(msg.message, msg.user, msg.date);
         }
 
     },
@@ -107,11 +115,8 @@ var MessageBoard = {
                 }
                 // TODO: easy shift-enter and br replacement
                 chatbox.value.replace(/\n/g, '<br>');
-                window.EventSource
-                    ? NodyAjax.post(chatbox.value, userEmail, '/stream')
-                    : NodyAjax.post(chatbox.value, userEmail, '/messages');
+                NodyAjax.post(chatbox.value, userEmail, '/messages', MessageBoard.parseMessage);
                 e.preventDefault();
-                //MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
                 chatbox.value = '';
             }
         }, false);
@@ -119,10 +124,8 @@ var MessageBoard = {
             e = e || event;
             if (e.target === submit) {
                 e.preventDefault();
-                window.EventSource
-                    ? NodyAjax.post(chatbox.value, userEmail, '/stream')
-                    : NodyAjax.post(chatbox.value, userEmail, '/messages');
-                //MessageBoard.helpers.insertMessage(chatbox.value, userEmail);
+                NodyAjax.post(chatbox.value, userEmail, '/messages');
+                chatbox.value = '';
             }
         });
     },

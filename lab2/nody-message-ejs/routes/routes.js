@@ -15,7 +15,6 @@ module.exports = function(app, passport) {
                 }
             });
             require('./messaging.js')(app, Message, messages);
-            require('./ssestream.js')(app, Message, messages);
         }
     });
     app.get('/', function(req, res) {
