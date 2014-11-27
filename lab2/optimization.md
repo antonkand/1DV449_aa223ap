@@ -1,6 +1,8 @@
 ## Optimering Laboration 2
 #### aa223ap
 
+Alla implementerade lösningar för dessa optimering har dokumenterats i filen [implementationsrapport.md](implementationsrapport.md)
+
 #### 1. Implementera CDN
 Filer som inte är specifika för appen har hämtats från CDN. Detta kan försämra för de som sitter väldigt nära den egna servern, men leder generellt till en prestandaförbättring.
 
@@ -17,7 +19,7 @@ Samma skript länkas in på massor av ställen. Dessa duplikationer har tagits b
 #### 3. Ta bort överflödiga filer
 Massor av onödiga GETs görs. Följande filer bör tas bort för att de inte fyller något syfte:
 
-* script.js i mess (blank fil)
+* script.js i mess (Massor med överflödig kod, som inte är minifierad eller behövd)
 * background=background="http://www.lockley.net/backgds/big_leo_minor.jpg" på body-elementet i mess
 
 #### 4. Endast minifierade filer bör länkas in
