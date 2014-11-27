@@ -45,15 +45,20 @@ module.exports = function (app, Message, messagesArray) {
 //app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     // TODO: se till att user ar authad innan post
     app.post('/messages', function(req, res) {
+        var sanitized = {
+            user: req.sanitize(req.body.user),
+            message: req.sanitize(req.body.message),
+            date: req.sanitize(req.body.date)
+        }
         postEmitter.emit('postAdded');
-        messagesArray.push(req.body);
-        console.log(req.body);
+        messagesArray.push(sanitized);
+        console.log(sanitized);
         new Message({
-            user: req.body.user,
-            message: req.body.message,
-            date: req.body.date
+            user: sanitized.user,
+            message: sanitized.message,
+            date: sanitized.date
         }).save();
         sseSource.send(messagesArray);
-        return res.json(req.body);
+        return res.json(sanitized);
     });
 }
