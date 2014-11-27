@@ -1,5 +1,10 @@
 'use strict';
 module.exports = function(app, passport) {
+    app.get('/', function(req, res) {
+        res.render('login.ejs', { message: req.flash('loginMessage') }); // load the index.ejs file
+    });
+    require('./login.js')(app, passport);
+    require('./signup.js')(app, passport);
     var Message = require('../models/message.js');
     var messages = [];
     Message.find(function (err, msgs) {
@@ -17,11 +22,6 @@ module.exports = function(app, passport) {
             require('./messaging.js')(app, Message, messages);
         }
     });
-    app.get('/', function(req, res) {
-        res.render('login.ejs', { message: req.flash('loginMessage') }); // load the index.ejs file
-    });
-    require('./login.js')(app, passport);
-    require('./signup.js')(app, passport);
     app.use(require('../lib/middleware.js').clusterlog);
 };
 

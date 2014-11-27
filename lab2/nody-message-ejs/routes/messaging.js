@@ -22,9 +22,7 @@ module.exports = function (app, Message, messagesArray) {
             user: req.user
         });
     });
-//app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
-    // TODO: se till att user ar authad innan get
-    app.get('/messages', function(req, res) {
+app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
         var respondToRequest = function () {
             console.log('on postAdded');
             return res.json(messagesArray);
@@ -42,9 +40,7 @@ module.exports = function (app, Message, messagesArray) {
             console.log(key);
         });
     });
-//app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
-    // TODO: se till att user ar authad innan post
-    app.post('/messages', function(req, res) {
+app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
         var sanitized = {
             user: req.sanitize(req.body.user),
             message: req.sanitize(req.body.message),
