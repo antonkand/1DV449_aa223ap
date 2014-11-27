@@ -66,5 +66,33 @@ var NodyAjax = {
       };
       xhr.open('get', url, true);
       xhr.send(null);
+  },
+  experiment: function (progressCallback, finishedCallback) {
+      console.log('createStream: inside get');
+      function createStream (url, progress, finished) {
+          console.log('createStream: inside createStream');
+          var xhr = new XMLHttpRequest(),
+              received = 0;
+          xhr.open('get', url, true);
+          xhr.onreadystatechange = function () {
+              console.log('createStream: inside onreadyStateChange');
+              var result = null;
+              if (xhr.readyState === 3) {
+                  console.log('createStream: readyState 3');
+                  result = xhr.responseText.substring(received);
+                  received += result.length;
+                  progress(result);
+              }
+              else {
+                  if (xhr.readyState === 4) {
+                      console.log('createStream: readyState 4');
+                      finished(xhr.responseText);
+                  }
+              }
+          };
+          xhr.send(null);
+          return xhr;
+      };
+      createStream('/experiment', progressCallback, finishedCallback);
   }
 };

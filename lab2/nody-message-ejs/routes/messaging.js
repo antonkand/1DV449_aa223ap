@@ -10,9 +10,13 @@ postEmitter.on('hej', function () {
     console.log('hejsan!');
 });
 postEmitter.emit('hej');
+
 module.exports = function (app, Message, messagesArray) {
     var SSE = require('express-sse');
     var sseSource = new SSE(messagesArray);
+    var ArrayStream = require('arraystream');
+    var messageStream = ArrayStream.create(messagesArray);
+
     app.get('/messageboard', require('../lib/middleware.js').isLoggedIn, function(req, res) {
         res.render('messageboard.ejs', {
             user: req.user
@@ -31,7 +35,13 @@ module.exports = function (app, Message, messagesArray) {
         res.json(messagesArray);
     });
     app.get('/stream', sseSource.init);
-
+    app.get('/experiment', function (req, res) {
+        messagesArray.push({message: 'experiment', user: 'userexperiment', date: new Date()});
+        messageStream.on('data', function (value, key) {
+            console.log(value);
+            console.log(key);
+        });
+    });
 //app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
     // TODO: se till att user ar authad innan post
     app.post('/messages', function(req, res) {

@@ -2,7 +2,8 @@
 
 var MessageBoard = {
     helpers: {
-        checkObject: // Checks the variable by calling toString.
+        checkObject:
+        // Checks the variable by calling toString.
         // Comparison passed in should be in format '[object TypeOfObject]'.
         // Ie: checkObject('string', '[object String]');
             function (variable, comparison) {
@@ -151,6 +152,7 @@ var MessageBoard = {
                 );
             };
             NodyAjax.allMessages('/allmessages', allMessagesLoaded);
+            NodyAjax.experiment();
         }
         else {
             MessageBoard.dataTransport.SSE();
