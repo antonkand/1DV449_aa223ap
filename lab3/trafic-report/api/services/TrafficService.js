@@ -9,23 +9,16 @@ var jsonStream = require('JSONStream');
 var chalk = require('chalk');
 // lib deps
 var CacheService = require('./CacheService.js');
-
 // vars
 var TrafficReport = require('../models/TrafficReport.js');
-var options = {};
 var url = 'http://api.sr.se/api/v2/traffic/messages?format=json&pagination=true&size=100&indent=true';
-var trafficReportJSON = appRoot + '/public/json/traffic_data.json';
 
-exports.requestData = function () {
-    console.log(chalk.cyan('eames: ') + 'cacheHasExpired, new request.');
+exports.requestData = function (res, callback) {
+    var received = [];
+    console.log(chalk.cyan('traffic-data: ') + 'cacheHasExpired, new request.');
     request(url)
         .pipe(jsonStream.parse('messages'))
         .pipe(eventStream.map(function (data) {
-            fs.writeFile(trafficReportJSON, JSON.stringify(data),  function(err) {
-                if(err) {
-                    console.log('overwriteTimestamp error: ' + err);
-                }
-            });
             data.forEach(function (incident) {
                 var json = {
                     id: incident.id,
@@ -39,20 +32,12 @@ exports.requestData = function () {
                     category: incident.category,
                     subcategory: incident.subcategory
                 };
+                received.push(json);
                 var report = new TrafficReport(json);
                 report.save();
             });
+            CacheService.overwriteTimeStamp();
+            callback(res, received);
         }));
-    CacheService.overwriteTimeStamp();
 };
-
 exports.cacheHasExpired = CacheService.cacheHasExpired;
-
-exports.loadJSON = function () {
-    try {
-        return require(trafficReportJSON);
-    }
-    catch (error) {
-        console.log('loadJSON error: ' + error);
-    }
-};

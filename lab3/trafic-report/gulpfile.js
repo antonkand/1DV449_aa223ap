@@ -15,6 +15,7 @@ var annotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
+var traffic_report_folder = './frontend/src/js/angular/traffic-report/';
 
 // File paths
 var paths = {
@@ -25,13 +26,17 @@ var paths = {
     // add your angular scripts in the order you want them,
     // globbing isn't used, you need to be specific
     angular_src: [
-                  './frontend/src/js/angular/traffic-report/TrafficReportApp.js',
-                  './frontend/src/js/angular/traffic-report/components/TrafficFilter/TrafficFilter.js',
-                  './frontend/src/js/angular/traffic-report/components/Listing/ListingController.js',
-                  './frontend/src/js/angular/traffic-report/components/Listing/ListingDirective.js',
-                  './frontend/src/js/angular/traffic-report/components/Listing/ListingFactory.js',
-                  './frontend/src/bower_components/angular-google-maps/dist/angular-google-maps/angular-google-maps.min.js'
+                  traffic_report_folder + 'TrafficReportApp.js',
+                  traffic_report_folder + 'components/traffic-menu/TrafficMenuDirective.js'
+                  //'./frontend/src/js/vanilla/iifeend.js',
+                  //'./frontend/src/js/angular/traffic-report/components/TrafficFilter/TrafficFilter.js',
+                  //'./frontend/src/js/angular/traffic-report/components/Listing/ListingController.js',
+                  //'./frontend/src/js/angular/traffic-report/components/Listing/ListingDirective.js',
+                  //'./frontend/src/js/angular/traffic-report/components/Listing/ListingFactory.js',
+                  //'./frontend/src/bower_components/angular-google-maps/dist/angular-google-maps/angular-google-maps.min.js'
     ],
+    templates: traffic_report_folder + '**/*.html',
+    templates_dist: './public/js/angulartemplates',
     script_dist: './public/js',
     script_src: './frontend/src/js/vanilla/**/*.js'
 };
@@ -62,7 +67,7 @@ gulp.task('angular', function () {
     return gulp.src(paths.angular_src)
         .pipe(annotate())
         .pipe(concat('angularbundle.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(paths.script_dist));
 });
 
@@ -73,12 +78,18 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest(paths.script_dist));
 });
 
+gulp.task('templates', function () {
+    return gulp.src(paths.templates)
+        .pipe(gulp.dest(paths.templates_dist));
+});
+
 gulp.task('watch', function () {
     gulp.watch(paths.sass + '/imports/*.scss', ['compass']);
     gulp.watch(paths.sass + '/*.scss', ['compass']);
     gulp.watch(paths.original_img + '/**/*.*', ['img']);
     gulp.watch(paths.angular_src, ['angular']);
+    gulp.watch(paths.templates, ['templates']);
     gulp.watch(paths.script_src, ['scripts']);
 });
 
-gulp.task('default', ['compass', 'img', 'angular', 'scripts', 'watch']);
+gulp.task('default', ['compass', 'img', 'angular', 'templates', 'scripts', 'watch']);

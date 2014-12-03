@@ -13,9 +13,13 @@
 		}
 	</style>
 </head>
-<body class="container-fluid">
-	<div class="row">
-    <%- include partials/nav.ejs %>
+<body class="container-fluid" ng-app="TrafficReportApp">
+	<div class="row" ng-controller="TrafficReportAppController as trafficreport">
+    <traffic-menu
+			areas="{{trafficreport.areas}}"
+			events="{{trafficreport.events}}"
+			categories="{{trafficreport.categories}}">
+	</traffic-menu>
     <%- include partials/map.ejs %>
 	</div>
     <%- include partials/scripts.ejs %>
