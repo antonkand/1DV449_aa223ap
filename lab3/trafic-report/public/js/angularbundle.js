@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('TrafficReportApp', []);
+var app = angular.module('TrafficReportApp', ['TrafficMenuComponent']);
 app.controller('TrafficReportAppController', TrafficReportAppController);
 
 function TrafficReportAppController($http) {
@@ -34,18 +34,24 @@ TrafficReportAppController.$inject = ["$http"];;
 //function (uiGoogleMapApi) {
 //    uiGmapGoogleMapApi.then(function(maps) {
 //    });
-app.directive('trafficMenu', function() {
-    return {
-        scope: {
-            areas: '@',
-            events: '@',
-            categories: '@'
-        },
-        restrict: 'E',
-        replace: false,
-        templateUrl: 'js/angulartemplates/components/traffic-menu/traffic-menu-template.html',
-        link: function(scope, elem, attrs) {
-            console.log('trafficMenu directive');
-        }
-    };
-});
+angular.module('TrafficMenuComponent')
+    .directive('trafficMenu', function () {
+        return {
+            scope: {
+                areas: '@',
+                events: '@',
+                categories: '@'
+            },
+            restrict: 'E',
+            replace: false,
+            templateUrl: 'js/angulartemplates/components/traffic-menu/traffic-menu-template.html',
+            link: function (scope, elem, attrs) {
+                console.log('trafficMenu directive');
+            }
+        };
+    })
+    .controller('TrafficMenuController', TrafficMenuController);
+
+function TrafficMenuController() {
+    console.log('TrafficMenuController');
+};

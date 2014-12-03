@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('TrafficReportApp', []);
+var app = angular.module('TrafficReportApp', ['TrafficMenuComponent']);
 app.controller('TrafficReportAppController', TrafficReportAppController);
 
 function TrafficReportAppController($http) {

@@ -27,7 +27,7 @@ var paths = {
     // globbing isn't used, you need to be specific
     angular_src: [
                   traffic_report_folder + 'TrafficReportApp.js',
-                  traffic_report_folder + 'components/traffic-menu/TrafficMenuDirective.js'
+                  traffic_report_folder + 'components/traffic-menu/TrafficMenuComponent.js'
                   //'./frontend/src/js/vanilla/iifeend.js',
                   //'./frontend/src/js/angular/traffic-report/components/TrafficFilter/TrafficFilter.js',
                   //'./frontend/src/js/angular/traffic-report/components/Listing/ListingController.js',
