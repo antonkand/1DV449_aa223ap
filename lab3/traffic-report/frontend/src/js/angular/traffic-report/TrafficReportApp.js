@@ -37,7 +37,6 @@ function TrafficReportAppController($http, $scope) {
             });
             that.markers = that.messages.events.map(function (marker, index) {
                 var cssClass = '';
-                console.log(marker.priority);
                 switch (marker.priority) {
                     case 1:
                         cssClass = 'danger';
@@ -56,13 +55,11 @@ function TrafficReportAppController($http, $scope) {
                         break;
                 }
                 return {
-                    id: 'trafficMarker' + (index + 1).toString(),
+                    id: (index + 12345),
                     title: marker.title,
                     description: marker.description,
-                    coords: {
-                        latitude: marker.latitude,
-                        longitude: marker.longitude
-                    },
+                    latitude: marker.latitude,
+                    longitude: marker.longitude,
                     priorityColor: cssClass
                 };
             });

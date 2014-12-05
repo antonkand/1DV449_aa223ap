@@ -28,6 +28,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-google-maps": "~2.0.11"
+    "angular-google-maps": "~2.0.11",
+    "angular-hint": "~0.1.0"
   }
 }
