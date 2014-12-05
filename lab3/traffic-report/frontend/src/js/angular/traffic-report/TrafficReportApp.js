@@ -4,6 +4,7 @@ angular.module('TrafficReportApp', ['TrafficMenuComponent', 'uiGmapgoogle-maps']
 
 function TrafficReportAppController($http, $scope) {
     var that = this;
+    var infoWindow = null;
     this.markers = [];
     this.messages = {
         areas: ['ett', 'two'],
@@ -21,8 +22,11 @@ function TrafficReportAppController($http, $scope) {
     };
     this.map = {center: {latitude: 63, longitude: 17}, zoom: 5, bounds: {}};
     this.displayInfo = function (description) {
+        //if (infoWindow) {
+        //    infoWindow.close();
+        //}
         console.log(description);
-    }
+    };
     $http.get('http://localhost:8080/traffic-data')
         .success(function (data, status, headers, config) {
             data.forEach(function (trafficmessage) {
@@ -60,13 +64,15 @@ function TrafficReportAppController($http, $scope) {
                 return {
                     id: (index + 12345),
                     title: marker.title,
-                    description: marker.description,
+                    //description: marker.description,
                     latitude: marker.latitude,
                     longitude: marker.longitude,
-                    priorityColor: cssClass,
-                    display: function () {
-                        return that.displayInfo(marker.description);
-                    }
+                    labelClass: cssClass,
+                    markerPriorityColor: cssClass,
+                    //display: function () {
+                    //    return that.displayInfo(marker.description);
+                    //}
+                    labelContent: marker.description
                 };
             });
             //console.table(that.messages.events);
