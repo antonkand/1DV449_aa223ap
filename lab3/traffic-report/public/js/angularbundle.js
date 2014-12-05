@@ -20,6 +20,9 @@ function TrafficReportAppController($http, $scope) {
         ]
     };
     this.map = {center: {latitude: 63, longitude: 17}, zoom: 5, bounds: {}};
+    this.displayInfo = function (description) {
+        console.log(description);
+    }
     $http.get('http://localhost:8080/traffic-data')
         .success(function (data, status, headers, config) {
             data.forEach(function (trafficmessage) {
@@ -60,7 +63,10 @@ function TrafficReportAppController($http, $scope) {
                     description: marker.description,
                     latitude: marker.latitude,
                     longitude: marker.longitude,
-                    priorityColor: cssClass
+                    priorityColor: cssClass,
+                    display: function () {
+                        return that.displayInfo(marker.description);
+                    }
                 };
             });
             //console.table(that.messages.events);
@@ -74,8 +80,6 @@ function TrafficReportAppController($http, $scope) {
             console.log(config);
         });
     console.log('TrafficReportAppController initialized.');
-
-    //this.map = { center: { latitude: 57.85508728027342, longitude: 12.01069164276123 }, zoom: 8 };
 }
 TrafficReportAppController.$inject = ["$http", "$scope"];;
 angular.module('TrafficMenuComponent', [])
