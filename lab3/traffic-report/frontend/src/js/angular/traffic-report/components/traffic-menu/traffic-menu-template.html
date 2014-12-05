@@ -7,11 +7,11 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                 <i class="fa fa-bolt"></i> Händelser <span class="caret"></span>
             </a>
-            <!--<ul class="dropdown-menu" ng-repeat="event in events">-->
-                <ul class="dropdown-menu">
-                <!--<li><a href="#dropdown1" data-toggle="tab">{{event}}</a></li>-->
-                    <li><a href="#dropdown1" data-toggle="tab">event</a></li>
-                <li class="divider"></li>
+            <ul class="dropdown-menu">
+                 <li ng-repeat="event in messages.events">
+                        <a href="#dropdown1" data-toggle="tab">{{event.title}}</a>
+                 </li>
+                 <li class="divider"></li>
             </ul>
         </li>
         <li class="dropdown">
@@ -19,9 +19,15 @@
                 <i class="fa fa-list"></i> Kategorier <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-                <!--<ul class="dropdown-menu" ng-repeat="category in categories">-->
-                <li><a href="#dropdown1" data-toggle="tab">category</a></li>
-                <!--<li><a href="#dropdown1" data-toggle="tab">{{category}}</a></li>-->
+                <li ng-repeat="category in messages.categories">
+                    <a class="dropdown-toggle small" data-toggle="dropdown" href="javascript:void(0)">
+                        {{category.title}} <span class="caret"></span>
+                    </a>
+                        <ul class="dropdown-menu" ng-repeat="events in category.events">
+                            <a href="#dropdown1" data-toggle="tab">{{event}}</a>
+                        </ul>
+
+                </li>
                 <li class="divider"></li>
             </ul>
         </li>

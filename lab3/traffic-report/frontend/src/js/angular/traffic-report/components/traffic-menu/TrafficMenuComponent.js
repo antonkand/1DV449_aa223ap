@@ -2,9 +2,7 @@ angular.module('TrafficMenuComponent', [])
     .directive('trafficMenu', function () {
         return {
             scope: {
-                areas: '@',
-                events: '@',
-                categories: '@'
+                messages: '='
             },
             restrict: 'E',
             replace: false,
