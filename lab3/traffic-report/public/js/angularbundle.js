@@ -23,12 +23,17 @@ function TrafficReportAppController($http, $scope) {
         ]
     };
     this.map = {center: {latitude: 63, longitude: 17}, zoom: 4, bounds: {}};
-    var checkForOpenWindow = function (e) {
+    var handleWindow = function (e) {
         e = e || event;
         if (that.activeWindow) {
-            that.activeWindow.isDrawn = false;
+            if (that.activeWindow.getAnimation() === google.maps.Animation.BOUNCE) {
+                that.activeWindow.setAnimation(null);
+            }
+            that.activeWindow.isDrawn = false; // TODO find where the directive have buried .close(), isDrawn removes object from map
         }
+        e.setAnimation(google.maps.Animation.BOUNCE);
         that.activeWindow = e;
+        console.log(e);
     };
     this.activeWindow = null;
     $http.get('http://localhost:8080/traffic-data')
@@ -105,7 +110,7 @@ function TrafficReportAppController($http, $scope) {
                       fillColor: hexColor,
                       scale: 6
                   },
-                  click: checkForOpenWindow
+                  click: handleWindow
               };
           });
       })
