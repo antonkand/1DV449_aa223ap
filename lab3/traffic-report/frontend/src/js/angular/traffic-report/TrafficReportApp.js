@@ -23,12 +23,14 @@ function TrafficReportAppController($http, $scope) {
         ]
     };
     this.map = {center: {latitude: 63, longitude: 17}, zoom: 4, bounds: {}};
-    this.closeWindow = function (description) {
-        //if (infoWindow) {
-        //    infoWindow.close();
-        //}
-        console.log(description);
+    var checkForOpenWindow = function (e) {
+        e = e || event;
+        if (that.activeWindow) {
+            that.activeWindow.isDrawn = false;
+        }
+        that.activeWindow = e;
     };
+    this.activeWindow = null;
     $http.get('http://localhost:8080/traffic-data')
         .success(function (data, status, headers, config) {
           data.forEach(function (trafficmessage) {
@@ -47,20 +49,7 @@ function TrafficReportAppController($http, $scope) {
           that.markers = that.messages.events.map(function (marker, index) {
               var hexColor = '';
               var category = '';
-              // TODO make sure returned date is correct + contains dd
-              var unixStringAsDateString = function (unixTimeStampString) {
-                  var hourAsMs = 60*60*1000;
-                  var strippedDate = parseInt(unixTimeStampString) + hourAsMs;
-                  var date = new Date(strippedDate * 1000);
-                  var hours = date.getHours();
-                  var minutes = +'0' + date.getMinutes();
-                  var seconds = +'0' + (date.getMilliseconds()/1000);
-                  console.log(date.getHours());
-                  console.log(date.getMinutes());
-                  console.log((date.getMilliseconds() / 1000));
-                  return hours + ':' + minutes + ':' + seconds;
-              };
-              var timestamp = unixStringAsDateString(marker.createddate.substring(6, marker.createddate.length-7));
+              var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
               switch (marker.priority) {
                   case 1:
                       hexColor = '#F51329';
@@ -92,7 +81,6 @@ function TrafficReportAppController($http, $scope) {
                       category = 'Övrigt';
                       break;
               }
-              console.log(google.maps.InfoWindow);
               return {
                   id: (index + 12345),
                   title: marker.title,
@@ -117,14 +105,7 @@ function TrafficReportAppController($http, $scope) {
                       fillColor: hexColor,
                       scale: 6
                   },
-                  checkForOpenWindow: function () {
-                      //if (google.maps.InfoWindow) {
-                      //    google.maps.InfoWindow.close();
-                      //}
-                      return function () {
-                        console.log(google.maps.InfoWindow);
-                      };
-                  }
+                  click: checkForOpenWindow
               };
           });
       })
