@@ -1,5 +1,6 @@
 ;(function () {
   'use strict';
+  /*global google*/
   function TrafficReportController () {
     this.get = (url, callback) => {
       let xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject();
@@ -13,8 +14,46 @@
       });
       xhr.send(null);
     };
+    let infoWindow = null;
+    let activeMarker = null;
+    this.map = {}; // sets on init
+    this.mapOptions = {}; // sets on init
     this.markers = [];
+    let createInfoWindow = (marker) => {
+      let htmlString = '<div>' +
+                       '<h3>' + marker.title + '</h3>' +
+                       '<span>' + marker.category + ' ' + marker.date + '</span>' +
+                       '<p>' + marker.labelContent + '</p>' +
+                       '</div>';
+      let newWindow = new google.maps.InfoWindow({
+        content: htmlString
+      });
+      infoWindow = newWindow;
+      return newWindow;
+    };
+    let pinMarker = (markerToAdd) => {
+        console.log(markerToAdd);
+        let info = createInfoWindow(markerToAdd);
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(markerToAdd.latitude, markerToAdd.longitude),
+          title: markerToAdd.title,
+          animation: google.maps.Animation.DROP,
+          map: this.map
+        });
+        google.maps.event.addListener(marker, 'click', () => {
+          if (activeMarker) {
+            activeMarker.setAnimation(null);
+          }
+          activeMarker = marker;
+          if (infoWindow !== info) {
+            infoWindow.close();
+          }
+          info.open(this.map, activeMarker);
+          activeMarker.setAnimation(google.maps.Animation.BOUNCE);
+        });
+    };
     let mapMarkers = (data) => {
+
       this.markers = JSON.parse(data).map((marker, index) => {
         var hexColor = '';
         var category = '';
@@ -51,7 +90,7 @@
             break;
         }
         return {
-          id: (index + 12345),
+          id: index,
           title: marker.title,
           latitude: marker.latitude,
           longitude: marker.longitude,
@@ -66,12 +105,23 @@
           zoom: marker.zoom,
           date: timestamp
         };
+      }).forEach(function (marker) {
+        pinMarker(marker);
       });
-      console.log(this.markers);
     };
-    this.get('http://localhost:8080/traffic-data', mapMarkers);
+    this.init = () => {
+      this.mapOptions = {
+        center: { lat: 56.6874601, lng: 16.326955},
+        zoom: 5
+      };
+      this.map = new google.maps.Map(document.querySelector('#google-map-container'), this.mapOptions);
+      this.get('http://localhost:8080/traffic-data', mapMarkers);
+    };
   }
   console.log('TrafficReport ES6.');
-  let run = () => new TrafficReportController();
-  window.onload = run;
+  let run = () => {
+    let controller = new TrafficReportController();
+    controller.init();
+  };
+  google.maps.event.addDomListener(window, 'load', run);
 })();

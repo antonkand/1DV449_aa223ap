@@ -16,7 +16,38 @@
       }));
       xhr.send(null);
     });
+    var infoWindow = null;
+    var activeMarker = null;
+    this.map = {};
+    this.mapOptions = {};
     this.markers = [];
+    var createInfoWindow = (function(marker) {
+      var htmlString = '<div>' + '<h3>' + marker.title + '</h3>' + '<span>' + marker.category + ' ' + marker.date + '</span>' + '<p>' + marker.labelContent + '</p>' + '</div>';
+      var newWindow = new google.maps.InfoWindow({content: htmlString});
+      infoWindow = newWindow;
+      return newWindow;
+    });
+    var pinMarker = (function(markerToAdd) {
+      console.log(markerToAdd);
+      var info = createInfoWindow(markerToAdd);
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(markerToAdd.latitude, markerToAdd.longitude),
+        title: markerToAdd.title,
+        animation: google.maps.Animation.DROP,
+        map: $__0.map
+      });
+      google.maps.event.addListener(marker, 'click', (function() {
+        if (activeMarker) {
+          activeMarker.setAnimation(null);
+        }
+        activeMarker = marker;
+        if (infoWindow !== info) {
+          infoWindow.close();
+        }
+        info.open($__0.map, activeMarker);
+        activeMarker.setAnimation(google.maps.Animation.BOUNCE);
+      }));
+    });
     var mapMarkers = (function(data) {
       $__0.markers = JSON.parse(data).map((function(marker, index) {
         var hexColor = '';
@@ -54,7 +85,7 @@
             break;
         }
         return {
-          id: (index + 12345),
+          id: index,
           title: marker.title,
           latitude: marker.latitude,
           longitude: marker.longitude,
@@ -72,14 +103,26 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      }));
-      console.log($__0.markers);
+      })).forEach(function(marker) {
+        pinMarker(marker);
+      });
     });
-    this.get('http://localhost:8080/traffic-data', mapMarkers);
+    this.init = (function() {
+      $__0.mapOptions = {
+        center: {
+          lat: 56.6874601,
+          lng: 16.326955
+        },
+        zoom: 5
+      };
+      $__0.map = new google.maps.Map(document.querySelector('#google-map-container'), $__0.mapOptions);
+      $__0.get('http://localhost:8080/traffic-data', mapMarkers);
+    });
   }
   console.log('TrafficReport ES6.');
   var run = (function() {
-    return new TrafficReportController();
+    var controller = new TrafficReportController();
+    controller.init();
   });
-  window.onload = run;
+  google.maps.event.addDomListener(window, 'load', run);
 })();

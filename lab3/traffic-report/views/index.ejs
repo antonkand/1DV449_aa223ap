@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%- include partials/meta.ejs %>
     <%- include partials/css.ejs %>
-    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js">
+    </script>
     <style>
         body, html {
             width: 100%;
             height: 100%;
         }
-        .angular-google-map-container {
+        #google-map-container {
             height: 75vh;
             width: 100vw;
             height: 600px;
@@ -24,9 +26,8 @@
 
     <%- include partials/nav.ejs %>
 
-    <%- include partials/map.ejs %>
-
-    <footer class="col-sm-12" style="height: 10vh;">
+    <div id="google-map-container" class="col-xs-12"></div>
+    <footer class="col-sm-12">
         <p class="pull-right small">
            <br> Google Maps Mashup by <a href="https://github.com/antonkandersson">Anton K. Andersson</a>.
         </p>
