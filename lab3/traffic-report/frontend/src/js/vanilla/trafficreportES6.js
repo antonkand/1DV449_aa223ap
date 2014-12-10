@@ -23,12 +23,11 @@
       let htmlString = '<div>' +
                        '<h3>' + marker.title + '</h3>' +
                        '<span>' + marker.category + ' ' + marker.date + '</span>' +
-                       '<p>' + marker.labelContent + '</p>' +
+                       '<p>' + marker.description + '</p>' +
                        '</div>';
       let newWindow = new google.maps.InfoWindow({
         content: htmlString
       });
-      infoWindow = newWindow;
       return newWindow;
     };
     let pinMarker = (markerToAdd) => {
@@ -43,12 +42,11 @@
         google.maps.event.addListener(marker, 'click', () => {
           if (activeMarker) {
             activeMarker.setAnimation(null);
-          }
-          activeMarker = marker;
-          if (infoWindow !== info) {
             infoWindow.close();
           }
-          info.open(this.map, activeMarker);
+          activeMarker = marker;
+          infoWindow = info;
+          infoWindow.open(this.map, activeMarker);
           activeMarker.setAnimation(google.maps.Animation.BOUNCE);
         });
     };
@@ -95,10 +93,7 @@
           latitude: marker.latitude,
           longitude: marker.longitude,
           description: marker.description,
-          labelClass: hexColor,
           markerPriorityColor: hexColor,
-          options: { animation: null, visible: true},
-          labelContent: marker.description,
           category: category,
           categoryNumber: marker.category,
           name: marker.name,

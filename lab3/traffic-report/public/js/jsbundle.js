@@ -22,9 +22,8 @@
     this.mapOptions = {};
     this.markers = [];
     var createInfoWindow = (function(marker) {
-      var htmlString = '<div>' + '<h3>' + marker.title + '</h3>' + '<span>' + marker.category + ' ' + marker.date + '</span>' + '<p>' + marker.labelContent + '</p>' + '</div>';
+      var htmlString = '<div>' + '<h3>' + marker.title + '</h3>' + '<span>' + marker.category + ' ' + marker.date + '</span>' + '<p>' + marker.description + '</p>' + '</div>';
       var newWindow = new google.maps.InfoWindow({content: htmlString});
-      infoWindow = newWindow;
       return newWindow;
     });
     var pinMarker = (function(markerToAdd) {
@@ -39,12 +38,11 @@
       google.maps.event.addListener(marker, 'click', (function() {
         if (activeMarker) {
           activeMarker.setAnimation(null);
-        }
-        activeMarker = marker;
-        if (infoWindow !== info) {
           infoWindow.close();
         }
-        info.open($__0.map, activeMarker);
+        activeMarker = marker;
+        infoWindow = info;
+        infoWindow.open($__0.map, activeMarker);
         activeMarker.setAnimation(google.maps.Animation.BOUNCE);
       }));
     });
@@ -90,13 +88,7 @@
           latitude: marker.latitude,
           longitude: marker.longitude,
           description: marker.description,
-          labelClass: hexColor,
           markerPriorityColor: hexColor,
-          options: {
-            animation: null,
-            visible: true
-          },
-          labelContent: marker.description,
           category: category,
           categoryNumber: marker.category,
           name: marker.name,
