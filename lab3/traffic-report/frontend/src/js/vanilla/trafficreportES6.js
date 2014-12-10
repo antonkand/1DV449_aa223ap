@@ -1,27 +1,24 @@
-"use strict";
-;
-(function() {
+;(function () {
   'use strict';
-  function TrafficReportController() {
-    var $__0 = this;
-    this.get = (function(url, callback) {
-      var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject();
+  function TrafficReportController () {
+    this.get = (url, callback) => {
+      let xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject();
       xhr.open('get', url, false);
       console.log('get');
-      xhr.addEventListener('load', (function() {
+      xhr.addEventListener('load', () => {
         if (xhr.status < 400) {
           console.log('xhr ok.');
           callback(xhr.responseText);
         }
-      }));
+      });
       xhr.send(null);
-    });
+    };
     this.markers = [];
-    var mapMarkers = (function(data) {
-      $__0.markers = JSON.parse(data).map((function(marker, index) {
+    let mapMarkers = (data) => {
+      this.markers = JSON.parse(data).map((marker, index) => {
         var hexColor = '';
         var category = '';
-        var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length - 7)))).toLocaleString();
+        var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
         switch (marker.priority) {
           case 1:
             hexColor = '#F51329';
@@ -61,10 +58,7 @@
           description: marker.description,
           labelClass: hexColor,
           markerPriorityColor: hexColor,
-          options: {
-            animation: null,
-            visible: true
-          },
+          options: { animation: null, visible: true},
           labelContent: marker.description,
           category: category,
           categoryNumber: marker.category,
@@ -72,14 +66,12 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      }));
-      console.log($__0.markers);
-    });
+      });
+      console.log(this.markers);
+    };
     this.get('http://localhost:8080/traffic-data', mapMarkers);
   }
   console.log('TrafficReport ES6.');
-  var run = (function() {
-    return new TrafficReportController();
-  });
+  let run = () => new TrafficReportController();
   window.onload = run;
 })();

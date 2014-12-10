@@ -20,26 +20,11 @@
     </style>
 </head>
 <body class="container-fluid" ng-app="TrafficReportApp" ng-cloak>
-<div class="row" ng-controller="TrafficReportAppController as trafficreport">
-    <traffic-menu messages="trafficreport.markers" window-controller="trafficreport.windowController">
-    </traffic-menu>
+<div class="row">
 
-    <ui-gmap-google-map center="trafficreport.map.center" zoom="trafficreport.map.zoom">
-        <ui-gmap-markers models="trafficreport.markers"
-                         coords="'self'"
-                         id="'id'"
-                         options="'options'"
-                         icon="'icon'"
-                         click="'windowclick'">
-            <ui-gmap-windows show="'show'" control='trafficreport.windowController'>
-                <div ng-non-bindable>
-                    <h4>{{ title }}</h4>
-                    <p><strong>{{ category }}</strong>  <small>{{ date }}</small></p>
-                    <p><em>{{description}}</em></p> <br>
-                </div>
-            </ui-gmap-windows>
-        </ui-gmap-markers>
-    </ui-gmap-google-map>
+    <%- include partials/nav.ejs %>
+
+    <%- include partials/map.ejs %>
 
     <footer class="col-sm-12" style="height: 10vh;">
         <p class="pull-right small">

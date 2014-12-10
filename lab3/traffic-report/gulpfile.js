@@ -14,6 +14,7 @@ var svgo = require('imagemin-svgo');
 var annotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var traceur = require('gulp-traceur');
 
 var traffic_report_folder = './frontend/src/js/angular/traffic-report/';
 
@@ -74,7 +75,8 @@ gulp.task('angular', function () {
 gulp.task('scripts', function () {
     return gulp.src(paths.script_src)
         .pipe(concat('jsbundle.js'))
-        .pipe(uglify())
+        .pipe(traceur())
+        //.pipe(uglify())
         .pipe(gulp.dest(paths.script_dist));
 });
 
