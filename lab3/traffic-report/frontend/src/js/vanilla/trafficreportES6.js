@@ -19,6 +19,7 @@
     this.map = {}; // sets on init
     this.mapOptions = {}; // sets on init
     this.markers = [];
+    let markerReferences = [];
     let createInfoWindow = (marker) => {
       let htmlString = '<div>' +
                        '<h3>' + marker.title + '</h3>' +
@@ -31,7 +32,6 @@
       return newWindow;
     };
     let pinMarker = (markerToAdd) => {
-        console.log(markerToAdd);
         // tutorial custom colored markers:
         // http://stackoverflow.com/questions/7095574/google-maps-api-3-custom-marker-color-for-default-dot-marker
         let pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor,
@@ -56,12 +56,26 @@
           infoWindow.open(this.map, activeMarker);
           activeMarker.setAnimation(google.maps.Animation.BOUNCE);
         });
+        markerReferences.push(marker);
     };
-    let mapMarkers = (data) => {
+    let addMarkerToMenu = (marker) => {
+      let ul = document.querySelector('#traffic-events');
+      let li = document.createElement('li');
+      let divider = document.createElement('li');
+      divider.setAttribute('class', 'divider');
+      let a = document.createElement('a');
+      a.setAttribute('href', '#'+ marker.title);
+      a.setAttribute('data-toggle', 'tab');
+      a.innerHTML = '<strong>' + marker.date + '</strong> ' + '<em>' + marker.title + '</em>';
+      li.appendChild(a);
+      ul.appendChild(li);
+      ul.appendChild(divider);
+    };
+    let handleMarkers = (data) => {
       this.markers = JSON.parse(data).map((marker, index) => {
-        var hexColor = '';
-        var category = '';
-        var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
+        let hexColor = '';
+        let category = '';
+        let timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
         switch (marker.priority) {
           case 1:
             hexColor = 'F51329';
@@ -106,10 +120,19 @@
           zoom: marker.zoom,
           date: timestamp
         };
+      }).sort(function (a, b) {
+        if (a.date > b.date) {
+          return -1;
+        }
+        if (a.date < b.date) {
+          return 1;
+        }
+        return 0;
       }).forEach(function (marker) {
-        pinMarker(marker);
-
+          pinMarker(marker);
+          addMarkerToMenu(marker);
       });
+      console.log(markerReferences);
     };
     this.init = () => {
       this.mapOptions = {
@@ -117,7 +140,7 @@
         zoom: 5
       };
       this.map = new google.maps.Map(document.querySelector('#google-map-container'), this.mapOptions);
-      this.get('http://localhost:8080/traffic-data', mapMarkers);
+      this.get('http://localhost:8080/traffic-data', handleMarkers);
     };
   }
   let run = () => {

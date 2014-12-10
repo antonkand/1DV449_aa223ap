@@ -21,13 +21,13 @@
     this.map = {};
     this.mapOptions = {};
     this.markers = [];
+    var markerReferences = [];
     var createInfoWindow = (function(marker) {
       var htmlString = '<div>' + '<h3>' + marker.title + '</h3>' + '<span>' + marker.category + ' ' + marker.date + '</span>' + '<p>' + marker.description + '</p>' + '</div>';
       var newWindow = new google.maps.InfoWindow({content: htmlString});
       return newWindow;
     });
     var pinMarker = (function(markerToAdd) {
-      console.log(markerToAdd);
       var pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor, new google.maps.Size(21, 34), new google.maps.Point(0, 0), new google.maps.Point(10, 34));
       var info = createInfoWindow(markerToAdd);
       var marker = new google.maps.Marker({
@@ -47,8 +47,22 @@
         infoWindow.open($__0.map, activeMarker);
         activeMarker.setAnimation(google.maps.Animation.BOUNCE);
       }));
+      markerReferences.push(marker);
     });
-    var mapMarkers = (function(data) {
+    var addMarkerToMenu = (function(marker) {
+      var ul = document.querySelector('#traffic-events');
+      var li = document.createElement('li');
+      var divider = document.createElement('li');
+      divider.setAttribute('class', 'divider');
+      var a = document.createElement('a');
+      a.setAttribute('href', '#' + marker.title);
+      a.setAttribute('data-toggle', 'tab');
+      a.innerHTML = '<strong>' + marker.date + '</strong> ' + '<em>' + marker.title + '</em>';
+      li.appendChild(a);
+      ul.appendChild(li);
+      ul.appendChild(divider);
+    });
+    var handleMarkers = (function(data) {
       $__0.markers = JSON.parse(data).map((function(marker, index) {
         var hexColor = '';
         var category = '';
@@ -97,9 +111,19 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      })).forEach(function(marker) {
+      })).sort(function(a, b) {
+        if (a.date > b.date) {
+          return -1;
+        }
+        if (a.date < b.date) {
+          return 1;
+        }
+        return 0;
+      }).forEach(function(marker) {
         pinMarker(marker);
+        addMarkerToMenu(marker);
       });
+      console.log(markerReferences);
     });
     this.init = (function() {
       $__0.mapOptions = {
@@ -110,7 +134,7 @@
         zoom: 5
       };
       $__0.map = new google.maps.Map(document.querySelector('#google-map-container'), $__0.mapOptions);
-      $__0.get('http://localhost:8080/traffic-data', mapMarkers);
+      $__0.get('http://localhost:8080/traffic-data', handleMarkers);
     });
   }
   var run = (function() {
