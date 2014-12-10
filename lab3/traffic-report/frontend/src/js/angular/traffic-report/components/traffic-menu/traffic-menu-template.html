@@ -1,14 +1,14 @@
-<h1 class="col-xs-6 text-center">
+<h1 class="col-xs-6 text-center" ng-cloak>
     <i class="fa fa-car"></i> Trafikdata från SR Trafik
 </h1>
-<nav class="col-xs-6" style="height: 15vh;">
+<nav class="col-xs-6" style="height: 15vh;" ng-cloak>
     <ul class="nav nav-tabs pull-down">
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
                 <i class="fa fa-bolt"></i> Händelser <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-                 <li ng-repeat="event in messages.events">
+                 <li ng-repeat="event in messages">
                         <a href="#dropdown1" data-toggle="tab">{{event.title}}</a>
                  </li>
                  <li class="divider"></li>
@@ -16,19 +16,27 @@
         </li>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
-                <i class="fa fa-list"></i> Kategorier <span class="caret"></span>
+                <i class="fa fa-tag"></i> Sortering <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-                <li ng-repeat="category in messages.categories">
-                    <a class="dropdown-toggle small" data-toggle="dropdown" href="javascript:void(0)">
-                        {{category.title}} <span class="caret"></span>
-                    </a>
-                        <ul class="dropdown-menu" ng-repeat="events in category.events">
-                            <a href="#dropdown1" data-toggle="tab">{{event}}</a>
-                        </ul>
+                 <li>
+                        <a href="#dropdown1" data-toggle="tab">Vägtrafik</a>
+                 </li>
+                                 <li class="divider"></li>
 
-                </li>
-                <li class="divider"></li>
+                <li>
+                        <a href="#dropdown1" data-toggle="tab">Kollektivtrafik</a>
+                 </li>
+                                 <li class="divider"></li>
+
+                <li>
+                        <a href="#dropdown1" data-toggle="tab">Störningar</a>
+                 </li>
+                                 <li class="divider"></li>
+
+                <li>
+                        <a href="#dropdown1" data-toggle="tab">Övrigt</a>
+                 </li>
             </ul>
         </li>
         <li class="dropdown">

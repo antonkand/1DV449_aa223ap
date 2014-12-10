@@ -1,57 +1,39 @@
 ;(function () {
-    'use strict';
+'use strict';
 
 angular.module('TrafficReportApp', ['TrafficMenuComponent', 'uiGmapgoogle-maps'])
     .controller('TrafficReportAppController', TrafficReportAppController);
 
 function TrafficReportAppController($http, $scope) {
     var that = this;
-    var infoWindow = null;
     this.markers = [];
-    this.messages = {
-        areas: ['ett', 'two'],
-        events: [],
-        categories: [
-            {
-                title: 'one',
-                events: ['ett', 'two']
-            },
-            {
-                title: 'two',
-                events: ['ett', 'two']
-            }
-        ]
-    };
+    this.infowindow = google.maps.InfoWindow;
+    this.windowController = {};
+    console.log(this.infowindow);
+    this.activeWindow = null;
     this.map = {center: {latitude: 63, longitude: 17}, zoom: 4, bounds: {}};
     var handleWindow = function (e) {
         e = e || event;
         if (that.activeWindow) {
-            if (that.activeWindow.getAnimation() === google.maps.Animation.BOUNCE) {
-                that.activeWindow.setAnimation(null);
-            }
-            that.activeWindow.isDrawn = false; // TODO find where the directive have buried .close(), isDrawn removes object from map
+            that.activeWindow.setAnimation(null);
+            that.activeWindow.visible = false; // TODO find where the directive have buried .close(), isDrawn removes object from map
         }
-        e.setAnimation(google.maps.Animation.BOUNCE);
         that.activeWindow = e;
-        console.log(e);
+        that.activeWindow.setAnimation(google.maps.Animation.BOUNCE);
+        //console.log(that.windowController.getGWindows());
+        that.windowController.getChildWindows().get(that.activeWindow.key).hideWindow();
+        console.log(that.windowController.getChildWindows().get(that.activeWindow.key).gWin.__e3_);
+        //console.log(that.activeWindow.key);
+        that.windowController.getChildWindows().values().forEach(function (window) {
+            window.remove = true;
+        });
+        //that.windowController.getGWindows().forEach(function (window) {
+        //    window.show = false;
+        //});
     };
-    this.activeWindow = null;
     $http.get('http://localhost:8080/traffic-data')
         .success(function (data, status, headers, config) {
-          data.forEach(function (trafficmessage) {
-                return that.messages.events.push({
-                    priority: trafficmessage.priority,
-                    createddate: trafficmessage.createddate,
-                    title: trafficmessage.title,
-                    exactlocation: trafficmessage.exactlocation,
-                    description: trafficmessage.description,
-                    latitude: trafficmessage.latitude,
-                    longitude: trafficmessage.longitude,
-                    category: trafficmessage.category,
-                    subcategory: trafficmessage.subcategory
-                });
-            });
-          that.markers = that.messages.events.map(function (marker, index) {
+          that.markers = data.map(function (marker, index) {
               var hexColor = '';
               var category = '';
               var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
@@ -106,11 +88,11 @@ function TrafficReportAppController($http, $scope) {
                       path: google.maps.SymbolPath.CIRCLE,
                       strokeColor: hexColor,
                       strokeWeight: 0.8,
-                      fillOpacity: 0.5,
+                      fillOpacity: 0.8,
                       fillColor: hexColor,
                       scale: 6
                   },
-                  click: handleWindow
+                  windowclick: handleWindow
               };
           });
       })

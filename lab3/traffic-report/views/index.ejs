@@ -21,17 +21,17 @@
 </head>
 <body class="container-fluid" ng-app="TrafficReportApp" ng-cloak>
 <div class="row" ng-controller="TrafficReportAppController as trafficreport">
-    <traffic-menu messages="trafficreport.messages">
+    <traffic-menu messages="trafficreport.markers" window-controller="trafficreport.windowController">
     </traffic-menu>
 
     <ui-gmap-google-map center="trafficreport.map.center" zoom="trafficreport.map.zoom">
         <ui-gmap-markers models="trafficreport.markers"
                          coords="'self'"
                          id="'id'"
-                         click="'click'"
                          options="'options'"
-                         icon="'icon'">
-            <ui-gmap-windows show="'show'">
+                         icon="'icon'"
+                         click="'windowclick'">
+            <ui-gmap-windows show="'show'" control='trafficreport.windowController'>
                 <div ng-non-bindable>
                     <h4>{{ title }}</h4>
                     <p><strong>{{ category }}</strong>  <small>{{ date }}</small></p>
