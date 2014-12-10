@@ -28,12 +28,14 @@
     });
     var pinMarker = (function(markerToAdd) {
       console.log(markerToAdd);
+      var pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor, new google.maps.Size(21, 34), new google.maps.Point(0, 0), new google.maps.Point(10, 34));
       var info = createInfoWindow(markerToAdd);
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(markerToAdd.latitude, markerToAdd.longitude),
         title: markerToAdd.title,
         animation: google.maps.Animation.DROP,
-        map: $__0.map
+        map: $__0.map,
+        icon: pinImage
       });
       google.maps.event.addListener(marker, 'click', (function() {
         if (activeMarker) {
@@ -53,19 +55,19 @@
         var timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length - 7)))).toLocaleString();
         switch (marker.priority) {
           case 1:
-            hexColor = '#F51329';
+            hexColor = 'F51329';
             break;
           case 2:
-            hexColor = '#F98020';
+            hexColor = 'F98020';
             break;
           case 3:
-            hexColor = '#F9EB18';
+            hexColor = 'F9EB18';
             break;
           case 4:
-            hexColor = '#85E0F7';
+            hexColor = '85E0F7';
             break;
           case 5:
-            hexColor = '#85E0F7';
+            hexColor = '85E0F7';
             break;
         }
         switch (marker.category) {
@@ -111,8 +113,8 @@
       $__0.get('http://localhost:8080/traffic-data', mapMarkers);
     });
   }
-  console.log('TrafficReport ES6.');
   var run = (function() {
+    console.log('TrafficReport ES6.');
     var controller = new TrafficReportController();
     controller.init();
   });
