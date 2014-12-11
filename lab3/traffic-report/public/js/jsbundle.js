@@ -22,58 +22,49 @@
     this.mapOptions = {};
     this.markers = [];
     this.markerReferences = [];
+    var clear = (function() {
+      $__0.markerReferences.forEach((function(marker) {
+        marker.setMap(null);
+      }));
+    });
+    var addSpecificMarkers = (function(filteredArray) {
+      filteredArray.forEach((function(marker) {
+        marker.setMap($__0.map);
+      }));
+    });
     var attachEventListenersToSortMenu = (function() {
       var all = document.querySelector('#categories-all');
-      all.addEventListener('click', (function() {
-        $__0.markerReferences.forEach((function(marker) {
-          marker.visible = true;
-          console.log('all click');
-        }));
-      }), false);
       var transport = document.querySelector('#categories-transport');
-      transport.addEventListener('click', (function() {
-        $__0.markerReferences.forEach((function(marker) {
-          if (marker.trafficCategory === 1) {
-            marker.visible = true;
-            console.log(marker);
-            console.log('traffic click');
-          } else {
-            marker.visible = false;
-          }
-        }));
-      }), false);
       var traffic = document.querySelector('#categories-traffic');
-      traffic.addEventListener('click', (function() {
-        $__0.markerReferences.forEach((function(marker) {
-          if (marker.trafficCategory === 0) {
-            marker.visible = true;
-            console.log('traffic click');
-          } else {
-            marker.visible = false;
-          }
-        }));
-      }), false);
-      var other = document.querySelector('#categories-other');
-      other.addEventListener('click', (function() {
-        $__0.markerReferences.forEach((function(marker) {
-          if (marker.trafficCategory === 3) {
-            marker.visible = true;
-            console.log('other click');
-          } else {
-            marker.visible = false;
-          }
-        }));
-      }), false);
       var disturbance = document.querySelector('#categories-disturbance');
+      var other = document.querySelector('#categories-other');
+      all.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences);
+      }), false);
+      traffic.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 0;
+        })));
+      }), false);
+      transport.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 1;
+        })));
+      }), false);
       disturbance.addEventListener('click', (function() {
-        $__0.markerReferences.forEach((function(marker) {
-          if (marker.trafficCategory === 2) {
-            marker.visible = true;
-            console.log('disturbance click');
-          } else {
-            marker.visible = false;
-          }
-        }));
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 2;
+        })));
+      }), false);
+      other.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 3;
+        })));
       }), false);
     });
     var createInfoWindow = (function(marker) {
@@ -81,7 +72,7 @@
       var newWindow = new google.maps.InfoWindow({content: htmlString});
       return newWindow;
     });
-    var pinMarker = (function(markerToAdd) {
+    var pinMarker = (function(markerToAdd, callback) {
       var pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor, new google.maps.Size(21, 34), new google.maps.Point(0, 0), new google.maps.Point(10, 34));
       var info = createInfoWindow(markerToAdd);
       var marker = new google.maps.Marker({
@@ -93,6 +84,7 @@
         trafficId: markerToAdd.id,
         trafficCategory: markerToAdd.categoryNumber
       });
+      console.log(markerToAdd.id);
       google.maps.event.addListener(marker, 'click', (function() {
         if (activeMarker) {
           activeMarker.setAnimation(null);
@@ -104,6 +96,7 @@
         activeMarker.setAnimation(google.maps.Animation.BOUNCE);
       }));
       $__0.markerReferences.push(marker);
+      callback();
     });
     var addMarkerToMenu = (function(marker) {
       var ul = document.querySelector('#traffic-events');
@@ -190,9 +183,8 @@
         }
         return 0;
       })).forEach((function(marker) {
-        pinMarker(marker);
+        pinMarker(marker, attachEventListenersToSortMenu);
         addMarkerToMenu(marker);
-        attachEventListenersToSortMenu();
       }));
       console.table($__0.markerReferences);
     });

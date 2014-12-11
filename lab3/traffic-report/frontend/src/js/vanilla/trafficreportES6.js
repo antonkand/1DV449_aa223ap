@@ -20,62 +20,41 @@
     this.mapOptions = {}; // sets on init
     this.markers = [];
     this.markerReferences = [];
+    let clear = () => {
+        this.markerReferences.forEach((marker) => {
+          marker.setMap(null);
+        });
+      };
+    let addSpecificMarkers = (filteredArray) => {
+        filteredArray.forEach((marker) => {
+          marker.setMap(this.map);
+        });
+    };
     let attachEventListenersToSortMenu = () => {
       let all = document.querySelector('#categories-all');
-      all.addEventListener('click', () => {
-        this.markerReferences.forEach((marker) => {
-            marker.visible = true;
-            console.log('all click');
-        });
-      }, false);
       let transport = document.querySelector('#categories-transport');
-      transport.addEventListener('click', () => {
-        this.markerReferences.forEach((marker) => {
-          if (marker.trafficCategory === 1) {
-            marker.visible = true;
-            console.log(marker);
-            console.log('traffic click');
-          }
-          else {
-            marker.visible = false;
-          }
-        });
-      }, false);
       let traffic = document.querySelector('#categories-traffic');
-      traffic.addEventListener('click', () => {
-        this.markerReferences.forEach((marker) => {
-          if (marker.trafficCategory === 0) {
-            marker.visible = true;
-            console.log('traffic click');
-          }
-          else {
-            marker.visible = false;
-          }
-        });
-      }, false);
-      let other = document.querySelector('#categories-other');
-      other.addEventListener('click', () => {
-        this.markerReferences.forEach((marker) => {
-          if (marker.trafficCategory === 3) {
-            marker.visible = true;
-            console.log('other click');
-          }
-          else {
-            marker.visible = false;
-          }
-        });
-      }, false);
       let disturbance = document.querySelector('#categories-disturbance');
+      let other = document.querySelector('#categories-other');
+      all.addEventListener('click', () => {
+        clear();
+        addSpecificMarkers(this.markerReferences);
+      }, false);
+      traffic.addEventListener('click', () => {
+        clear();
+        addSpecificMarkers(this.markerReferences.filter((marker) =>  marker.trafficCategory === 0));
+      }, false);
+      transport.addEventListener('click', () => {
+        clear();
+        addSpecificMarkers(this.markerReferences.filter((marker) =>  marker.trafficCategory === 1));
+      }, false);
       disturbance.addEventListener('click', () => {
-        this.markerReferences.forEach((marker) => {
-          if (marker.trafficCategory === 2) {
-            marker.visible = true;
-            console.log('disturbance click');
-          }
-          else {
-            marker.visible = false;
-          }
-        });
+        clear();
+        addSpecificMarkers(this.markerReferences.filter((marker) =>  marker.trafficCategory === 2));
+      }, false);
+      other.addEventListener('click', () => {
+        clear();
+        addSpecificMarkers(this.markerReferences.filter((marker) =>  marker.trafficCategory === 3));
       }, false);
     };
     let createInfoWindow = (marker) => {
@@ -89,7 +68,7 @@
       });
       return newWindow;
     };
-    let pinMarker = (markerToAdd) => {
+    let pinMarker = (markerToAdd, callback) => {
         // tutorial custom colored markers:
         // http://stackoverflow.com/questions/7095574/google-maps-api-3-custom-marker-color-for-default-dot-marker
         let pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor,
@@ -106,6 +85,7 @@
           trafficId: markerToAdd.id,
           trafficCategory: markerToAdd.categoryNumber
         });
+        console.log(markerToAdd.id);
         google.maps.event.addListener(marker, 'click', () => {
           if (activeMarker) {
             activeMarker.setAnimation(null);
@@ -117,6 +97,7 @@
           activeMarker.setAnimation(google.maps.Animation.BOUNCE);
         });
         this.markerReferences.push(marker);
+        callback();
     };
     let addMarkerToMenu = (marker) => {
       let ul = document.querySelector('#traffic-events');
@@ -204,9 +185,8 @@
         }
         return 0;
       }).forEach((marker) => {
-          pinMarker(marker);
+          pinMarker(marker, attachEventListenersToSortMenu);
           addMarkerToMenu(marker);
-          attachEventListenersToSortMenu();
       });
       //this.markerReferences.reverse();
       console.table(this.markerReferences);
