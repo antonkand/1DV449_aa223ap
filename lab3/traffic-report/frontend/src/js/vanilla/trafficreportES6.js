@@ -21,6 +21,7 @@
     this.markers = [];
     this.markerReferences = [];
     let clear = () => {
+        infoWindow ? infoWindow.close() : null;
         this.markerReferences.forEach((marker) => {
           marker.setMap(null);
         });
