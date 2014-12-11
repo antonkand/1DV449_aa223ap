@@ -84,6 +84,7 @@
         trafficId: markerToAdd.id,
         trafficCategory: markerToAdd.categoryNumber
       });
+      console.log('markerToAdd.id, inside pinMarker');
       console.log(markerToAdd.id);
       google.maps.event.addListener(marker, 'click', (function() {
         if (activeMarker) {
@@ -99,6 +100,8 @@
       callback();
     });
     var addMarkerToMenu = (function(marker) {
+      console.log('addMarkerToMenu marker.id');
+      console.log(marker.id);
       var ul = document.querySelector('#traffic-events');
       var li = document.createElement('li');
       var divider = document.createElement('li');
@@ -112,12 +115,8 @@
       span.setAttribute('class', 'text-center');
       span.addEventListener('click', (function(e) {
         e = e || event;
-        var filtered = $__0.markerReferences.filter((function(element) {
-          console.log(element.title);
-          console.log(e.target.firstChild);
-          return element.title === e.target.firstChild.toString();
-        }));
-        console.log(filtered);
+        console.log('addMarkerToMenu, inside eventlistener, marker.id');
+        console.log(marker.id);
         google.maps.event.trigger($__0.markerReferences[marker.id], 'click');
       }), false);
       span.appendChild(a);
@@ -186,7 +185,6 @@
         pinMarker(marker, attachEventListenersToSortMenu);
         addMarkerToMenu(marker);
       }));
-      console.table($__0.markerReferences);
     });
     this.init = (function() {
       $__0.mapOptions = {

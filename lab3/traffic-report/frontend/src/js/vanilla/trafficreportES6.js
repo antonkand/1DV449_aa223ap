@@ -85,7 +85,8 @@
           trafficId: markerToAdd.id,
           trafficCategory: markerToAdd.categoryNumber
         });
-        console.log(markerToAdd.id);
+      console.log('markerToAdd.id, inside pinMarker');
+      console.log(markerToAdd.id);
         google.maps.event.addListener(marker, 'click', () => {
           if (activeMarker) {
             activeMarker.setAnimation(null);
@@ -100,6 +101,8 @@
         callback();
     };
     let addMarkerToMenu = (marker) => {
+      console.log('addMarkerToMenu marker.id');
+      console.log(marker.id);
       let ul = document.querySelector('#traffic-events');
       let li = document.createElement('li');
       let divider = document.createElement('li');
@@ -113,12 +116,10 @@
       span.setAttribute('class', 'text-center');
       span.addEventListener('click', (e) => {
         e = e || event;
-        let filtered = this.markerReferences.filter((element) => {
-          console.log(element.title);
-          console.log(e.target.firstChild);
-          return element.title === e.target.firstChild.toString();
-        });
-        console.log(filtered);
+        console.log('addMarkerToMenu, inside eventlistener, marker.id');
+        console.log(marker.id);
+
+        //console.log(filtered);
         google.maps.event.trigger(this.markerReferences[marker.id], 'click');
         //console.log(e.target.firstChild);
       }, false);
@@ -189,7 +190,7 @@
           addMarkerToMenu(marker);
       });
       //this.markerReferences.reverse();
-      console.table(this.markerReferences);
+      //console.table(this.markerReferences);
     };
     this.init = () => {
       this.mapOptions = {
