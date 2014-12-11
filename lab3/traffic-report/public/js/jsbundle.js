@@ -125,7 +125,15 @@
       ul.appendChild(divider);
     });
     var handleMarkers = (function(data) {
-      $__0.markers = JSON.parse(data).map((function(marker, index) {
+      $__0.markers = JSON.parse(data).sort((function(a, b) {
+        if (a.date > b.date) {
+          return -1;
+        }
+        if (a.date < b.date) {
+          return 1;
+        }
+        return 0;
+      })).map((function(marker, index) {
         var hexColor = '';
         var category = '';
         var timestamp = new Date((+marker.createddate.substring(6, marker.createddate.length - 7))).toLocaleString();
@@ -173,18 +181,11 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      })).sort((function(a, b) {
-        if (a.date > b.date) {
-          return -1;
-        }
-        if (a.date < b.date) {
-          return 1;
-        }
-        return 0;
       })).forEach((function(marker) {
         pinMarker(marker, attachEventListenersToSortMenu);
         addMarkerToMenu(marker);
       }));
+      console.table($__0.markerReferences);
     });
     this.init = (function() {
       $__0.mapOptions = {

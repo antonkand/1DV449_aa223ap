@@ -129,7 +129,15 @@
       ul.appendChild(divider);
     };
     let handleMarkers = (data) => {
-      this.markers = JSON.parse(data).map((marker, index) => {
+      this.markers = JSON.parse(data).sort((a, b) => {
+        if (a.date > b.date) {
+          return -1;
+        }
+        if (a.date < b.date) {
+          return 1;
+        }
+        return 0;
+      }).map((marker, index) => {
         let hexColor = '';
         let category = '';
         let timestamp = new Date((+marker.createddate.substring(6, marker.createddate.length-7))).toLocaleString();
@@ -177,20 +185,12 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      }).sort((a, b) => {
-        if (a.date > b.date) {
-          return -1;
-        }
-        if (a.date < b.date) {
-          return 1;
-        }
-        return 0;
       }).forEach((marker) => {
           pinMarker(marker, attachEventListenersToSortMenu);
           addMarkerToMenu(marker);
       });
       //this.markerReferences.reverse();
-      //console.table(this.markerReferences);
+      console.table(this.markerReferences);
     };
     this.init = () => {
       this.mapOptions = {
