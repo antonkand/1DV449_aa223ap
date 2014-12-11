@@ -19,7 +19,65 @@
     this.map = {}; // sets on init
     this.mapOptions = {}; // sets on init
     this.markers = [];
-    let markerReferences = [];
+    this.markerReferences = [];
+    let attachEventListenersToSortMenu = () => {
+      let all = document.querySelector('#categories-all');
+      all.addEventListener('click', () => {
+        this.markerReferences.forEach((marker) => {
+            marker.visible = true;
+            console.log('all click');
+        });
+      }, false);
+      let transport = document.querySelector('#categories-transport');
+      transport.addEventListener('click', () => {
+        this.markerReferences.forEach((marker) => {
+          if (marker.trafficCategory === 1) {
+            marker.visible = true;
+            console.log(marker);
+            console.log('traffic click');
+          }
+          else {
+            marker.visible = false;
+          }
+        });
+      }, false);
+      let traffic = document.querySelector('#categories-traffic');
+      traffic.addEventListener('click', () => {
+        this.markerReferences.forEach((marker) => {
+          if (marker.trafficCategory === 0) {
+            marker.visible = true;
+            console.log('traffic click');
+          }
+          else {
+            marker.visible = false;
+          }
+        });
+      }, false);
+      let other = document.querySelector('#categories-other');
+      other.addEventListener('click', () => {
+        this.markerReferences.forEach((marker) => {
+          if (marker.trafficCategory === 3) {
+            marker.visible = true;
+            console.log('other click');
+          }
+          else {
+            marker.visible = false;
+          }
+        });
+      }, false);
+      let disturbance = document.querySelector('#categories-disturbance');
+      disturbance.addEventListener('click', () => {
+        this.markerReferences.forEach((marker) => {
+          if (marker.trafficCategory === 2) {
+            marker.visible = true;
+            console.log('disturbance click');
+          }
+          else {
+            marker.visible = false;
+          }
+        });
+      }, false);
+    };
     let createInfoWindow = (marker) => {
       let htmlString = '<div>' +
                        '<h3>' + marker.title + '</h3>' +
@@ -45,6 +103,8 @@
           animation: google.maps.Animation.DROP,
           map: this.map,
           icon: pinImage,
+          trafficId: markerToAdd.id,
+          trafficCategory: markerToAdd.categoryNumber
         });
         google.maps.event.addListener(marker, 'click', () => {
           if (activeMarker) {
@@ -56,7 +116,7 @@
           infoWindow.open(this.map, activeMarker);
           activeMarker.setAnimation(google.maps.Animation.BOUNCE);
         });
-        markerReferences.push(marker);
+        this.markerReferences.push(marker);
     };
     let addMarkerToMenu = (marker) => {
       let ul = document.querySelector('#traffic-events');
@@ -64,10 +124,25 @@
       let divider = document.createElement('li');
       divider.setAttribute('class', 'divider');
       let a = document.createElement('a');
-      a.setAttribute('href', '#'+ marker.title);
       a.setAttribute('data-toggle', 'tab');
-      a.innerHTML = '<strong>' + marker.date + '</strong> ' + '<em>' + marker.title + '</em>';
-      li.appendChild(a);
+      a.innerHTML = '<strong>' + marker.date + '</strong> ' + '<br><em>' + marker.title + '</em>';
+      let span = document.createElement('span');
+      span.setAttribute('style', 'display: block;');
+      span.setAttribute('id', 'marker'+ marker.id);
+      span.setAttribute('class', 'text-center');
+      span.addEventListener('click', (e) => {
+        e = e || event;
+        let filtered = this.markerReferences.filter((element) => {
+          console.log(element.title);
+          console.log(e.target.firstChild);
+          return element.title === e.target.firstChild.toString();
+        });
+        console.log(filtered);
+        google.maps.event.trigger(this.markerReferences[marker.id], 'click');
+        //console.log(e.target.firstChild);
+      }, false);
+      span.appendChild(a);
+      li.appendChild(span);
       ul.appendChild(li);
       ul.appendChild(divider);
     };
@@ -75,7 +150,7 @@
       this.markers = JSON.parse(data).map((marker, index) => {
         let hexColor = '';
         let category = '';
-        let timestamp = new Date(parseInt((marker.createddate.substring(6, marker.createddate.length-7)))).toLocaleString();
+        let timestamp = new Date((+marker.createddate.substring(6, marker.createddate.length-7))).toLocaleString();
         switch (marker.priority) {
           case 1:
             hexColor = 'F51329';
@@ -120,7 +195,7 @@
           zoom: marker.zoom,
           date: timestamp
         };
-      }).sort(function (a, b) {
+      }).sort((a, b) => {
         if (a.date > b.date) {
           return -1;
         }
@@ -128,11 +203,13 @@
           return 1;
         }
         return 0;
-      }).forEach(function (marker) {
+      }).forEach((marker) => {
           pinMarker(marker);
           addMarkerToMenu(marker);
+          attachEventListenersToSortMenu();
       });
-      console.log(markerReferences);
+      //this.markerReferences.reverse();
+      console.table(this.markerReferences);
     };
     this.init = () => {
       this.mapOptions = {
