@@ -1,1 +1,208 @@
-"use strict";!function(){function e(){var e=this;this.get=function(e,t){var n=XMLHttpRequest?new XMLHttpRequest:new ActiveXObject;n.open("get",e,!1),console.log("get"),n.addEventListener("load",function(){n.status<400&&(console.log("xhr ok."),t(n.responseText))}),n.send(null)};var t=null,n=null;this.map={},this.mapOptions={},this.markers=[],this.markerReferences=[];var r=function(){t?t.close():null,e.markerReferences.forEach(function(e){e.setMap(null)})},o=function(t){t.forEach(function(t){t.setMap(e.map)})},a=function(){var t=document.querySelector("#categories-all"),n=document.querySelector("#categories-transport"),a=document.querySelector("#categories-traffic"),i=document.querySelector("#categories-disturbance"),c=document.querySelector("#categories-other");t.addEventListener("click",function(){r(),o(e.markerReferences)},!1),a.addEventListener("click",function(){r(),o(e.markerReferences.filter(function(e){return 0===e.trafficCategory}))},!1),n.addEventListener("click",function(){r(),o(e.markerReferences.filter(function(e){return 1===e.trafficCategory}))},!1),i.addEventListener("click",function(){r(),o(e.markerReferences.filter(function(e){return 2===e.trafficCategory}))},!1),c.addEventListener("click",function(){r(),o(e.markerReferences.filter(function(e){return 3===e.trafficCategory}))},!1)},i=function(e){var t="<div><h3>"+e.title+"</h3><span>"+e.category+" "+e.date+"</span><p>"+e.description+"</p></div>",n=new google.maps.InfoWindow({content:t});return n},c=function(r,o){var a=new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|"+r.markerPriorityColor,new google.maps.Size(21,34),new google.maps.Point(0,0),new google.maps.Point(10,34)),c=i(r),s=new google.maps.Marker({position:new google.maps.LatLng(r.latitude,r.longitude),title:r.title,animation:google.maps.Animation.DROP,map:e.map,icon:a,trafficId:r.id,trafficCategory:r.categoryNumber});console.log("markerToAdd.id, inside pinMarker"),console.log(r.id),google.maps.event.addListener(s,"click",function(){n&&(n.setAnimation(null),t.close()),n=s,t=c,t.open(e.map,n),n.setAnimation(google.maps.Animation.BOUNCE)}),e.markerReferences.push(s),o()},s=function(t){console.log("addMarkerToMenu marker.id"),console.log(t.id);var n=document.querySelector("#traffic-events"),r=document.createElement("li"),o=document.createElement("li");o.setAttribute("class","divider");var a=document.createElement("a");a.setAttribute("data-toggle","tab"),a.innerHTML="<strong>"+t.date+"</strong> <br><em>"+t.title+"</em>";var i=document.createElement("span");i.setAttribute("style","display: block;"),i.setAttribute("id","marker"+t.id),i.setAttribute("class","text-center"),i.addEventListener("click",function(n){n=n||event,console.log("addMarkerToMenu, inside eventlistener, marker.id"),console.log(t.id),google.maps.event.trigger(e.markerReferences[t.id],"click")},!1),i.appendChild(a),r.appendChild(i),n.appendChild(r),n.appendChild(o)},l=function(t){e.markers=JSON.parse(t).sort(function(e,t){return e.date>t.date?-1:e.date<t.date?1:0}).map(function(e,t){var n="",r="",o=new Date(+e.createddate.substring(6,e.createddate.length-7)).toLocaleString();switch(e.priority){case 1:n="F51329";break;case 2:n="F98020";break;case 3:n="F9EB18";break;case 4:n="85E0F7";break;case 5:n="85E0F7"}switch(e.category){case 0:r="Vägtrafik";break;case 1:r="Kollektivtrafik";break;case 2:r="Planerad störning";break;case 3:r="Övrigt"}return{id:t,title:e.title,latitude:e.latitude,longitude:e.longitude,description:e.description,markerPriorityColor:n,category:r,categoryNumber:e.category,name:e.name,zoom:e.zoom,date:o}}).forEach(function(e){c(e,a),s(e)}),console.table(e.markerReferences)};this.init=function(){e.mapOptions={center:{lat:56.6874601,lng:16.326955},zoom:5},e.map=new google.maps.Map(document.querySelector("#google-map-container"),e.mapOptions),e.get("http://localhost:8080/traffic-data",l)}}var t=function(){console.log("TrafficReport ES6.");var t=new e;t.init()};google.maps.event.addDomListener(window,"load",t)}();
+"use strict";
+;
+(function() {
+  'use strict';
+  function TrafficReportController() {
+    var $__0 = this;
+    this.get = (function(url, callback) {
+      var xhr = XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject();
+      xhr.open('get', url, false);
+      console.log('get');
+      xhr.addEventListener('load', (function() {
+        if (xhr.status < 400) {
+          console.log('xhr ok.');
+          callback(xhr.responseText);
+        }
+      }));
+      xhr.send(null);
+    });
+    var infoWindow = null;
+    var activeMarker = null;
+    this.map = {};
+    this.mapOptions = {};
+    this.markers = [];
+    this.markerReferences = [];
+    var clear = (function() {
+      infoWindow ? infoWindow.close() : null;
+      $__0.markerReferences.forEach((function(marker) {
+        marker.setMap(null);
+      }));
+    });
+    var addSpecificMarkers = (function(filteredArray) {
+      filteredArray.forEach((function(marker) {
+        marker.setMap($__0.map);
+      }));
+    });
+    var attachEventListenersToSortMenu = (function() {
+      var all = document.querySelector('#categories-all');
+      var transport = document.querySelector('#categories-transport');
+      var traffic = document.querySelector('#categories-traffic');
+      var disturbance = document.querySelector('#categories-disturbance');
+      var other = document.querySelector('#categories-other');
+      all.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences);
+      }), false);
+      traffic.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 0;
+        })));
+      }), false);
+      transport.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 1;
+        })));
+      }), false);
+      disturbance.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 2;
+        })));
+      }), false);
+      other.addEventListener('click', (function() {
+        clear();
+        addSpecificMarkers($__0.markerReferences.filter((function(marker) {
+          return marker.trafficCategory === 3;
+        })));
+      }), false);
+    });
+    var createInfoWindow = (function(marker) {
+      var htmlString = '<div>' + '<h3>' + marker.title + '</h3>' + '<span>' + marker.category + ' ' + marker.date + '</span>' + '<p>' + marker.description + '</p>' + '</div>';
+      var newWindow = new google.maps.InfoWindow({content: htmlString});
+      return newWindow;
+    });
+    var pinMarker = (function(markerToAdd, callback) {
+      var pinImage = new google.maps.MarkerImage('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerToAdd.markerPriorityColor, new google.maps.Size(21, 34), new google.maps.Point(0, 0), new google.maps.Point(10, 34));
+      var info = createInfoWindow(markerToAdd);
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(markerToAdd.latitude, markerToAdd.longitude),
+        title: markerToAdd.title,
+        animation: google.maps.Animation.DROP,
+        map: $__0.map,
+        icon: pinImage,
+        trafficId: markerToAdd.id,
+        trafficCategory: markerToAdd.categoryNumber
+      });
+      console.log('markerToAdd.id, inside pinMarker');
+      console.log(markerToAdd.id);
+      google.maps.event.addListener(marker, 'click', (function() {
+        if (activeMarker) {
+          activeMarker.setAnimation(null);
+          infoWindow.close();
+        }
+        activeMarker = marker;
+        infoWindow = info;
+        infoWindow.open($__0.map, activeMarker);
+        activeMarker.setAnimation(google.maps.Animation.BOUNCE);
+      }));
+      $__0.markerReferences.push(marker);
+      callback();
+    });
+    var addMarkerToMenu = (function(marker) {
+      console.log('addMarkerToMenu marker.id');
+      console.log(marker.id);
+      var ul = document.querySelector('#traffic-events');
+      var li = document.createElement('li');
+      var divider = document.createElement('li');
+      divider.setAttribute('class', 'divider');
+      var a = document.createElement('a');
+      a.setAttribute('data-toggle', 'tab');
+      a.innerHTML = '<strong>' + marker.date + '</strong> ' + '<br><em>' + marker.title + '</em>';
+      var span = document.createElement('span');
+      span.setAttribute('style', 'display: block;');
+      span.setAttribute('id', 'marker' + marker.id);
+      span.setAttribute('class', 'text-center');
+      span.addEventListener('click', (function(e) {
+        e = e || event;
+        console.log('addMarkerToMenu, inside eventlistener, marker.id');
+        console.log(marker.id);
+        google.maps.event.trigger($__0.markerReferences[marker.id], 'click');
+      }), false);
+      span.appendChild(a);
+      li.appendChild(span);
+      ul.appendChild(li);
+      ul.appendChild(divider);
+    });
+    var handleMarkers = (function(data) {
+      $__0.markers = JSON.parse(data).sort((function(a, b) {
+        if (a.date > b.date) {
+          return -1;
+        }
+        if (a.date < b.date) {
+          return 1;
+        }
+        return 0;
+      })).map((function(marker, index) {
+        var hexColor = '';
+        var category = '';
+        marker.createddate = new Date((+marker.createddate.substring(6, marker.createddate.length - 7))).toLocaleString();
+        switch (marker.priority) {
+          case 1:
+            hexColor = 'F51329';
+            break;
+          case 2:
+            hexColor = 'F98020';
+            break;
+          case 3:
+            hexColor = 'F9EB18';
+            break;
+          case 4:
+            hexColor = '85E0F7';
+            break;
+          case 5:
+            hexColor = '85E0F7';
+            break;
+        }
+        switch (marker.category) {
+          case 0:
+            category = 'Vägtrafik';
+            break;
+          case 1:
+            category = 'Kollektivtrafik';
+            break;
+          case 2:
+            category = 'Planerad störning';
+            break;
+          case 3:
+            category = 'Övrigt';
+            break;
+        }
+        return {
+          id: index,
+          title: marker.title,
+          latitude: marker.latitude,
+          longitude: marker.longitude,
+          description: marker.description,
+          markerPriorityColor: hexColor,
+          category: category,
+          categoryNumber: marker.category,
+          name: marker.name,
+          zoom: marker.zoom,
+          date: marker.createddate
+        };
+      })).forEach((function(marker) {
+        pinMarker(marker, attachEventListenersToSortMenu);
+        addMarkerToMenu(marker);
+      }));
+    });
+    this.init = (function() {
+      $__0.mapOptions = {
+        center: {
+          lat: 56.6874601,
+          lng: 16.326955
+        },
+        zoom: 3
+      };
+      $__0.map = new google.maps.Map(document.querySelector('#google-map-container'), $__0.mapOptions);
+      $__0.get('http://localhost:8080/traffic-data', handleMarkers);
+    });
+  }
+  var run = (function() {
+    console.log('TrafficReport ES6.');
+    var controller = new TrafficReportController();
+    controller.init();
+  });
+  google.maps.event.addDomListener(window, 'load', run);
+})();

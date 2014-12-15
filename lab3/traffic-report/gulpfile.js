@@ -76,7 +76,7 @@ gulp.task('scripts', function () {
     return gulp.src(paths.script_src)
         .pipe(concat('jsbundle.js'))
         .pipe(traceur())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(paths.script_dist));
 });
 

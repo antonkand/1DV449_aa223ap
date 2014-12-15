@@ -141,7 +141,7 @@
       }).map((marker, index) => {
         let hexColor = '';
         let category = '';
-        let timestamp = new Date((+marker.createddate.substring(6, marker.createddate.length-7))).toLocaleString();
+        marker.createddate = new Date((+marker.createddate.substring(6, marker.createddate.length-7))).toLocaleString();
         switch (marker.priority) {
           case 1:
             hexColor = 'F51329';
@@ -184,19 +184,19 @@
           categoryNumber: marker.category,
           name: marker.name,
           zoom: marker.zoom,
-          date: timestamp
+          date: marker.createddate
         };
       }).forEach((marker) => {
           pinMarker(marker, attachEventListenersToSortMenu);
           addMarkerToMenu(marker);
       });
       //this.markerReferences.reverse();
-      console.table(this.markerReferences);
+      //console.table(this.markerReferences);
     };
     this.init = () => {
       this.mapOptions = {
         center: { lat: 56.6874601, lng: 16.326955},
-        zoom: 5
+        zoom: 3
       };
       this.map = new google.maps.Map(document.querySelector('#google-map-container'), this.mapOptions);
       this.get('http://localhost:8080/traffic-data', handleMarkers);
