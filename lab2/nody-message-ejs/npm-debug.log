@@ -1,0 +1,510 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev',
+1 verbose cli   'gulp',
+1 verbose cli   'gulp-uglify',
+1 verbose cli   'gulp-concat',
+1 verbose cli   'gulp-imagemin',
+1 verbose cli   'imagemin-optipng',
+1 verbose cli   'imagemin-jpegtranimagemin-svgo' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json nody-message-ejs@ No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'gulp', null ]
+7 verbose cache add name=undefined spec="gulp" args=["gulp",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'gulp',
+8 verbose parsed url   path: 'gulp',
+8 verbose parsed url   href: 'gulp' }
+9 verbose cache add [ 'gulp-uglify', null ]
+10 verbose cache add name=undefined spec="gulp-uglify" args=["gulp-uglify",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'gulp-uglify',
+11 verbose parsed url   path: 'gulp-uglify',
+11 verbose parsed url   href: 'gulp-uglify' }
+12 verbose cache add [ 'gulp-concat', null ]
+13 verbose cache add name=undefined spec="gulp-concat" args=["gulp-concat",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'gulp-concat',
+14 verbose parsed url   path: 'gulp-concat',
+14 verbose parsed url   href: 'gulp-concat' }
+15 verbose cache add [ 'gulp-imagemin', null ]
+16 verbose cache add name=undefined spec="gulp-imagemin" args=["gulp-imagemin",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'gulp-imagemin',
+17 verbose parsed url   path: 'gulp-imagemin',
+17 verbose parsed url   href: 'gulp-imagemin' }
+18 verbose cache add [ 'imagemin-optipng', null ]
+19 verbose cache add name=undefined spec="imagemin-optipng" args=["imagemin-optipng",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'imagemin-optipng',
+20 verbose parsed url   path: 'imagemin-optipng',
+20 verbose parsed url   href: 'imagemin-optipng' }
+21 verbose cache add [ 'imagemin-jpegtranimagemin-svgo', null ]
+22 verbose cache add name=undefined spec="imagemin-jpegtranimagemin-svgo" args=["imagemin-jpegtranimagemin-svgo",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'imagemin-jpegtranimagemin-svgo',
+23 verbose parsed url   path: 'imagemin-jpegtranimagemin-svgo',
+23 verbose parsed url   href: 'imagemin-jpegtranimagemin-svgo' }
+24 silly lockFile 9750c68d-gulp gulp
+25 verbose lock gulp /Users/anton/.npm/9750c68d-gulp.lock
+26 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+27 verbose lock gulp-uglify /Users/anton/.npm/15fab96b-gulp-uglify.lock
+28 silly lockFile a9575072-gulp-concat gulp-concat
+29 verbose lock gulp-concat /Users/anton/.npm/a9575072-gulp-concat.lock
+30 silly lockFile fa224668-gulp-imagemin gulp-imagemin
+31 verbose lock gulp-imagemin /Users/anton/.npm/fa224668-gulp-imagemin.lock
+32 silly lockFile 136681ec-imagemin-optipng imagemin-optipng
+33 verbose lock imagemin-optipng /Users/anton/.npm/136681ec-imagemin-optipng.lock
+34 silly lockFile 91353a23-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo
+35 verbose lock imagemin-jpegtranimagemin-svgo /Users/anton/.npm/91353a23-imagemin-jpegtranimagemin-svgo.lock
+36 silly lockFile 9750c68d-gulp gulp
+37 silly lockFile 9750c68d-gulp gulp
+38 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+39 silly lockFile 15fab96b-gulp-uglify gulp-uglify
+40 silly lockFile a9575072-gulp-concat gulp-concat
+41 silly lockFile a9575072-gulp-concat gulp-concat
+42 verbose addNamed [ 'gulp', '' ]
+43 verbose addNamed [ null, '*' ]
+44 silly lockFile 72f4391e-gulp gulp@
+45 verbose lock gulp@ /Users/anton/.npm/72f4391e-gulp.lock
+46 verbose addNamed [ 'gulp-uglify', '' ]
+47 verbose addNamed [ null, '*' ]
+48 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+49 verbose lock gulp-uglify@ /Users/anton/.npm/044a9113-gulp-uglify.lock
+50 silly lockFile 136681ec-imagemin-optipng imagemin-optipng
+51 silly lockFile 136681ec-imagemin-optipng imagemin-optipng
+52 silly lockFile fa224668-gulp-imagemin gulp-imagemin
+53 silly lockFile fa224668-gulp-imagemin gulp-imagemin
+54 verbose addNamed [ 'gulp-concat', '' ]
+55 verbose addNamed [ null, '*' ]
+56 silly lockFile 190d832a-gulp-concat gulp-concat@
+57 verbose lock gulp-concat@ /Users/anton/.npm/190d832a-gulp-concat.lock
+58 verbose addNamed [ 'imagemin-optipng', '' ]
+59 verbose addNamed [ null, '*' ]
+60 silly lockFile 941eee69-imagemin-optipng imagemin-optipng@
+61 verbose lock imagemin-optipng@ /Users/anton/.npm/941eee69-imagemin-optipng.lock
+62 verbose addNamed [ 'gulp-imagemin', '' ]
+63 verbose addNamed [ null, '*' ]
+64 silly lockFile 0ba22ca1-gulp-imagemin gulp-imagemin@
+65 verbose lock gulp-imagemin@ /Users/anton/.npm/0ba22ca1-gulp-imagemin.lock
+66 silly lockFile 91353a23-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo
+67 silly lockFile 91353a23-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo
+68 silly addNameRange { name: 'gulp', range: '*', hasData: false }
+69 silly addNameRange { name: 'gulp-uglify', range: '*', hasData: false }
+70 verbose addNamed [ 'imagemin-jpegtranimagemin-svgo', '' ]
+71 verbose addNamed [ null, '*' ]
+72 silly lockFile 3f57d0cf-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo@
+73 verbose lock imagemin-jpegtranimagemin-svgo@ /Users/anton/.npm/3f57d0cf-imagemin-jpegtranimagemin-svgo.lock
+74 silly addNameRange { name: 'gulp-concat', range: '*', hasData: false }
+75 silly addNameRange { name: 'imagemin-optipng', range: '*', hasData: false }
+76 silly addNameRange { name: 'gulp-imagemin', range: '*', hasData: false }
+77 silly addNameRange { name: 'imagemin-jpegtranimagemin-svgo',
+77 silly addNameRange   range: '*',
+77 silly addNameRange   hasData: false }
+78 verbose request where is /imagemin-jpegtranimagemin-svgo
+79 verbose request registry https://registry.npmjs.org/
+80 verbose request id 77d23ba38fdef321
+81 verbose url raw /imagemin-jpegtranimagemin-svgo
+82 verbose url resolving [ 'https://registry.npmjs.org/',
+82 verbose url resolving   './imagemin-jpegtranimagemin-svgo' ]
+83 verbose url resolved https://registry.npmjs.org/imagemin-jpegtranimagemin-svgo
+84 verbose request where is https://registry.npmjs.org/imagemin-jpegtranimagemin-svgo
+85 info trying registry request attempt 1 at 12:31:00
+86 http GET https://registry.npmjs.org/imagemin-jpegtranimagemin-svgo
+87 verbose request where is /gulp
+88 verbose request registry https://registry.npmjs.org/
+89 verbose url raw /gulp
+90 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+91 verbose url resolved https://registry.npmjs.org/gulp
+92 verbose request where is https://registry.npmjs.org/gulp
+93 info trying registry request attempt 1 at 12:31:00
+94 verbose etag "CLEWAQQNCAUX8Z2WIX7OR2UIC"
+95 http GET https://registry.npmjs.org/gulp
+96 verbose request where is /gulp-uglify
+97 verbose request registry https://registry.npmjs.org/
+98 verbose url raw /gulp-uglify
+99 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-uglify' ]
+100 verbose url resolved https://registry.npmjs.org/gulp-uglify
+101 verbose request where is https://registry.npmjs.org/gulp-uglify
+102 info trying registry request attempt 1 at 12:31:00
+103 verbose etag "51M2YNZM4Y7EOP0NW4T52PJGC"
+104 http GET https://registry.npmjs.org/gulp-uglify
+105 verbose request where is /gulp-concat
+106 verbose request registry https://registry.npmjs.org/
+107 verbose url raw /gulp-concat
+108 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-concat' ]
+109 verbose url resolved https://registry.npmjs.org/gulp-concat
+110 verbose request where is https://registry.npmjs.org/gulp-concat
+111 info trying registry request attempt 1 at 12:31:00
+112 verbose etag "4B9VQKS492B1G2DI72FGFUWMD"
+113 http GET https://registry.npmjs.org/gulp-concat
+114 verbose request where is /gulp-imagemin
+115 verbose request registry https://registry.npmjs.org/
+116 verbose url raw /gulp-imagemin
+117 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-imagemin' ]
+118 verbose url resolved https://registry.npmjs.org/gulp-imagemin
+119 verbose request where is https://registry.npmjs.org/gulp-imagemin
+120 info trying registry request attempt 1 at 12:31:00
+121 verbose etag "67LH2XS101YOFHYRRD7PHVM95"
+122 http GET https://registry.npmjs.org/gulp-imagemin
+123 verbose request where is /imagemin-optipng
+124 verbose request registry https://registry.npmjs.org/
+125 verbose url raw /imagemin-optipng
+126 verbose url resolving [ 'https://registry.npmjs.org/', './imagemin-optipng' ]
+127 verbose url resolved https://registry.npmjs.org/imagemin-optipng
+128 verbose request where is https://registry.npmjs.org/imagemin-optipng
+129 info trying registry request attempt 1 at 12:31:00
+130 verbose etag "82CFJ19IPVPZ0EWOZ6M60SFET"
+131 http GET https://registry.npmjs.org/imagemin-optipng
+132 http 304 https://registry.npmjs.org/gulp-uglify
+133 silly registry.get cb [ 304,
+133 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+133 silly registry.get     server: 'Apache',
+133 silly registry.get     via: '1.1 varnish',
+133 silly registry.get     'last-modified': 'Fri, 12 Dec 2014 11:31:00 GMT',
+133 silly registry.get     'cache-control': 'max-age=60',
+133 silly registry.get     etag: '"51M2YNZM4Y7EOP0NW4T52PJGC"',
+133 silly registry.get     age: '48',
+133 silly registry.get     'x-served-by': 'cache-fra1231-FRA',
+133 silly registry.get     'x-cache': 'HIT',
+133 silly registry.get     'x-cache-hits': '1',
+133 silly registry.get     'x-timer': 'S1418383860.700723,VS0,VE0',
+133 silly registry.get     vary: 'Accept',
+133 silly registry.get     'content-length': '0',
+133 silly registry.get     'keep-alive': 'timeout=10, max=50',
+133 silly registry.get     connection: 'Keep-Alive' } ]
+134 verbose etag https://registry.npmjs.org/gulp-uglify from cache
+135 silly addNameRange number 2 { name: 'gulp-uglify', range: '*', hasData: true }
+136 silly addNameRange versions [ 'gulp-uglify',
+136 silly addNameRange   [ '0.0.1',
+136 silly addNameRange     '0.0.3',
+136 silly addNameRange     '0.0.4',
+136 silly addNameRange     '0.1.0',
+136 silly addNameRange     '0.2.0',
+136 silly addNameRange     '0.2.1',
+136 silly addNameRange     '0.3.0',
+136 silly addNameRange     '0.3.1',
+136 silly addNameRange     '0.3.2',
+136 silly addNameRange     '1.0.0-0',
+136 silly addNameRange     '1.0.0',
+136 silly addNameRange     '1.0.1',
+136 silly addNameRange     '1.0.2' ] ]
+137 verbose addNamed [ 'gulp-uglify', '1.0.2' ]
+138 verbose addNamed [ '1.0.2', '1.0.2' ]
+139 silly lockFile a51ba47a-gulp-uglify-1-0-2 gulp-uglify@1.0.2
+140 verbose lock gulp-uglify@1.0.2 /Users/anton/.npm/a51ba47a-gulp-uglify-1-0-2.lock
+141 silly lockFile a51ba47a-gulp-uglify-1-0-2 gulp-uglify@1.0.2
+142 silly lockFile a51ba47a-gulp-uglify-1-0-2 gulp-uglify@1.0.2
+143 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+144 silly lockFile 044a9113-gulp-uglify gulp-uglify@
+145 http 304 https://registry.npmjs.org/imagemin-optipng
+146 silly registry.get cb [ 304,
+146 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+146 silly registry.get     server: 'Apache',
+146 silly registry.get     via: '1.1 varnish',
+146 silly registry.get     'last-modified': 'Fri, 12 Dec 2014 11:30:29 GMT',
+146 silly registry.get     'cache-control': 'max-age=60',
+146 silly registry.get     etag: '"82CFJ19IPVPZ0EWOZ6M60SFET"',
+146 silly registry.get     age: '42',
+146 silly registry.get     'x-served-by': 'cache-fra1231-FRA',
+146 silly registry.get     'x-cache': 'HIT',
+146 silly registry.get     'x-cache-hits': '2',
+146 silly registry.get     'x-timer': 'S1418383860.740140,VS0,VE0',
+146 silly registry.get     vary: 'Accept',
+146 silly registry.get     'content-length': '0',
+146 silly registry.get     'keep-alive': 'timeout=10, max=49',
+146 silly registry.get     connection: 'Keep-Alive' } ]
+147 verbose etag https://registry.npmjs.org/imagemin-optipng from cache
+148 silly addNameRange number 2 { name: 'imagemin-optipng', range: '*', hasData: true }
+149 silly addNameRange versions [ 'imagemin-optipng',
+149 silly addNameRange   [ '0.1.0', '1.0.0', '2.0.0', '2.0.1', '3.0.0', '3.1.0', '4.0.0' ] ]
+150 verbose addNamed [ 'imagemin-optipng', '4.0.0' ]
+151 verbose addNamed [ '4.0.0', '4.0.0' ]
+152 silly lockFile 7cfbe3ef-imagemin-optipng-4-0-0 imagemin-optipng@4.0.0
+153 verbose lock imagemin-optipng@4.0.0 /Users/anton/.npm/7cfbe3ef-imagemin-optipng-4-0-0.lock
+154 silly lockFile 7cfbe3ef-imagemin-optipng-4-0-0 imagemin-optipng@4.0.0
+155 silly lockFile 7cfbe3ef-imagemin-optipng-4-0-0 imagemin-optipng@4.0.0
+156 silly lockFile 941eee69-imagemin-optipng imagemin-optipng@
+157 silly lockFile 941eee69-imagemin-optipng imagemin-optipng@
+158 http 200 https://registry.npmjs.org/gulp-concat
+159 silly registry.get cb [ 200,
+159 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+159 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+159 silly registry.get     etag: '"BA55NN27E7KGG2SYZOGQ0JYFU"',
+159 silly registry.get     'content-type': 'application/json',
+159 silly registry.get     'cache-control': 'max-age=60',
+159 silly registry.get     'content-length': '28697',
+159 silly registry.get     'accept-ranges': 'bytes',
+159 silly registry.get     via: '1.1 varnish',
+159 silly registry.get     age: '10',
+159 silly registry.get     'x-served-by': 'cache-fra1245-FRA',
+159 silly registry.get     'x-cache': 'HIT',
+159 silly registry.get     'x-cache-hits': '1',
+159 silly registry.get     'x-timer': 'S1418383860.708788,VS0,VE0',
+159 silly registry.get     vary: 'Accept',
+159 silly registry.get     'keep-alive': 'timeout=10, max=50',
+159 silly registry.get     connection: 'Keep-Alive' } ]
+160 silly addNameRange number 2 { name: 'gulp-concat', range: '*', hasData: true }
+161 silly addNameRange versions [ 'gulp-concat',
+161 silly addNameRange   [ '0.0.1',
+161 silly addNameRange     '1.0.0',
+161 silly addNameRange     '1.1.0',
+161 silly addNameRange     '2.0.0',
+161 silly addNameRange     '2.1.0',
+161 silly addNameRange     '2.1.1',
+161 silly addNameRange     '2.1.2',
+161 silly addNameRange     '2.1.3',
+161 silly addNameRange     '2.1.4',
+161 silly addNameRange     '2.1.5',
+161 silly addNameRange     '2.1.6',
+161 silly addNameRange     '2.1.7',
+161 silly addNameRange     '2.2.0',
+161 silly addNameRange     '2.3.0',
+161 silly addNameRange     '2.3.3',
+161 silly addNameRange     '2.3.4',
+161 silly addNameRange     '2.3.5',
+161 silly addNameRange     '2.4.0',
+161 silly addNameRange     '2.4.1',
+161 silly addNameRange     '2.4.2' ] ]
+162 verbose addNamed [ 'gulp-concat', '2.4.2' ]
+163 verbose addNamed [ '2.4.2', '2.4.2' ]
+164 silly lockFile 00e29c6f-gulp-concat-2-4-2 gulp-concat@2.4.2
+165 verbose lock gulp-concat@2.4.2 /Users/anton/.npm/00e29c6f-gulp-concat-2-4-2.lock
+166 silly lockFile 00e29c6f-gulp-concat-2-4-2 gulp-concat@2.4.2
+167 silly lockFile 00e29c6f-gulp-concat-2-4-2 gulp-concat@2.4.2
+168 silly lockFile 190d832a-gulp-concat gulp-concat@
+169 silly lockFile 190d832a-gulp-concat gulp-concat@
+170 http 200 https://registry.npmjs.org/gulp
+171 silly registry.get cb [ 200,
+171 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+171 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+171 silly registry.get     etag: '"D6BN2I0LY8LXV63C7S74SI4NS"',
+171 silly registry.get     'content-type': 'application/json',
+171 silly registry.get     'cache-control': 'max-age=60',
+171 silly registry.get     'content-length': '96284',
+171 silly registry.get     'accept-ranges': 'bytes',
+171 silly registry.get     via: '1.1 varnish',
+171 silly registry.get     age: '12',
+171 silly registry.get     'x-served-by': 'cache-fra1245-FRA',
+171 silly registry.get     'x-cache': 'HIT',
+171 silly registry.get     'x-cache-hits': '1',
+171 silly registry.get     'x-timer': 'S1418383860.704304,VS0,VE0',
+171 silly registry.get     vary: 'Accept',
+171 silly registry.get     'keep-alive': 'timeout=10, max=50',
+171 silly registry.get     connection: 'Keep-Alive' } ]
+172 silly addNameRange number 2 { name: 'gulp', range: '*', hasData: true }
+173 silly addNameRange versions [ 'gulp',
+173 silly addNameRange   [ '0.0.1',
+173 silly addNameRange     '0.0.2',
+173 silly addNameRange     '0.0.3',
+173 silly addNameRange     '0.0.4',
+173 silly addNameRange     '0.0.5',
+173 silly addNameRange     '0.0.7',
+173 silly addNameRange     '0.0.8',
+173 silly addNameRange     '0.0.9',
+173 silly addNameRange     '0.1.0',
+173 silly addNameRange     '0.2.0',
+173 silly addNameRange     '1.0.0',
+173 silly addNameRange     '1.1.0',
+173 silly addNameRange     '1.2.0',
+173 silly addNameRange     '1.2.1',
+173 silly addNameRange     '2.0.0',
+173 silly addNameRange     '2.0.1',
+173 silly addNameRange     '2.1.0',
+173 silly addNameRange     '2.2.0',
+173 silly addNameRange     '2.3.0',
+173 silly addNameRange     '2.4.0',
+173 silly addNameRange     '2.4.1',
+173 silly addNameRange     '2.6.0',
+173 silly addNameRange     '2.6.1',
+173 silly addNameRange     '2.7.0',
+173 silly addNameRange     '3.0.0',
+173 silly addNameRange     '3.1.1',
+173 silly addNameRange     '3.1.2',
+173 silly addNameRange     '3.1.3',
+173 silly addNameRange     '3.1.4',
+173 silly addNameRange     '3.2.0',
+173 silly addNameRange     '3.2.1',
+173 silly addNameRange     '3.2.2',
+173 silly addNameRange     '3.2.3',
+173 silly addNameRange     '3.2.4',
+173 silly addNameRange     '3.2.5',
+173 silly addNameRange     '3.3.0',
+173 silly addNameRange     '3.3.1',
+173 silly addNameRange     '3.3.2',
+173 silly addNameRange     '3.3.4',
+173 silly addNameRange     '3.4.0',
+173 silly addNameRange     '3.5.0',
+173 silly addNameRange     '3.5.1',
+173 silly addNameRange     '3.5.2',
+173 silly addNameRange     '3.5.5',
+173 silly addNameRange     '3.5.6',
+173 silly addNameRange     '3.6.0',
+173 silly addNameRange     '3.6.1',
+173 silly addNameRange     '3.6.2',
+173 silly addNameRange     '3.7.0',
+173 silly addNameRange     '3.8.0',
+173 silly addNameRange     '3.8.1',
+173 silly addNameRange     '3.8.2',
+173 silly addNameRange     '3.8.3',
+173 silly addNameRange     '3.8.4',
+173 silly addNameRange     '3.8.5',
+173 silly addNameRange     '3.8.6',
+173 silly addNameRange     '3.8.7',
+173 silly addNameRange     '3.8.8',
+173 silly addNameRange     '3.8.9',
+173 silly addNameRange     '3.8.10' ] ]
+174 verbose addNamed [ 'gulp', '3.8.10' ]
+175 verbose addNamed [ '3.8.10', '3.8.10' ]
+176 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+177 verbose lock gulp@3.8.10 /Users/anton/.npm/f843d0d7-gulp-3-8-10.lock
+178 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+179 silly lockFile f843d0d7-gulp-3-8-10 gulp@3.8.10
+180 silly lockFile 72f4391e-gulp gulp@
+181 silly lockFile 72f4391e-gulp gulp@
+182 http 200 https://registry.npmjs.org/gulp-imagemin
+183 silly registry.get cb [ 200,
+183 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+183 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+183 silly registry.get     etag: '"4NPYOI5H1O4ZEGYQJV5E9FQY0"',
+183 silly registry.get     'content-type': 'application/json',
+183 silly registry.get     'cache-control': 'max-age=60',
+183 silly registry.get     'content-length': '28590',
+183 silly registry.get     'accept-ranges': 'bytes',
+183 silly registry.get     via: '1.1 varnish',
+183 silly registry.get     age: '0',
+183 silly registry.get     'x-served-by': 'cache-fra1233-FRA',
+183 silly registry.get     'x-cache': 'HIT',
+183 silly registry.get     'x-cache-hits': '1',
+183 silly registry.get     'x-timer': 'S1418383860.712982,VS0,VE102',
+183 silly registry.get     vary: 'Accept',
+183 silly registry.get     'keep-alive': 'timeout=10, max=50',
+183 silly registry.get     connection: 'Keep-Alive' } ]
+184 http 404 https://registry.npmjs.org/imagemin-jpegtranimagemin-svgo
+185 verbose headers { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+185 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+185 verbose headers   'content-type': 'application/json',
+185 verbose headers   'cache-control': 'max-age=0',
+185 verbose headers   'content-length': '52',
+185 verbose headers   'accept-ranges': 'bytes',
+185 verbose headers   via: '1.1 varnish',
+185 verbose headers   age: '0',
+185 verbose headers   'x-served-by': 'cache-fra1242-FRA',
+185 verbose headers   'x-cache': 'MISS',
+185 verbose headers   'x-cache-hits': '0',
+185 verbose headers   'x-timer': 'S1418383860.698120,VS0,VE178',
+185 verbose headers   'keep-alive': 'timeout=10, max=50',
+185 verbose headers   connection: 'Keep-Alive' }
+186 silly registry.get cb [ 404,
+186 silly registry.get   { date: 'Fri, 12 Dec 2014 11:31:00 GMT',
+186 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+186 silly registry.get     'content-type': 'application/json',
+186 silly registry.get     'cache-control': 'max-age=0',
+186 silly registry.get     'content-length': '52',
+186 silly registry.get     'accept-ranges': 'bytes',
+186 silly registry.get     via: '1.1 varnish',
+186 silly registry.get     age: '0',
+186 silly registry.get     'x-served-by': 'cache-fra1242-FRA',
+186 silly registry.get     'x-cache': 'MISS',
+186 silly registry.get     'x-cache-hits': '0',
+186 silly registry.get     'x-timer': 'S1418383860.698120,VS0,VE178',
+186 silly registry.get     'keep-alive': 'timeout=10, max=50',
+186 silly registry.get     connection: 'Keep-Alive' } ]
+187 silly lockFile 3f57d0cf-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo@
+188 silly lockFile 3f57d0cf-imagemin-jpegtranimagemin-svgo imagemin-jpegtranimagemin-svgo@
+189 silly addNameRange number 2 { name: 'gulp-imagemin', range: '*', hasData: true }
+190 silly addNameRange versions [ 'gulp-imagemin',
+190 silly addNameRange   [ '0.1.0',
+190 silly addNameRange     '0.1.1',
+190 silly addNameRange     '0.1.2',
+190 silly addNameRange     '0.1.3',
+190 silly addNameRange     '0.1.4',
+190 silly addNameRange     '0.1.5',
+190 silly addNameRange     '0.2.0',
+190 silly addNameRange     '0.3.0',
+190 silly addNameRange     '0.4.0',
+190 silly addNameRange     '0.5.0',
+190 silly addNameRange     '0.5.1',
+190 silly addNameRange     '0.6.0',
+190 silly addNameRange     '0.6.1',
+190 silly addNameRange     '0.6.2',
+190 silly addNameRange     '1.0.0',
+190 silly addNameRange     '1.0.1',
+190 silly addNameRange     '1.1.0',
+190 silly addNameRange     '1.2.1',
+190 silly addNameRange     '2.0.0' ] ]
+191 verbose addNamed [ 'gulp-imagemin', '2.0.0' ]
+192 verbose addNamed [ '2.0.0', '2.0.0' ]
+193 silly lockFile 017b90ee-gulp-imagemin-2-0-0 gulp-imagemin@2.0.0
+194 verbose lock gulp-imagemin@2.0.0 /Users/anton/.npm/017b90ee-gulp-imagemin-2-0-0.lock
+195 silly lockFile 017b90ee-gulp-imagemin-2-0-0 gulp-imagemin@2.0.0
+196 silly lockFile 017b90ee-gulp-imagemin-2-0-0 gulp-imagemin@2.0.0
+197 silly lockFile 0ba22ca1-gulp-imagemin gulp-imagemin@
+198 silly lockFile 0ba22ca1-gulp-imagemin gulp-imagemin@
+199 error 404 404 Not Found: imagemin-jpegtranimagemin-svgo
+199 error 404
+199 error 404 'imagemin-jpegtranimagemin-svgo' is not in the npm registry.
+199 error 404 You should bug the author to publish it
+199 error 404 It was specified as a dependency of 'nody-message-ejs'
+199 error 404
+199 error 404 Note that you can also install from a
+199 error 404 tarball, folder, or http url, or git url.
+200 error System Darwin 14.0.0
+201 error command "node" "/usr/local/bin/npm" "install" "--save-dev" "gulp" "gulp-uglify" "gulp-concat" "gulp-imagemin" "imagemin-optipng" "imagemin-jpegtranimagemin-svgo"
+202 error cwd /Users/anton/dev/school/1DV449_aa223ap/lab2/nody-message-ejs
+203 error node -v v0.10.33
+204 error npm -v 1.4.28
+205 error code E404
+206 verbose exit [ 1, true ]

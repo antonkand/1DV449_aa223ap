@@ -1,1 +1,358 @@
-"use strict";var NodyAjax={send:function(){},post:function(e,t,a,s){var n=new XMLHttpRequest;n.onreadystatechange=function(){4===n.readyState&&(n.status>=200&&n.status<300||304===n.status?(s(n.responseText),console.log(n.responseText)):console.log("postMessage: unsuccessful post. status code "+n.status))},n.open("post",a,!0),n.setRequestHeader("Content-Type","application/json;charset=UTF-8");var o={message:e,user:t,date:new Date};n.send(JSON.stringify(o))},get:function(e,t){function a(e,t,a){console.log("createStream: inside createStream");var s=new XMLHttpRequest,n=0;return s.open("get",e,!0),s.onreadystatechange=function(){console.log("createStream: inside onreadyStateChange");var e=null;3===s.readyState?(console.log("createStream: readyState 3"),e=s.responseText.substring(n),n+=e.length,t(e)):4===s.readyState&&(console.log("createStream: readyState 4"),a(s.responseText))},s.send(null),s}console.log("createStream: inside get"),a("/messages",e,t)},allMessages:function(e,t){var a=1,s=4,n=new XMLHttpRequest;n.onreadystatechange=function(){n.readyState===a&&console.log("allMessages: opened"),n.readyState===s&&(n.status>=200&&n.status<300||304==n.status?(console.log(n.responseText),t(n.responseText)):console.log("Error. XHR status "+n.status))},n.open("get",e,!0),n.send(null)},experiment:function(e,t){function a(e,t,a){console.log("createStream: inside createStream");var s=new XMLHttpRequest,n=0;return s.open("get",e,!0),s.onreadystatechange=function(){console.log("createStream: inside onreadyStateChange");var e=null;3===s.readyState?(console.log("createStream: readyState 3"),e=s.responseText.substring(n),n+=e.length,t(e)):4===s.readyState&&(console.log("createStream: readyState 4"),a(s.responseText))},s.send(null),s}console.log("createStream: inside get"),a("/experiment",e,t)}},MessageBoard={helpers:{checkObject:function(e,t){return Object.prototype.toString.call(e)===t},isString:function(e){return MessageBoard.helpers.checkObject(e,"[object String]")},Message:function(e,t,a){if(a=a||new Date,MessageBoard.helpers.isString(e)&&MessageBoard.helpers.isString(t))return{message:e,user:t,date:a};throw new Error("Message: failed to create new Message.")},insertMessage:function(e,t,a){var s=new MessageBoard.helpers.Message(e,t,a),n=document.createElement("div"),o=document.createElement("p");o.textContent="by "+s.user;var r=document.createElement("strong");r.appendChild(o);var c=document.createElement("p");c.textContent=s.date,c.setAttribute("class","small");var l=document.createElement("small");l.appendChild(r),l.appendChild(c);var d=document.createElement("blockquote");if(d.textContent=s.message,d.appendChild(l),n.appendChild(d),messageboard.hasChildNodes()){var u=messageboard.firstChild;messageboard.insertBefore(d,u)}else messageboard.appendChild(n)}},dataTransport:{xhrStream:function(e,t){NodyAjax.get(e,t)},SSE:function(){console.log("SSE enabled browser.");var e=new EventSource("/stream");e.onmessage=function(e){console.log("PING! SSE event!"),MessageBoard.parseMessage(e.data)}}},parseMessage:function(e){if(e instanceof Array)e.forEach(function(e){var t=e.message,a=e.user,s=e.date;MessageBoard.helpers.insertMessage(t,a,s)});else{var t=e;"string"==typeof t&&(t=JSON.parse(e)),MessageBoard.helpers.insertMessage(t.message,t.user,t.date)}},handleDOM:function(){var e=document.querySelector("#submitButton"),t=document.querySelector("#chatbox"),a=document.body,s=(document.querySelector("#messageboard"),document.querySelector("#userEmail").textContent);a.addEventListener("keydown",function(e){if(e=e||event,e.target===t&&13===e.keyCode){if(!t.value)return void e.preventDefault();t.value.replace(/\n/g,"<br>"),NodyAjax.post(t.value,s,"/messages",MessageBoard.parseMessage),e.preventDefault(),t.value=""}},!1),a.addEventListener("click",function(a){a=a||event,a.target===e&&(a.preventDefault(),NodyAjax.post(t.value,s,"/messages",MessageBoard.parseMessage),t.value="")})},init:function(){if(MessageBoard.handleDOM(),window.EventSource){var e=function(e){JSON.parse(e).forEach(function(e){MessageBoard.parseMessage(e)})},t=function(){MessageBoard.dataTransport.xhrStream(e,t)},a=function(a){MessageBoard.dataTransport.xhrStream(e,t),JSON.parse(a).forEach(function(e){MessageBoard.parseMessage(e)})};NodyAjax.allMessages("/allmessages",a),NodyAjax.experiment()}else MessageBoard.dataTransport.SSE()}};window.onload=MessageBoard.init;var NodyAjax={send:function(){},post:function(e,t,a,s){var n=new XMLHttpRequest;n.onreadystatechange=function(){4===n.readyState&&(n.status>=200&&n.status<300||304===n.status?(s(n.responseText),console.log(n.responseText)):console.log("postMessage: unsuccessful post. status code "+n.status))},n.open("post",a,!0),n.setRequestHeader("Content-Type","application/json;charset=UTF-8");var o={message:e,user:t,date:new Date};n.send(JSON.stringify(o))},get:function(e,t){function a(e,t,a){console.log("createStream: inside createStream");var s=new XMLHttpRequest,n=0;return s.open("get",e,!0),s.onreadystatechange=function(){console.log("createStream: inside onreadyStateChange");var e=null;3===s.readyState?(console.log("createStream: readyState 3"),e=s.responseText.substring(n),n+=e.length,t(e)):4===s.readyState&&(console.log("createStream: readyState 4"),a(s.responseText))},s.send(null),s}console.log("createStream: inside get"),a("/messages",e,t)},allMessages:function(e,t){var a=1,s=4,n=new XMLHttpRequest;n.onreadystatechange=function(){n.readyState===a&&console.log("allMessages: opened"),n.readyState===s&&(n.status>=200&&n.status<300||304==n.status?(console.log(n.responseText),t(n.responseText)):console.log("Error. XHR status "+n.status))},n.open("get",e,!0),n.send(null)},experiment:function(e,t){function a(e,t,a){console.log("createStream: inside createStream");var s=new XMLHttpRequest,n=0;return s.open("get",e,!0),s.onreadystatechange=function(){console.log("createStream: inside onreadyStateChange");var e=null;3===s.readyState?(console.log("createStream: readyState 3"),e=s.responseText.substring(n),n+=e.length,t(e)):4===s.readyState&&(console.log("createStream: readyState 4"),a(s.responseText))},s.send(null),s}console.log("createStream: inside get"),a("/experiment",e,t)}};
+'use strict';
+var NodyAjax = {
+    send: function () {},
+    post: function (message, username, url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                    callback(xhr.responseText);
+                    console.log(xhr.responseText);
+                }
+                else {
+                    console.log('postMessage: unsuccessful post. status code ' + xhr.status);
+                }
+            }
+        };
+        xhr.open('post', url, true);
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        var msg = { message: message, user: username, date: new Date()};
+        xhr.send(JSON.stringify(msg));
+    },
+    get: function (progressCallback, finishedCallback) {
+        console.log('createStream: inside get');
+        function createStream (url, progress, finished) {
+            console.log('createStream: inside createStream');
+            var xhr = new XMLHttpRequest(),
+                received = 0;
+            xhr.open('get', url, true);
+            xhr.onreadystatechange = function () {
+                console.log('createStream: inside onreadyStateChange');
+                var result = null;
+                if (xhr.readyState === 3) {
+                    console.log('createStream: readyState 3');
+                    result = xhr.responseText.substring(received);
+                    received += result.length;
+                    progress(result);
+                }
+                else {
+                    if (xhr.readyState === 4) {
+                        console.log('createStream: readyState 4');
+                        finished(xhr.responseText);
+                    }
+                }
+            };
+            xhr.send(null);
+            return xhr;
+        };
+        createStream('/messages', progressCallback, finishedCallback);
+    },
+    allMessages: function (url, callback) {
+        var opened = 1,
+            complete = 4,
+            xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === opened) {
+                console.log('allMessages: opened');
+            }
+            if (xhr.readyState === complete) {
+                if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                    console.log(xhr.responseText);
+                    callback(xhr.responseText);
+                }
+                else {
+                    console.log('Error. XHR status ' + xhr.status);
+                }
+            }
+        };
+        xhr.open('get', url, true);
+        xhr.send(null);
+    },
+    experiment: function (progressCallback, finishedCallback) {
+        console.log('createStream: inside get');
+        function createStream (url, progress, finished) {
+            console.log('createStream: inside createStream');
+            var xhr = new XMLHttpRequest(),
+                received = 0;
+            xhr.open('get', url, true);
+            xhr.onreadystatechange = function () {
+                console.log('createStream: inside onreadyStateChange');
+                var result = null;
+                if (xhr.readyState === 3) {
+                    console.log('createStream: readyState 3');
+                    result = xhr.responseText.substring(received);
+                    received += result.length;
+                    progress(result);
+                }
+                else {
+                    if (xhr.readyState === 4) {
+                        console.log('createStream: readyState 4');
+                        finished(xhr.responseText);
+                    }
+                }
+            };
+            xhr.send(null);
+            return xhr;
+        };
+        createStream('/experiment', progressCallback, finishedCallback);
+    }
+};
+
+var MessageBoard = {
+    helpers: {
+        checkObject:
+        // Checks the variable by calling toString.
+        // Comparison passed in should be in format '[object TypeOfObject]'.
+        // Ie: checkObject('string', '[object String]');
+            function (variable, comparison) {
+                return Object.prototype.toString.call(variable) === comparison;
+            },
+        isString: function (variable) {
+            return MessageBoard.helpers.checkObject(variable, '[object String]');
+        },
+        Message: function (str, user, date) {
+            //console.log('Message:')
+            //console.log(str);
+            //console.log(user);
+            //console.log(date);
+            date = date || new Date();
+            // TODO: parse date to nicely looking timestamp
+            if (MessageBoard.helpers.isString(str) && MessageBoard.helpers.isString(user)) {
+                return {
+                    message: str,
+                    user: user,
+                    date: date
+                };
+            }
+            else {
+                throw new Error('Message: failed to create new Message.');
+            }
+        },
+        insertMessage: function (message, email, date) {
+            //console.log('insertMessage');
+            //console.log('message, email, date');
+            //console.log(message +' '+ email + ' '+ date);
+            var msg = new MessageBoard.helpers.Message(message, email, date);
+            // message container
+            var div = document.createElement('div');
+            // user info
+            var userParagraph = document.createElement('p');
+            userParagraph.textContent = 'by ' + msg.user;
+            var strong = document.createElement('strong');
+            strong.appendChild(userParagraph);
+            // date info
+            var timeParagraph = document.createElement('p');
+            timeParagraph.textContent = msg.date;
+            timeParagraph.setAttribute('class', 'small');
+            var small = document.createElement('small');
+            small.appendChild(strong);
+            small.appendChild(timeParagraph);
+            // main message
+            var blockquote = document.createElement('blockquote');
+            blockquote.textContent = msg.message;
+            blockquote.appendChild(small);
+            div.appendChild(blockquote);
+            if (messageboard.hasChildNodes()) {
+                var firstChild = messageboard.firstChild;
+                messageboard.insertBefore(blockquote, firstChild);
+            }
+            else {
+                messageboard.appendChild(div);
+            }
+        }
+    },
+    dataTransport: {
+        xhrStream: function (progressCallback, finishedCallback) {
+            //console.log('xhrStream');
+            NodyAjax.get(progressCallback, finishedCallback);
+        },
+        SSE: function () {
+            console.log('SSE enabled browser.');
+            var sseStream = new EventSource('/stream');
+            sseStream.onmessage = function (event) {
+                console.log('PING! SSE event!');
+                MessageBoard.parseMessage(event.data);
+            };
+        }
+    },
+    parseMessage: function (msgs) {
+        // XHR Stream sends as array
+        if (msgs instanceof Array) {
+            //console.log('typeof msgs, array');
+            msgs.forEach(function (element) {
+                //console.log(element);
+                var msg = element.message;
+                var user = element.user;
+                var date = element.date;
+                MessageBoard.helpers.insertMessage(msg, user, date);
+            });
+        }
+        // SSE transport sends each msg as separate object
+        else {
+            //console.log('typeof msgs, !array');
+            var msg = msgs;
+            if (typeof msg === 'string') {
+                msg = JSON.parse(msgs);
+            }
+            //console.log('parseMessage msgs');
+            //console.log(typeof msg);
+            MessageBoard.helpers.insertMessage(msg.message, msg.user, msg.date);
+        }
+
+    },
+    handleDOM: function () {
+        var submit = document.querySelector('#submitButton');
+        var chatbox = document.querySelector('#chatbox');
+        var body = document.body;
+        var messageboard = document.querySelector('#messageboard');
+        var userEmail = document.querySelector('#userEmail').textContent;
+        body.addEventListener('keydown', function (e) {
+            e = e || event;
+            if (e.target === chatbox && e.keyCode === 13) {
+                if (!chatbox.value) {
+                    e.preventDefault();
+                    return;
+                }
+                // TODO: easy shift-enter and br replacement
+                chatbox.value.replace(/\n/g, '<br>');
+                NodyAjax.post(chatbox.value, userEmail, '/messages', MessageBoard.parseMessage);
+                e.preventDefault();
+                chatbox.value = '';
+            }
+        }, false);
+        body.addEventListener('click', function (e) {
+            e = e || event;
+            if (e.target === submit) {
+                e.preventDefault();
+                NodyAjax.post(chatbox.value, userEmail, '/messages', MessageBoard.parseMessage);
+                chatbox.value = '';
+            }
+        });
+    },
+    init: function () {
+        MessageBoard.handleDOM();
+        if (window.EventSource) {
+            var progress = function (data) {
+                //console.log('poll progress: data received.');
+                JSON.parse(data).forEach(function (element) {
+                        MessageBoard.parseMessage(element)}
+                );
+            };
+            var finished = function (data) {
+                //console.log('poll end: stream ended.');
+                MessageBoard.dataTransport.xhrStream(progress, finished);
+            };
+            var allMessagesLoaded = function (data) {
+                MessageBoard.dataTransport.xhrStream(progress, finished);
+                JSON.parse(data).forEach(function (element) {
+                        MessageBoard.parseMessage(element)}
+                );
+            };
+            NodyAjax.allMessages('/allmessages', allMessagesLoaded);
+            NodyAjax.experiment();
+        }
+        else {
+            MessageBoard.dataTransport.SSE();
+        }
+    }
+};
+
+window.onload = MessageBoard.init;
+var NodyAjax = {
+  send: function () {},
+  post: function (message, username, url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+              if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                  callback(xhr.responseText);
+                  console.log(xhr.responseText);
+              }
+              else {
+                  console.log('postMessage: unsuccessful post. status code ' + xhr.status);
+              }
+          }
+      };
+      xhr.open('post', url, true);
+      xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      var msg = { message: message, user: username, date: new Date()};
+      xhr.send(JSON.stringify(msg));
+  },
+  get: function (progressCallback, finishedCallback) {
+      console.log('createStream: inside get');
+            function createStream (url, progress, finished) {
+                console.log('createStream: inside createStream');
+                  var xhr = new XMLHttpRequest(),
+                      received = 0;
+                  xhr.open('get', url, true);
+                  xhr.onreadystatechange = function () {
+                      console.log('createStream: inside onreadyStateChange');
+                      var result = null;
+                      if (xhr.readyState === 3) {
+                          console.log('createStream: readyState 3');
+                          result = xhr.responseText.substring(received);
+                          received += result.length;
+                          progress(result);
+                      }
+                      else {
+                          if (xhr.readyState === 4) {
+                              console.log('createStream: readyState 4');
+                              finished(xhr.responseText);
+                          }
+                      }
+                  };
+                  xhr.send(null);
+                  return xhr;
+      };
+      createStream('/messages', progressCallback, finishedCallback);
+  },
+  allMessages: function (url, callback) {
+      var opened = 1,
+          complete = 4,
+          xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+          if (xhr.readyState === opened) {
+              console.log('allMessages: opened');
+          }
+          if (xhr.readyState === complete) {
+              if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
+                  console.log(xhr.responseText);
+                  callback(xhr.responseText);
+              }
+              else {
+                  console.log('Error. XHR status ' + xhr.status);
+              }
+          }
+      };
+      xhr.open('get', url, true);
+      xhr.send(null);
+  },
+  experiment: function (progressCallback, finishedCallback) {
+      console.log('createStream: inside get');
+      function createStream (url, progress, finished) {
+          console.log('createStream: inside createStream');
+          var xhr = new XMLHttpRequest(),
+              received = 0;
+          xhr.open('get', url, true);
+          xhr.onreadystatechange = function () {
+              console.log('createStream: inside onreadyStateChange');
+              var result = null;
+              if (xhr.readyState === 3) {
+                  console.log('createStream: readyState 3');
+                  result = xhr.responseText.substring(received);
+                  received += result.length;
+                  progress(result);
+              }
+              else {
+                  if (xhr.readyState === 4) {
+                      console.log('createStream: readyState 4');
+                      finished(xhr.responseText);
+                  }
+              }
+          };
+          xhr.send(null);
+          return xhr;
+      };
+      createStream('/experiment', progressCallback, finishedCallback);
+  }
+};
