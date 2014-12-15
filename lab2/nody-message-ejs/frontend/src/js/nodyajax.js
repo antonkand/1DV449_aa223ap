@@ -15,7 +15,7 @@ var NodyAjax = {
       };
       xhr.open('post', url, true);
       xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-      var msg = { message: message, user: username, date: new Date()};
+      var msg = { message: message, user: username, date: new Date(), _csrf: document.querySelector('#csrf').value };
       xhr.send(JSON.stringify(msg));
   },
   get: function (progressCallback, finishedCallback) {

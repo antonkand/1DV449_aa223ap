@@ -33,13 +33,7 @@ app.get('/messages', require('../lib/middleware.js').isLoggedIn, function(req, r
         res.json(messagesArray);
     });
     app.get('/stream', sseSource.init);
-    app.get('/experiment', function (req, res) {
-        messagesArray.push({message: 'experiment', user: 'userexperiment', date: new Date()});
-        messageStream.on('data', function (value, key) {
-            console.log(value);
-            console.log(key);
-        });
-    });
+
 app.post('/messages', require('../lib/middleware.js').isLoggedIn, function(req, res) {
         var sanitized = {
             user: req.sanitize(req.body.user),
